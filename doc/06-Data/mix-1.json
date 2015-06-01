@@ -1,0 +1,4128 @@
+{
+  "message": "success",
+  "data": {
+    "has_more": true,
+    "tip": "27条新内容",
+    "has_new_message": true,
+    "max_time": 1432655001,
+    "min_time": 1432655349,
+    "data": [
+      {
+        "online_time": 1432655349,
+        "display_time": 1432655349,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/77/4454963418"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/77/4454963418"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/77/4454963418"
+              }
+            ],
+            "uri": "p360/77/4454963418",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/77/4454963418.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/77/4454963418"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/77/4454963418"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/77/4454963418"
+              }
+            ],
+            "uri": "p720/77/4454963418",
+            "height": 640
+          },
+          "digg_count": 272,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/77/4454963418"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/77/4454963418"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/77/4454963418"
+              }
+            ],
+            "uri": "p480/77/4454963418",
+            "height": 480
+          },
+          "create_time": 1432653448,
+          "duration": 17,
+          "favorite_count": 2,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3773/2585867099"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3773/2585867099"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3773/2585867099"
+              }
+            ],
+            "uri": "large/3773/2585867099"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/77/4454963418"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/77/4454963418"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/77/4454963418"
+              }
+            ],
+            "uri": "origin/77/4454963418",
+            "height": 640
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424801344/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 640,
+          "category_type": 1,
+          "share_count": 7,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 6,
+          "status_desc": "已发表",
+          "play_count": 5080,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3671/5447814332",
+            "user_id": 2358456691,
+            "name": "福ooo",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424801344,
+          "bury_count": 9,
+          "level": 3,
+          "url": "",
+          "repin_count": 2,
+          "uri": "77/4454963418",
+          "is_public_url": 1,
+          "cover_image_uri": "3773/2585867099",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3773/2585867099"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3773/2585867099"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3773/2585867099"
+              }
+            ],
+            "uri": "medium/3773/2585867099"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655337,
+        "display_time": 1432655337,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/54/4538441275"
+              }
+            ],
+            "uri": "p360/54/4538441275",
+            "height": 320
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/54/4538441275.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/54/4538441275"
+              }
+            ],
+            "uri": "p360/54/4538441275",
+            "height": 320
+          },
+          "digg_count": 48822,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/54/4538441275"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/54/4538441275"
+              }
+            ],
+            "uri": "p360/54/4538441275",
+            "height": 320
+          },
+          "create_time": 1430981552,
+          "duration": 57,
+          "favorite_count": 5105,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3492/4102385827"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3492/4102385827"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3492/4102385827"
+              }
+            ],
+            "uri": "large/3492/4102385827"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "绘图范冰冰版武媚娘",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/54/4538441275"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/54/4538441275"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/54/4538441275"
+              }
+            ],
+            "uri": "origin/54/4538441275",
+            "height": 320
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4314166772/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "绘图范冰冰版武媚娘",
+          "video_height": 320,
+          "category_type": 1,
+          "share_count": 2725,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 1422,
+          "status_desc": "热门投稿",
+          "play_count": 816862,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3667/5456087233",
+            "user_id": 4300646536,
+            "name": "罗小领",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4314166772,
+          "bury_count": 1835,
+          "level": 4,
+          "url": "",
+          "repin_count": 5105,
+          "uri": "54/4538441275",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3492/4102385827",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3492/4102385827"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3492/4102385827"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3492/4102385827"
+              }
+            ],
+            "uri": "medium/3492/4102385827"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655325,
+        "display_time": 1432655325,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/76/6626220665"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/76/6626220665"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/76/6626220665"
+              }
+            ],
+            "uri": "p360/76/6626220665",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/76/6626220665.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/76/6626220665"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/76/6626220665"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/76/6626220665"
+              }
+            ],
+            "uri": "p720/76/6626220665",
+            "height": 640
+          },
+          "digg_count": 123,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6626220665"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6626220665"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6626220665"
+              }
+            ],
+            "uri": "p480/76/6626220665",
+            "height": 480
+          },
+          "create_time": 1432653469,
+          "duration": 17,
+          "favorite_count": 1,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/large/3767/4883466382"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3767/4883466382"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3767/4883466382"
+              }
+            ],
+            "uri": "large/3767/4883466382"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/76/6626220665"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/76/6626220665"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/76/6626220665"
+              }
+            ],
+            "uri": "origin/76/6626220665",
+            "height": 640
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424828137/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 640,
+          "category_type": 1,
+          "share_count": 12,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 9,
+          "status_desc": "已发表",
+          "play_count": 1793,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3671/5447814332",
+            "user_id": 2358456691,
+            "name": "福ooo",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424828137,
+          "bury_count": 15,
+          "level": 3,
+          "url": "",
+          "repin_count": 1,
+          "uri": "76/6626220665",
+          "is_public_url": 1,
+          "cover_image_uri": "3767/4883466382",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/w202/3767/4883466382"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3767/4883466382"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3767/4883466382"
+              }
+            ],
+            "uri": "medium/3767/4883466382"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655313,
+        "display_time": 1432655313,
+        "group": {
+          "360p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/77/4449251625"
+              }
+            ],
+            "uri": "p360/77/4449251625",
+            "height": 240
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/77/4449251625.mp4",
+          "720p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/77/4449251625"
+              }
+            ],
+            "uri": "p360/77/4449251625",
+            "height": 240
+          },
+          "digg_count": 108,
+          "keywords": "",
+          "480p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/77/4449251625"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/77/4449251625"
+              }
+            ],
+            "uri": "p360/77/4449251625",
+            "height": 240
+          },
+          "create_time": 1432653009,
+          "duration": 6,
+          "favorite_count": 1,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3771/2525707003"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3771/2525707003"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3771/2525707003"
+              }
+            ],
+            "uri": "large/3771/2525707003"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "求过，，，，，",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/77/4449251625"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/77/4449251625"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/77/4449251625"
+              }
+            ],
+            "uri": "origin/77/4449251625",
+            "height": 240
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424736805/?iid=2767929313&app=joke_essay",
+          "content": "求过，，，，，",
+          "video_height": 240,
+          "category_type": 1,
+          "share_count": 5,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 2,
+          "status_desc": "已发表",
+          "play_count": 1030,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://wx.qlogo.cn/mmopen/ajNVdqHZLLAypcSs0ynvaFVmodic9dwMvlzlLIDoM2Y2lrYUP3RTHazTQJy9ITOjHXOEQA1gxyukyw9G2ibhOSiaMq4icuKUXdHeYtiawMYibe9QE/46",
+            "user_id": 4346345460,
+            "name": "A二爷sunny",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 320,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424736805,
+          "bury_count": 22,
+          "level": 3,
+          "url": "",
+          "repin_count": 1,
+          "uri": "77/4449251625",
+          "is_public_url": 1,
+          "cover_image_uri": "3771/2525707003",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3771/2525707003"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3771/2525707003"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3771/2525707003"
+              }
+            ],
+            "uri": "medium/3771/2525707003"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655301,
+        "display_time": 1432655301,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/66/5509728045"
+              }
+            ],
+            "uri": "p360/66/5509728045",
+            "height": 244
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/66/5509728045.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/66/5509728045"
+              }
+            ],
+            "uri": "p360/66/5509728045",
+            "height": 244
+          },
+          "digg_count": 15908,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/66/5509728045"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/66/5509728045"
+              }
+            ],
+            "uri": "p360/66/5509728045",
+            "height": 244
+          },
+          "create_time": 1432147186,
+          "duration": 40,
+          "favorite_count": 3372,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3689/699950039"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3689/699950039"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3689/699950039"
+              }
+            ],
+            "uri": "large/3689/699950039"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "大哥！我和鱼干起来了",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/66/5509728045"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/66/5509728045"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/66/5509728045"
+              }
+            ],
+            "uri": "origin/66/5509728045",
+            "height": 244
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4387064639/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "大哥！我和鱼干起来了",
+          "video_height": 244,
+          "category_type": 1,
+          "share_count": 2903,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 392,
+          "status_desc": "热门投稿",
+          "play_count": 630348,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/490/3057196202",
+            "user_id": 1931183964,
+            "name": "海亮魔术",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4387064639,
+          "bury_count": 1155,
+          "level": 4,
+          "url": "",
+          "repin_count": 3372,
+          "uri": "66/5509728045",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3689/699950039",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3689/699950039"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3689/699950039"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3689/699950039"
+              }
+            ],
+            "uri": "medium/3689/699950039"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3796901963,
+            "description": "靠近我，温暖你，",
+            "text": "大哥我和鱼干起来了，给你家猫接我使使，",
+            "comment_id": 4387983960,
+            "digg_count": 3387,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://app.qlogo.cn/mbloghead/aaad1fffec0319f723dc/50",
+            "create_time": 1432170794,
+            "is_digg": 0,
+            "user_name": "折扣积分",
+            "user_profile_image_url": "http://app.qlogo.cn/mbloghead/aaad1fffec0319f723dc/50"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655289,
+        "display_time": 1432655289,
+        "group": {
+          "360p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/78/4343751475"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/78/4343751475"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/78/4343751475"
+              }
+            ],
+            "uri": "p360/78/4343751475",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/78/4343751475.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/78/4343751475"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/78/4343751475"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/78/4343751475"
+              }
+            ],
+            "uri": "p480/78/4343751475",
+            "height": 480
+          },
+          "digg_count": 111,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/78/4343751475"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/78/4343751475"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/78/4343751475"
+              }
+            ],
+            "uri": "p480/78/4343751475",
+            "height": 480
+          },
+          "create_time": 1432653220,
+          "duration": 28,
+          "favorite_count": 8,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3766/4823676497"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3766/4823676497"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3766/4823676497"
+              }
+            ],
+            "uri": "large/3766/4823676497"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/78/4343751475"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/78/4343751475"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/78/4343751475"
+              }
+            ],
+            "uri": "origin/78/4343751475",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424763949/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 12,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 9,
+          "status_desc": "已发表",
+          "play_count": 2420,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/2167/7464275621",
+            "user_id": 3943508480,
+            "name": "赵文萱30159465",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424763949,
+          "bury_count": 16,
+          "level": 3,
+          "url": "",
+          "repin_count": 8,
+          "uri": "78/4343751475",
+          "is_public_url": 1,
+          "cover_image_uri": "3766/4823676497",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3766/4823676497"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3766/4823676497"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3766/4823676497"
+              }
+            ],
+            "uri": "medium/3766/4823676497"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655277,
+        "display_time": 1432655277,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/58/3044062753"
+              }
+            ],
+            "uri": "p360/58/3044062753",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/58/3044062753.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/58/3044062753"
+              }
+            ],
+            "uri": "p360/58/3044062753",
+            "height": 360
+          },
+          "digg_count": 26328,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/58/3044062753"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/58/3044062753"
+              }
+            ],
+            "uri": "p360/58/3044062753",
+            "height": 360
+          },
+          "create_time": 1431595956,
+          "duration": 49,
+          "favorite_count": 4369,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3602/432773896"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3602/432773896"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3602/432773896"
+              }
+            ],
+            "uri": "large/3602/432773896"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "吊爆了",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/58/3044062753"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/58/3044062753"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/58/3044062753"
+              }
+            ],
+            "uri": "origin/58/3044062753",
+            "height": 360
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4353530766/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "吊爆了",
+          "video_height": 360,
+          "category_type": 1,
+          "share_count": 3237,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 271,
+          "status_desc": "热门投稿",
+          "play_count": 886816,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://tp1.sinaimg.cn/1908758204/50/5701061995/1",
+            "user_id": 3819489229,
+            "name": "陈翔六点半",
+            "user_verified": true
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4353530766,
+          "bury_count": 1404,
+          "level": 4,
+          "url": "",
+          "repin_count": 4369,
+          "uri": "58/3044062753",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3602/432773896",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3602/432773896"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3602/432773896"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3602/432773896"
+              }
+            ],
+            "uri": "medium/3602/432773896"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655265,
+        "display_time": 1432655265,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/74/5781845121"
+              }
+            ],
+            "uri": "p360/74/5781845121",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/74/5781845121.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/74/5781845121"
+              }
+            ],
+            "uri": "p360/74/5781845121",
+            "height": 360
+          },
+          "digg_count": 262,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/74/5781845121"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/74/5781845121"
+              }
+            ],
+            "uri": "p360/74/5781845121",
+            "height": 360
+          },
+          "create_time": 1432652534,
+          "duration": 98,
+          "favorite_count": 15,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3773/2429695237"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3773/2429695237"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3773/2429695237"
+              }
+            ],
+            "uri": "large/3773/2429695237"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "还好没被打死",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/74/5781845121"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/74/5781845121"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/74/5781845121"
+              }
+            ],
+            "uri": "origin/74/5781845121",
+            "height": 360
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424774716/?iid=2767929313&app=joke_essay",
+          "content": "还好没被打死",
+          "video_height": 360,
+          "category_type": 1,
+          "share_count": 47,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 33,
+          "status_desc": "已发表",
+          "play_count": 11745,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3762/7280589010",
+            "user_id": 4423465845,
+            "name": "许少风2",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424774716,
+          "bury_count": 23,
+          "level": 3,
+          "url": "",
+          "repin_count": 15,
+          "uri": "74/5781845121",
+          "is_public_url": 1,
+          "cover_image_uri": "3773/2429695237",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3773/2429695237"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3773/2429695237"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3773/2429695237"
+              }
+            ],
+            "uri": "medium/3773/2429695237"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655253,
+        "display_time": 1432655253,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/76/6650062880"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/76/6650062880"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/76/6650062880"
+              }
+            ],
+            "uri": "p360/76/6650062880",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/76/6650062880.mp4",
+          "720p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6650062880"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6650062880"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6650062880"
+              }
+            ],
+            "uri": "p480/76/6650062880",
+            "height": 480
+          },
+          "digg_count": 96,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6650062880"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6650062880"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6650062880"
+              }
+            ],
+            "uri": "p480/76/6650062880",
+            "height": 480
+          },
+          "create_time": 1432654190,
+          "duration": 7,
+          "favorite_count": 0,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3770/2732137299"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3770/2732137299"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3770/2732137299"
+              }
+            ],
+            "uri": "large/3770/2732137299"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/76/6650062880"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/76/6650062880"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/76/6650062880"
+              }
+            ],
+            "uri": "origin/76/6650062880",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424879273/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 7,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 5,
+          "status_desc": "已发表",
+          "play_count": 1143,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3753/1303700334",
+            "user_id": 2754541951,
+            "name": "泗洪小大姐",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 360,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424879273,
+          "bury_count": 35,
+          "level": 3,
+          "url": "",
+          "repin_count": 0,
+          "uri": "76/6650062880",
+          "is_public_url": 1,
+          "cover_image_uri": "3770/2732137299",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3770/2732137299"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3770/2732137299"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3770/2732137299"
+              }
+            ],
+            "uri": "medium/3770/2732137299"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655241,
+        "display_time": 1432655241,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/49/7913488845"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/49/7913488845"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/49/7913488845"
+              }
+            ],
+            "uri": "p360/49/7913488845",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/49/7913488845.mp4",
+          "720p_video": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/49/7913488845"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/49/7913488845"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/49/7913488845"
+              }
+            ],
+            "uri": "p480/49/7913488845",
+            "height": 480
+          },
+          "digg_count": 17523,
+          "keywords": "",
+          "480p_video": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/49/7913488845"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/49/7913488845"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/49/7913488845"
+              }
+            ],
+            "uri": "p480/49/7913488845",
+            "height": 480
+          },
+          "create_time": 1431170226,
+          "duration": 17,
+          "favorite_count": 2957,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3526/6203367985"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3526/6203367985"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3526/6203367985"
+              }
+            ],
+            "uri": "large/3526/6203367985"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "你这记性没救了",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/49/7913488845"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/49/7913488845"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/49/7913488845"
+              }
+            ],
+            "uri": "origin/49/7913488845",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4324650322/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "你这记性没救了",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 2172,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 635,
+          "status_desc": "热门投稿",
+          "play_count": 887983,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/3212/3191487770",
+            "user_id": 3163397921,
+            "name": "林大奶",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 640,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4324650322,
+          "bury_count": 1041,
+          "level": 4,
+          "url": "",
+          "repin_count": 2957,
+          "uri": "49/7913488845",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3526/6203367985",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3526/6203367985"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3526/6203367985"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3526/6203367985"
+              }
+            ],
+            "uri": "medium/3526/6203367985"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3916440588,
+            "description": "这个人非常懒，狗毛都没有留下！",
+            "text": "喂你好是110吗？我钥匙忘屋里了，麻烦您找个开锁匠帮我开下门，我的现在在在月球北纬 76.5与东纬32.8附近，喂喂喂，你还在听么？  喂喂喂？",
+            "comment_id": 4327431604,
+            "digg_count": 4457,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://p3.pstatp.com/thumb/2828/78105874",
+            "create_time": 1431220932,
+            "is_digg": 0,
+            "user_name": "profess...",
+            "user_profile_image_url": "http://p3.pstatp.com/thumb/2828/78105874"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655229,
+        "display_time": 1432655229,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/79/4144699307"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/79/4144699307"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/79/4144699307"
+              }
+            ],
+            "uri": "p360/79/4144699307",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/79/4144699307.mp4",
+          "720p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/79/4144699307"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/79/4144699307"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/79/4144699307"
+              }
+            ],
+            "uri": "p480/79/4144699307",
+            "height": 480
+          },
+          "digg_count": 73,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/79/4144699307"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/79/4144699307"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/79/4144699307"
+              }
+            ],
+            "uri": "p480/79/4144699307",
+            "height": 480
+          },
+          "create_time": 1432654263,
+          "duration": 7,
+          "favorite_count": 1,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3771/2745422950"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3771/2745422950"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3771/2745422950"
+              }
+            ],
+            "uri": "large/3771/2745422950"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/79/4144699307"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/79/4144699307"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/79/4144699307"
+              }
+            ],
+            "uri": "origin/79/4144699307",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424884641/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 7,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 7,
+          "status_desc": "已发表",
+          "play_count": 1034,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3753/1303700334",
+            "user_id": 2754541951,
+            "name": "泗洪小大姐",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 360,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424884641,
+          "bury_count": 42,
+          "level": 3,
+          "url": "",
+          "repin_count": 1,
+          "uri": "79/4144699307",
+          "is_public_url": 1,
+          "cover_image_uri": "3771/2745422950",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3771/2745422950"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3771/2745422950"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3771/2745422950"
+              }
+            ],
+            "uri": "medium/3771/2745422950"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655217,
+        "display_time": 1432655217,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/74/5663596401"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/74/5663596401"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/74/5663596401"
+              }
+            ],
+            "uri": "p360/74/5663596401",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/74/5663596401.mp4",
+          "720p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/74/5663596401"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/74/5663596401"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/74/5663596401"
+              }
+            ],
+            "uri": "p480/74/5663596401",
+            "height": 426
+          },
+          "digg_count": 79,
+          "keywords": "",
+          "480p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/74/5663596401"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/74/5663596401"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/74/5663596401"
+              }
+            ],
+            "uri": "p480/74/5663596401",
+            "height": 426
+          },
+          "create_time": 1432654098,
+          "duration": 17,
+          "favorite_count": 4,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3770/1078855613"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3770/1078855613"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3770/1078855613"
+              }
+            ],
+            "uri": "large/3770/1078855613"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/74/5663596401"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/74/5663596401"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/74/5663596401"
+              }
+            ],
+            "uri": "origin/74/5663596401",
+            "height": 426
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424211948/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 426,
+          "category_type": 1,
+          "share_count": 5,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 3,
+          "status_desc": "已发表",
+          "play_count": 1493,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3753/1303700334",
+            "user_id": 2754541951,
+            "name": "泗洪小大姐",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 320,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424211948,
+          "bury_count": 36,
+          "level": 3,
+          "url": "",
+          "repin_count": 4,
+          "uri": "74/5663596401",
+          "is_public_url": 1,
+          "cover_image_uri": "3770/1078855613",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3770/1078855613"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3770/1078855613"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3770/1078855613"
+              }
+            ],
+            "uri": "medium/3770/1078855613"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655205,
+        "display_time": 1432655205,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/55/5330682345"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/55/5330682345"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/55/5330682345"
+              }
+            ],
+            "uri": "p360/55/5330682345",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/55/5330682345.mp4",
+          "720p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/55/5330682345"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/55/5330682345"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/55/5330682345"
+              }
+            ],
+            "uri": "p480/55/5330682345",
+            "height": 480
+          },
+          "digg_count": 23695,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/55/5330682345"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/55/5330682345"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/55/5330682345"
+              }
+            ],
+            "uri": "p480/55/5330682345",
+            "height": 480
+          },
+          "create_time": 1431087740,
+          "duration": 5,
+          "favorite_count": 1584,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3519/952081670"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3519/952081670"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3519/952081670"
+              }
+            ],
+            "uri": "large/3519/952081670"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "脱掉",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/55/5330682345"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/55/5330682345"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/55/5330682345"
+              }
+            ],
+            "uri": "origin/55/5330682345",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4320718136/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "脱掉",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 1088,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 523,
+          "status_desc": "热门投稿",
+          "play_count": 997169,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/1071/2109769340",
+            "user_id": 2989535475,
+            "name": "一生翩翩",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 360,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4320718136,
+          "bury_count": 1103,
+          "level": 4,
+          "url": "",
+          "repin_count": 1584,
+          "uri": "55/5330682345",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3519/952081670",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3519/952081670"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3519/952081670"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3519/952081670"
+              }
+            ],
+            "uri": "medium/3519/952081670"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3859216545,
+            "description": "天天就像灰太狼，夜夜好比光头强。",
+            "text": "现在的孩子们啊，哎，肯定是作业太少了～～",
+            "comment_id": 4324121161,
+            "digg_count": 9745,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://p3.pstatp.com/thumb/2363/1920328365",
+            "create_time": 1431161970,
+            "is_digg": 0,
+            "user_name": "一代大侠瞄人缝",
+            "user_profile_image_url": "http://p3.pstatp.com/thumb/2363/1920328365"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655193,
+        "display_time": 1432655193,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/75/7593475362"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/75/7593475362"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/75/7593475362"
+              }
+            ],
+            "uri": "p360/75/7593475362",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/75/7593475362.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/75/7593475362"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/75/7593475362"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/75/7593475362"
+              }
+            ],
+            "uri": "p720/75/7593475362",
+            "height": 640
+          },
+          "digg_count": 1632,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/75/7593475362"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/75/7593475362"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/75/7593475362"
+              }
+            ],
+            "uri": "p480/75/7593475362",
+            "height": 480
+          },
+          "create_time": 1432599554,
+          "duration": 7,
+          "favorite_count": 220,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3755/7593823907"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3755/7593823907"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3755/7593823907"
+              }
+            ],
+            "uri": "large/3755/7593823907"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "我手都给我烫熟了，为什么我放不上去",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/75/7593475362"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/75/7593475362"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/75/7593475362"
+              }
+            ],
+            "uri": "origin/75/7593475362",
+            "height": 640
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4417971429/?iid=2767929313&app=joke_essay",
+          "content": "我手都给我烫熟了，为什么我放不上去",
+          "video_height": 640,
+          "category_type": 1,
+          "share_count": 216,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 123,
+          "status_desc": "已发表",
+          "play_count": 103925,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/583/7607189776",
+            "user_id": 3114769046,
+            "name": "爱她有cao她深吗",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4417971429,
+          "bury_count": 93,
+          "level": 3,
+          "url": "",
+          "repin_count": 220,
+          "uri": "75/7593475362",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3755/7593823907",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3755/7593823907"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3755/7593823907"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3755/7593823907"
+              }
+            ],
+            "uri": "medium/3755/7593823907"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 4244964083,
+            "description": "",
+            "text": "这就是传说中的化学武器：蒸硫蛋！！！",
+            "comment_id": 4418950881,
+            "digg_count": 412,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://wx.qlogo.cn/mmopen/7zwO3pRR0303TVljdsZ9licJua5ibPYkialGEjlyOpdicyGIX6FV4RkB5qV9sGVAiaRe4Mlcx1dquOGm3wpKe8VXRTGC8B8yGzP1t/46",
+            "create_time": 1432605329,
+            "is_digg": 0,
+            "user_name": "無法無天363...",
+            "user_profile_image_url": "http://wx.qlogo.cn/mmopen/7zwO3pRR0303TVljdsZ9licJua5ibPYkialGEjlyOpdicyGIX6FV4RkB5qV9sGVAiaRe4Mlcx1dquOGm3wpKe8VXRTGC8B8yGzP1t/46"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655181,
+        "display_time": 1432655181,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/59/4765179933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/59/4765179933"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/59/4765179933"
+              }
+            ],
+            "uri": "p360/59/4765179933",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/59/4765179933.mp4",
+          "720p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/59/4765179933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/59/4765179933"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/59/4765179933"
+              }
+            ],
+            "uri": "p480/59/4765179933",
+            "height": 480
+          },
+          "digg_count": 16848,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/59/4765179933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/59/4765179933"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/59/4765179933"
+              }
+            ],
+            "uri": "p480/59/4765179933",
+            "height": 480
+          },
+          "create_time": 1431928088,
+          "duration": 16,
+          "favorite_count": 2341,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3648/2370437373"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3648/2370437373"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3648/2370437373"
+              }
+            ],
+            "uri": "large/3648/2370437373"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "一个WiFi密码引发的血案",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/59/4765179933"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/59/4765179933"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/59/4765179933"
+              }
+            ],
+            "uri": "origin/59/4765179933",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4373354872/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "一个WiFi密码引发的血案",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 2374,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 506,
+          "status_desc": "热门投稿",
+          "play_count": 758203,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/2914/4270670116",
+            "user_id": 4218454602,
+            "name": "搞笑特长生",
+            "user_verified": true
+          },
+          "user_digg": 0,
+          "video_width": 360,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4373354872,
+          "bury_count": 1132,
+          "level": 4,
+          "url": "",
+          "repin_count": 2341,
+          "uri": "59/4765179933",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3648/2370437373",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3648/2370437373"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3648/2370437373"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3648/2370437373"
+              }
+            ],
+            "uri": "medium/3648/2370437373"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3635644772,
+            "description": "",
+            "text": "82年到底产了多少瓶拉菲？",
+            "comment_id": 4374117759,
+            "digg_count": 8763,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://p1.pstatp.com/thumb/1560/5731262670",
+            "create_time": 1431940003,
+            "is_digg": 0,
+            "user_name": "强悍牛萨",
+            "user_profile_image_url": "http://p1.pstatp.com/thumb/1560/5731262670"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655157,
+        "display_time": 1432655157,
+        "group": {
+          "360p_video": {
+            "width": 270,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/76/6084651664"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/76/6084651664"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/76/6084651664"
+              }
+            ],
+            "uri": "p360/76/6084651664",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/76/6084651664.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/76/6084651664"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/76/6084651664"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/76/6084651664"
+              }
+            ],
+            "uri": "p720/76/6084651664",
+            "height": 640
+          },
+          "digg_count": 2246,
+          "keywords": "",
+          "480p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6084651664"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6084651664"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6084651664"
+              }
+            ],
+            "uri": "p480/76/6084651664",
+            "height": 480
+          },
+          "create_time": 1432623931,
+          "duration": 17,
+          "favorite_count": 106,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3765/3837974222"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3765/3837974222"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3765/3837974222"
+              }
+            ],
+            "uri": "large/3765/3837974222"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/76/6084651664"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/76/6084651664"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/76/6084651664"
+              }
+            ],
+            "uri": "origin/76/6084651664",
+            "height": 640
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4422284680/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 640,
+          "category_type": 1,
+          "share_count": 144,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 117,
+          "status_desc": "已发表",
+          "play_count": 66688,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3671/5447814332",
+            "user_id": 2358456691,
+            "name": "福ooo",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4422284680,
+          "bury_count": 86,
+          "level": 3,
+          "url": "",
+          "repin_count": 106,
+          "uri": "76/6084651664",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3765/3837974222",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3765/3837974222"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3765/3837974222"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3765/3837974222"
+              }
+            ],
+            "uri": "medium/3765/3837974222"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655145,
+        "display_time": 1432655145,
+        "group": {
+          "360p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/77/3684840449"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/77/3684840449"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/77/3684840449"
+              }
+            ],
+            "uri": "p360/77/3684840449",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/77/3684840449.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/77/3684840449"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/77/3684840449"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/77/3684840449"
+              }
+            ],
+            "uri": "p480/77/3684840449",
+            "height": 480
+          },
+          "digg_count": 5884,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/77/3684840449"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/77/3684840449"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/77/3684840449"
+              }
+            ],
+            "uri": "p480/77/3684840449",
+            "height": 480
+          },
+          "create_time": 1432615139,
+          "duration": 58,
+          "favorite_count": 796,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3761/2313267884"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3761/2313267884"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3761/2313267884"
+              }
+            ],
+            "uri": "large/3761/2313267884"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "FBI枪毙坏人",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/77/3684840449"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/77/3684840449"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/77/3684840449"
+              }
+            ],
+            "uri": "origin/77/3684840449",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4420752911/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "FBI枪毙坏人",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 403,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 112,
+          "status_desc": "热门投稿",
+          "play_count": 231492,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://tp1.sinaimg.cn/1908758204/50/5701061995/1",
+            "user_id": 3819489229,
+            "name": "陈翔六点半",
+            "user_verified": true
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4420752911,
+          "bury_count": 268,
+          "level": 4,
+          "url": "",
+          "repin_count": 796,
+          "uri": "77/3684840449",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3761/2313267884",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3761/2313267884"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3761/2313267884"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3761/2313267884"
+              }
+            ],
+            "uri": "medium/3761/2313267884"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3976539878,
+            "description": "今晚打老虎。约吗？",
+            "text": "蘑菇头在面包车里面，偷偷的窃笑。＂我就知道这一集要挨枪子儿，还好，我找了一个替身。‘’",
+            "comment_id": 4422153016,
+            "digg_count": 1716,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://p3.pstatp.com/thumb/3712/1209316093",
+            "create_time": 1432622654,
+            "is_digg": 0,
+            "user_name": "Energy无限",
+            "user_profile_image_url": "http://p3.pstatp.com/thumb/3712/1209316093"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655133,
+        "display_time": 1432655133,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/80/693384530"
+              }
+            ],
+            "uri": "p360/80/693384530",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/80/693384530.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/80/693384530"
+              }
+            ],
+            "uri": "p360/80/693384530",
+            "height": 360
+          },
+          "digg_count": 1047,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/80/693384530"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/80/693384530"
+              }
+            ],
+            "uri": "p360/80/693384530",
+            "height": 360
+          },
+          "create_time": 1432642566,
+          "duration": 31,
+          "favorite_count": 117,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3762/8244526917"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3762/8244526917"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3762/8244526917"
+              }
+            ],
+            "uri": "large/3762/8244526917"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "食人鱼的锋利牙齿",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/80/693384530"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/80/693384530"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/80/693384530"
+              }
+            ],
+            "uri": "origin/80/693384530",
+            "height": 360
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424018993/?iid=2767929313&app=joke_essay",
+          "content": "食人鱼的锋利牙齿",
+          "video_height": 360,
+          "category_type": 1,
+          "share_count": 149,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 93,
+          "status_desc": "已发表",
+          "play_count": 50296,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/2855/286751257",
+            "user_id": 3925334972,
+            "name": "一凡29854982",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424018993,
+          "bury_count": 73,
+          "level": 3,
+          "url": "",
+          "repin_count": 117,
+          "uri": "80/693384530",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3762/8244526917",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3762/8244526917"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3762/8244526917"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3762/8244526917"
+              }
+            ],
+            "uri": "medium/3762/8244526917"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655121,
+        "display_time": 1432655121,
+        "group": {
+          "360p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/53/470733741"
+              }
+            ],
+            "uri": "p360/53/470733741",
+            "height": 320
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/53/470733741.mp4",
+          "720p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/53/470733741"
+              }
+            ],
+            "uri": "p360/53/470733741",
+            "height": 320
+          },
+          "digg_count": 21206,
+          "keywords": "",
+          "480p_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/53/470733741"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/53/470733741"
+              }
+            ],
+            "uri": "p360/53/470733741",
+            "height": 320
+          },
+          "create_time": 1430448660,
+          "duration": 14,
+          "favorite_count": 2659,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/large/3296/2585702466"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3296/2585702466"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3296/2585702466"
+              }
+            ],
+            "uri": "large/3296/2585702466"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "这个不用教学 慢慢练吧",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 320,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/53/470733741"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/53/470733741"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/53/470733741"
+              }
+            ],
+            "uri": "origin/53/470733741",
+            "height": 320
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4288549001/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "这个不用教学 慢慢练吧",
+          "video_height": 320,
+          "category_type": 1,
+          "share_count": 2059,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 710,
+          "status_desc": "热门投稿",
+          "play_count": 1044239,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/490/3057196202",
+            "user_id": 1931183964,
+            "name": "海亮魔术",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 320,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4288549001,
+          "bury_count": 1357,
+          "level": 4,
+          "url": "",
+          "repin_count": 2659,
+          "uri": "53/470733741",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3296/2585702466",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/w202/3296/2585702466"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3296/2585702466"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3296/2585702466"
+              }
+            ],
+            "uri": "medium/3296/2585702466"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3919379975,
+            "description": "这是一个强者的时代",
+            "text": "首先你得有栋这么高的房子，然后你得有个浴池，其次你要买个摄像机，最后还需要一个蹦床，你的没有恐高症，你也得有观众呀",
+            "comment_id": 4289554124,
+            "digg_count": 4732,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://wx.qlogo.cn/mmopen/XYrRG5UShDfV4DUEiaIUKoFic5edRnTEjxexClZedqRIX21x1y7zemGodWf88CX193Pu5jAo14acxjQ38nEVdLhJvKHuHjV1cm/46",
+            "create_time": 1430472618,
+            "is_digg": 0,
+            "user_name": "殇之木痕",
+            "user_profile_image_url": "http://wx.qlogo.cn/mmopen/XYrRG5UShDfV4DUEiaIUKoFic5edRnTEjxexClZedqRIX21x1y7zemGodWf88CX193Pu5jAo14acxjQ38nEVdLhJvKHuHjV1cm/46"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655109,
+        "display_time": 1432655109,
+        "group": {
+          "360p_video": {
+            "width": 360,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/76/6604951575"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/76/6604951575"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/76/6604951575"
+              }
+            ],
+            "uri": "p360/76/6604951575",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/76/6604951575.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6604951575"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6604951575"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6604951575"
+              }
+            ],
+            "uri": "p480/76/6604951575",
+            "height": 480
+          },
+          "digg_count": 197,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/76/6604951575"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/76/6604951575"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/76/6604951575"
+              }
+            ],
+            "uri": "p480/76/6604951575",
+            "height": 480
+          },
+          "create_time": 1432651100,
+          "duration": 58,
+          "favorite_count": 27,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3769/2241389265"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3769/2241389265"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3769/2241389265"
+              }
+            ],
+            "uri": "large/3769/2241389265"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "真心是个人才。",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/76/6604951575"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/76/6604951575"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/76/6604951575"
+              }
+            ],
+            "uri": "origin/76/6604951575",
+            "height": 480
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424636603/?iid=2767929313&app=joke_essay",
+          "content": "真心是个人才。",
+          "video_height": 480,
+          "category_type": 1,
+          "share_count": 31,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 9,
+          "status_desc": "已发表",
+          "play_count": 6398,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3521/7017409362",
+            "user_id": 4127223699,
+            "name": "欲望圣地淘B",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424636603,
+          "bury_count": 31,
+          "level": 3,
+          "url": "",
+          "repin_count": 27,
+          "uri": "76/6604951575",
+          "is_public_url": 1,
+          "cover_image_uri": "3769/2241389265",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3769/2241389265"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3769/2241389265"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3769/2241389265"
+              }
+            ],
+            "uri": "medium/3769/2241389265"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655097,
+        "display_time": 1432655097,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/75/5446154933"
+              }
+            ],
+            "uri": "p360/75/5446154933",
+            "height": 268
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/75/5446154933.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/75/5446154933"
+              }
+            ],
+            "uri": "p360/75/5446154933",
+            "height": 268
+          },
+          "digg_count": 4996,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/75/5446154933"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/75/5446154933"
+              }
+            ],
+            "uri": "p360/75/5446154933",
+            "height": 268
+          },
+          "create_time": 1432535239,
+          "duration": 34,
+          "favorite_count": 674,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3751/571624003"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3751/571624003"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3751/571624003"
+              }
+            ],
+            "uri": "large/3751/571624003"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "年轻肯定是个狠角色。",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/75/5446154933"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/75/5446154933"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/75/5446154933"
+              }
+            ],
+            "uri": "origin/75/5446154933",
+            "height": 268
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4408705366/?iid=2767929313&app=joke_essay",
+          "content": "年轻肯定是个狠角色。",
+          "video_height": 268,
+          "category_type": 1,
+          "share_count": 602,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 207,
+          "status_desc": "已发表",
+          "play_count": 155440,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3674/233423589",
+            "user_id": 4098919195,
+            "name": "爱我你会火33310317",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4408705366,
+          "bury_count": 165,
+          "level": 3,
+          "url": "",
+          "repin_count": 674,
+          "uri": "75/5446154933",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3751/571624003",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3751/571624003"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3751/571624003"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3751/571624003"
+              }
+            ],
+            "uri": "medium/3751/571624003"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655073,
+        "display_time": 1432655073,
+        "group": {
+          "360p_video": {
+            "width": 300,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/80/821373032"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/80/821373032"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/80/821373032"
+              }
+            ],
+            "uri": "p360/80/821373032",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/80/821373032.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/80/821373032"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/80/821373032"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/80/821373032"
+              }
+            ],
+            "uri": "p720/80/821373032",
+            "height": 576
+          },
+          "digg_count": 1021,
+          "keywords": "",
+          "480p_video": {
+            "width": 400,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/80/821373032"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/80/821373032"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/80/821373032"
+              }
+            ],
+            "uri": "p480/80/821373032",
+            "height": 480
+          },
+          "create_time": 1432646287,
+          "duration": 52,
+          "favorite_count": 38,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3770/1197605906"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3770/1197605906"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3770/1197605906"
+              }
+            ],
+            "uri": "large/3770/1197605906"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/80/821373032"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/80/821373032"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/80/821373032"
+              }
+            ],
+            "uri": "origin/80/821373032",
+            "height": 576
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424217400/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 576,
+          "category_type": 1,
+          "share_count": 64,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 39,
+          "status_desc": "已发表",
+          "play_count": 16119,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3671/5447814332",
+            "user_id": 2358456691,
+            "name": "福ooo",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424217400,
+          "bury_count": 96,
+          "level": 3,
+          "url": "",
+          "repin_count": 38,
+          "uri": "80/821373032",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3770/1197605906",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3770/1197605906"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3770/1197605906"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3770/1197605906"
+              }
+            ],
+            "uri": "medium/3770/1197605906"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655061,
+        "display_time": 1432655061,
+        "group": {
+          "360p_video": {
+            "width": 244,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/79/3189640712"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/79/3189640712"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/79/3189640712"
+              }
+            ],
+            "uri": "p360/79/3189640712",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p480/79/3189640712.mp4",
+          "720p_video": {
+            "width": 432,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p720/79/3189640712"
+              },
+              {
+                "url": "http://v2.pstatp.com/p720/79/3189640712"
+              },
+              {
+                "url": "http://v.pstatp.com/p720/79/3189640712"
+              }
+            ],
+            "uri": "p720/79/3189640712",
+            "height": 640
+          },
+          "digg_count": 2062,
+          "keywords": "",
+          "480p_video": {
+            "width": 324,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p480/79/3189640712"
+              },
+              {
+                "url": "http://v2.pstatp.com/p480/79/3189640712"
+              },
+              {
+                "url": "http://v.pstatp.com/p480/79/3189640712"
+              }
+            ],
+            "uri": "p480/79/3189640712",
+            "height": 480
+          },
+          "create_time": 1432578122,
+          "duration": 16,
+          "favorite_count": 34,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3749/8083581005"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3749/8083581005"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3749/8083581005"
+              }
+            ],
+            "uri": "large/3749/8083581005"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 432,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/79/3189640712"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/79/3189640712"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/79/3189640712"
+              }
+            ],
+            "uri": "origin/79/3189640712",
+            "height": 640
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4416552461/?iid=2767929313&app=joke_essay",
+          "content": "",
+          "video_height": 640,
+          "category_type": 1,
+          "share_count": 44,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 30,
+          "status_desc": "已发表",
+          "play_count": 23810,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3671/5447814332",
+            "user_id": 2358456691,
+            "name": "福ooo",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 432,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4416552461,
+          "bury_count": 104,
+          "level": 3,
+          "url": "",
+          "repin_count": 34,
+          "uri": "79/3189640712",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3749/8083581005",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3749/8083581005"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3749/8083581005"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3749/8083581005"
+              }
+            ],
+            "uri": "medium/3749/8083581005"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655049,
+        "display_time": 1432655049,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/79/1822728127"
+              }
+            ],
+            "uri": "p360/79/1822728127",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/79/1822728127.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/79/1822728127"
+              }
+            ],
+            "uri": "p360/79/1822728127",
+            "height": 360
+          },
+          "digg_count": 17659,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/79/1822728127"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/79/1822728127"
+              }
+            ],
+            "uri": "p360/79/1822728127",
+            "height": 360
+          },
+          "create_time": 1432510706,
+          "duration": 67,
+          "favorite_count": 1541,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3740/5504445484"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3740/5504445484"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3740/5504445484"
+              }
+            ],
+            "uri": "large/3740/5504445484"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "流浪汉的感动！今天不是搞笑视频，希望大家多转让爱传递下去。",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/79/1822728127"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/79/1822728127"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/79/1822728127"
+              }
+            ],
+            "uri": "origin/79/1822728127",
+            "height": 360
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4406577500/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "流浪汉的感动！今天不是搞笑视频，希望大家多转让爱传递下去。",
+          "video_height": 360,
+          "category_type": 1,
+          "share_count": 1432,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 552,
+          "status_desc": "热门投稿",
+          "play_count": 296262,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3758/5646819826",
+            "user_id": 3845920469,
+            "name": "V五-自拍搞笑",
+            "user_verified": true
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4406577500,
+          "bury_count": 757,
+          "level": 4,
+          "url": "",
+          "repin_count": 1541,
+          "uri": "79/1822728127",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3740/5504445484",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3740/5504445484"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3740/5504445484"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3740/5504445484"
+              }
+            ],
+            "uri": "medium/3740/5504445484"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655037,
+        "display_time": 1432655037,
+        "group": {
+          "360p_video": {
+            "width": 384,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/73/5932734822"
+              }
+            ],
+            "uri": "p360/73/5932734822",
+            "height": 208
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/73/5932734822.mp4",
+          "720p_video": {
+            "width": 384,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/73/5932734822"
+              }
+            ],
+            "uri": "p360/73/5932734822",
+            "height": 208
+          },
+          "digg_count": 4836,
+          "keywords": "",
+          "480p_video": {
+            "width": 384,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/73/5932734822"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/73/5932734822"
+              }
+            ],
+            "uri": "p360/73/5932734822",
+            "height": 208
+          },
+          "create_time": 1432544566,
+          "duration": 89,
+          "favorite_count": 406,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3749/2497964763"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3749/2497964763"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3749/2497964763"
+              }
+            ],
+            "uri": "large/3749/2497964763"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "在外创业挣钱的兄弟姐妹们，别忘了回家看看妈妈。",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 384,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/73/5932734822"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/73/5932734822"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/73/5932734822"
+              }
+            ],
+            "uri": "origin/73/5932734822",
+            "height": 208
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4409649926/?iid=2767929313&app=joke_essay",
+          "content": "在外创业挣钱的兄弟姐妹们，别忘了回家看看妈妈。",
+          "video_height": 208,
+          "category_type": 1,
+          "share_count": 268,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 95,
+          "status_desc": "已发表",
+          "play_count": 94177,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/3575/5680389748",
+            "user_id": 3998637849,
+            "name": "ca刘大哥",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 384,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4409649926,
+          "bury_count": 139,
+          "level": 3,
+          "url": "",
+          "repin_count": 406,
+          "uri": "73/5932734822",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3749/2497964763",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3749/2497964763"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3749/2497964763"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3749/2497964763"
+              }
+            ],
+            "uri": "medium/3749/2497964763"
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432655025,
+        "display_time": 1432655025,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/52/5555540270"
+              }
+            ],
+            "uri": "p360/52/5555540270",
+            "height": 360
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/52/5555540270.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/52/5555540270"
+              }
+            ],
+            "uri": "p360/52/5555540270",
+            "height": 360
+          },
+          "digg_count": 20938,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/52/5555540270"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/52/5555540270"
+              }
+            ],
+            "uri": "p360/52/5555540270",
+            "height": 360
+          },
+          "create_time": 1431079742,
+          "duration": 60,
+          "favorite_count": 2046,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/large/3509/8114177782"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3509/8114177782"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3509/8114177782"
+              }
+            ],
+            "uri": "large/3509/8114177782"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "被害现场",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/52/5555540270"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/52/5555540270"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/52/5555540270"
+              }
+            ],
+            "uri": "origin/52/5555540270",
+            "height": 360
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4320104820/?iid=2767929313&app=joke_essay",
+          "label": 1,
+          "content": "被害现场",
+          "video_height": 360,
+          "category_type": 1,
+          "share_count": 1287,
+          "status": 1,
+          "has_comments": 1,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 278,
+          "status_desc": "热门投稿",
+          "play_count": 992143,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://tp1.sinaimg.cn/1908758204/50/5701061995/1",
+            "user_id": 3819489229,
+            "name": "陈翔六点半",
+            "user_verified": true
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4320104820,
+          "bury_count": 1367,
+          "level": 4,
+          "url": "",
+          "repin_count": 2046,
+          "uri": "52/5555540270",
+          "is_public_url": 1,
+          "has_hot_comments": 1,
+          "cover_image_uri": "3509/8114177782",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p1.pstatp.com/w202/3509/8114177782"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3509/8114177782"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3509/8114177782"
+              }
+            ],
+            "uri": "medium/3509/8114177782"
+          }
+        },
+        "comments": [
+          {
+            "user_id": 3632694344,
+            "description": "快乐也是一天，不快乐也是一天，即使不快乐也要快乐的过不快乐的一天",
+            "text": "那么大一坨掉下去仿佛扔了块砖",
+            "comment_id": 4320720670,
+            "digg_count": 4928,
+            "user_verified": false,
+            "platform_id": "feifei",
+            "avatar_url": "http://p2.pstatp.com/thumb/3485/3306213905",
+            "create_time": 1431088126,
+            "is_digg": 0,
+            "user_name": "土豪中的土豪",
+            "user_profile_image_url": "http://p2.pstatp.com/thumb/3485/3306213905"
+          }
+        ],
+        "type": 1
+      },
+      {
+        "online_time": 1432655013,
+        "display_time": 1432655013,
+        "group": {
+          "360p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/78/4321233379"
+              }
+            ],
+            "uri": "p360/78/4321233379",
+            "height": 272
+          },
+          "mp4_url": "http://v1.pstatp.com/p360/78/4321233379.mp4",
+          "720p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/78/4321233379"
+              }
+            ],
+            "uri": "p360/78/4321233379",
+            "height": 272
+          },
+          "digg_count": 202,
+          "keywords": "",
+          "480p_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v2.pstatp.com/p360/78/4321233379"
+              },
+              {
+                "url": "http://v.pstatp.com/p360/78/4321233379"
+              }
+            ],
+            "uri": "p360/78/4321233379",
+            "height": 272
+          },
+          "create_time": 1432650203,
+          "duration": 17,
+          "favorite_count": 31,
+          "user_bury": 0,
+          "m3u8_url": "",
+          "large_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3766/4222869377"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3766/4222869377"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3766/4222869377"
+              }
+            ],
+            "uri": "large/3766/4222869377"
+          },
+          "user_favorite": 0,
+          "share_type": 1,
+          "title": "大家看看这是什么原理！",
+          "is_can_share": 1,
+          "origin_video": {
+            "width": 480,
+            "url_list": [
+              {
+                "url": "http://v1.pstatp.com/origin/78/4321233379"
+              },
+              {
+                "url": "http://v2.pstatp.com/origin/78/4321233379"
+              },
+              {
+                "url": "http://v.pstatp.com/origin/78/4321233379"
+              }
+            ],
+            "uri": "origin/78/4321233379",
+            "height": 272
+          },
+          "share_url": "http://m.neihanshequ.com/share/group/4424546115/?iid=2767929313&app=joke_essay",
+          "content": "大家看看这是什么原理！",
+          "video_height": 272,
+          "category_type": 1,
+          "share_count": 14,
+          "status": 1,
+          "has_comments": 0,
+          "publish_time": "",
+          "go_detail_count": 0,
+          "comment_count": 9,
+          "status_desc": "已发表",
+          "play_count": 10655,
+          "user_repin": 0,
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/398/6869667585",
+            "user_id": 1804649646,
+            "name": "孩她爸爸",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "video_width": 480,
+          "category_name": "搞笑视频",
+          "flash_url": "",
+          "group_id": 4424546115,
+          "bury_count": 31,
+          "level": 3,
+          "url": "",
+          "repin_count": 31,
+          "uri": "78/4321233379",
+          "is_public_url": 1,
+          "cover_image_uri": "3766/4222869377",
+          "cover_image_url": "",
+          "category_id": 65,
+          "is_video": 1,
+          "medium_cover": {
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3766/4222869377"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3766/4222869377"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3766/4222869377"
+              }
+            ],
+            "uri": "medium/3766/4222869377"
+          }
+        },
+        "comments": [],
+        "type": 1
+      }
+    ]
+  }
+}

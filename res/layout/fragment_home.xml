@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+    <!--标题区-->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#DCD9CF"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="5dp"
+            >
+
+        <ImageView
+                android:id="@+id/myico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_neihan_logo"
+
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_publish"
+                />
+
+    </RelativeLayout>
+
+    <!--分类部分-->
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+            >
+
+        <!--首页下面分类的指示器方块-->
+        <View
+                android:id="@+id/home_category_indicator"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+        <LinearLayout
+                android:id="@+id/home_category_titles"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                >
+
+            <TextView
+                    android:id="@+id/home_category_recommend"
+                    android:text="推荐"
+                    style="@style/main_home_category_text_style"
+                    />
+
+            <TextView
+                    android:id="@+id/home_category_video"
+                    android:text="视频"
+                    style="@style/main_home_category_text_style"
+                    />
+
+            <TextView
+                    android:id="@+id/home_category_image"
+                    android:text="图片"
+                    style="@style/main_home_category_text_style"
+                    />
+
+            <TextView
+                    android:id="@+id/home_category_text"
+                    android:text="段子"
+                    style="@style/main_home_category_text_style"
+                    />
+
+            <TextView
+                    android:id="@+id/home_category_group"
+                    android:text="段友圈"
+                    style="@style/main_home_category_text_style"
+                    />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <!--viewpager-->
+        <android.support.v4.view.ViewPager
+                android:id="@+id/home_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        <ImageView
+                android:id="@+id/home_refresh_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/ic_refresh_normal"
+                android:background="@drawable/circleshape"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

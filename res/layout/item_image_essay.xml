@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#EEEEEE"
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <ImageView
+                    android:id="@+id/item_essay_user_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    />
+            <TextView
+                    android:id="@+id/item_essay_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="用户名"
+                    android:gravity="center_vertical"
+                    />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/item_essay_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                />
+            <ImageView
+                    android:id="@+id/item_essay_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    >
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <ImageView
+                                    android:id="@+id/ite_essay_dig"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_digg_normal"
+                                    android:clickable="true"
+                                    android:layout_centerInParent="true"
+                                    />
+                            <TextView
+                                    android:id="@+id/tv_one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+1"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone"
+                                    android:gravity="center"
+                                    android:textSize="18dip"
+                                    android:textColor="#FF6434"
+                                    />
+
+                    </RelativeLayout>
+                    <TextView
+                            android:id="@+id/item_essay_favority_count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="赞数"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#999999"
+                            android:clickable="true"
+                            />
+                    <View
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:background="#EEEEEE"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_pop_bury_normal"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            />
+
+                    <TextView
+                            android:id="@+id/item_essay_bury_count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="踩数"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#999999"
+                            android:clickable="true"
+
+                            />
+
+                    <View
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:background="#EEEEEE"
+                            android:layout_gravity="center_vertical"
+                            />
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/hot_commenticon_textpage"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+
+                            />
+
+                    <TextView
+                            android:id="@+id/item_essay_comment_count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="评论"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#999999"
+                            android:clickable="true"
+
+                            />
+
+                    <View
+                            android:layout_width="1dp"
+                            android:layout_height="20dp"
+                            android:background="#EEEEEE"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:src="@drawable/ic_more_action_normal"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+
+                            />
+
+
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

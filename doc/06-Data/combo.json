@@ -1,0 +1,694 @@
+{
+  "message": "success",
+  "data": {
+    "has_more": true,
+    "min_time": 1432639787,
+    "tip": "10条新内容",
+    "data": [
+      {
+        "online_time": 1432639787,
+        "display_time": 1432639787,
+        "group": {
+          "create_time": 1430609728,
+          "favorite_count": 3008,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 77,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 22,
+          "share_url": "http://m.neihanshequ.com/share/group/4294513123/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "现在突然什么都不想在乎了、不想把任何事任何人都看的那么重要了，因为往往你越在乎的人或事往往伤你最深。你只不过是在充当一个傻子呗了。把自己的心放在自己身上，对自己好点，因为只有自己永远属于自己。",
+          "category_type": 1,
+          "share_count": 117,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 800,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3355/5251629447"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3355/5251629447"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3355/5251629447"
+              }
+            ],
+            "uri": "large/3355/5251629447",
+            "height": 1067
+          },
+          "go_detail_count": 112,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/2262/2412994934",
+            "user_id": 3567847700,
+            "name": "呆呆蕾",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4294513123,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 3008,
+          "digg_count": 1112,
+          "has_hot_comments": 1,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3355/5251629447"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3355/5251629447"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3355/5251629447"
+              }
+            ],
+            "uri": "w202/3355/5251629447",
+            "height": 269
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432639568,
+        "display_time": 1432639568,
+        "group": {
+          "create_time": 1430375893,
+          "favorite_count": 2609,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 67,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 20,
+          "share_url": "http://m.neihanshequ.com/share/group/4285537247/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "酒，不喝不醉。人，不累不睡。心，不伤不碎。情，不学不会。万人追，不如一人疼。万人宠，不如一人懂。感情的事没有谁错谁对，只有谁不理解谁。人与人之间没有谁离不开谁，只有谁会不会珍惜谁。",
+          "category_type": 1,
+          "share_count": 110,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 800,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3273/896853690"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3273/896853690"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3273/896853690"
+              }
+            ],
+            "uri": "large/3273/896853690",
+            "height": 1067
+          },
+          "go_detail_count": 137,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://tp3.sinaimg.cn/2255605674/50/39996339015/1",
+            "user_id": 1179567017,
+            "name": "永不言败spirit",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4285537247,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 2609,
+          "digg_count": 924,
+          "has_hot_comments": 1,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3273/896853690"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3273/896853690"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3273/896853690"
+              }
+            ],
+            "uri": "w202/3273/896853690",
+            "height": 269
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432639349,
+        "display_time": 1432639349,
+        "group": {
+          "create_time": 1424330549,
+          "favorite_count": 2052,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 88,
+          "is_can_share": 1,
+          "comment_count": 19,
+          "share_url": "http://m.neihanshequ.com/share/group/3974637133/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "提醒你穿衣的人，让你吃胖的人，给你端开水的人，给你做饭的的人，你哭时在摸着你的头的人，做你闹钟的人，你埋怨他都对你笑的人，你累时给你鼓励的人，老是一直看你的人，喝醉时愿意照顾你的人，发信息秒回的人，盼着你平安回来的人，晚上等你到凌晨的人，都是你应该去珍惜的人。",
+          "category_type": 1,
+          "share_count": 61,
+          "status": 3,
+          "has_comments": 0,
+          "go_detail_count": 34,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/2011/4779212700",
+            "user_id": 3870174244,
+            "name": "佩28816896",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 3974637133,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 2052,
+          "digg_count": 1168,
+          "user_repin": 0,
+          "category_id": 3
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432639130,
+        "display_time": 1432639130,
+        "group": {
+          "create_time": 1432359892,
+          "favorite_count": 304,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 59,
+          "is_can_share": 1,
+          "comment_count": 8,
+          "share_url": "http://m.neihanshequ.com/share/group/4399521267/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "一段情，一定是有一方在做主導作用，愛的深的那方，一定是主體，一旦對方不跟從，那麼就沒有再繼續下去的勇氣了，但是主動多了，就會心涼，為什麼總是我在主動，要知道愛情是自私的，有時候也要對方來哄哄自己",
+          "category_type": 1,
+          "share_count": 15,
+          "status": 3,
+          "has_comments": 0,
+          "go_detail_count": 15,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/1893/1177052233",
+            "user_id": 1800750651,
+            "name": "游荡在城市的精靈",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4399521267,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 304,
+          "digg_count": 217,
+          "user_repin": 0,
+          "category_id": 3
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432638911,
+        "display_time": 1432638911,
+        "group": {
+          "create_time": 1432637181,
+          "favorite_count": 0,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 1,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 0,
+          "share_url": "http://m.neihanshequ.com/share/group/4423653517/?iid=2337593504&app=joke_essay",
+          "content": "人有时候总会为了一件不是自己错误的错误而固执，其实并不是他/她傻，而是这样可以铭记不愿意忘记的过去。",
+          "category_type": 1,
+          "share_count": 0,
+          "min_screen_width_percent": 0.167,
+          "status": 2,
+          "has_comments": 0,
+          "large_image": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3761/6956973209"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3761/6956973209"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3761/6956973209"
+              }
+            ],
+            "uri": "large/3761/6956973209",
+            "height": 640
+          },
+          "go_detail_count": 0,
+          "status_desc": "已发表",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p3.pstatp.com/thumb/3761/6965995185",
+            "user_id": 4423634002,
+            "name": "一叶孤舟夜伴钟",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4423653517,
+          "share_type": 1,
+          "level": 3,
+          "repin_count": 0,
+          "digg_count": 76,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3761/6956973209"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3761/6956973209"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3761/6956973209"
+              }
+            ],
+            "uri": "w202/3761/6956973209",
+            "height": 202
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432638692,
+        "display_time": 1432638692,
+        "group": {
+          "create_time": 1430531868,
+          "favorite_count": 2523,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 70,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 25,
+          "share_url": "http://m.neihanshequ.com/share/group/4291751352/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "目前的状态是 看不清未来 又回不到过去",
+          "category_type": 1,
+          "share_count": 74,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 539,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3320/8560901914"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3320/8560901914"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3320/8560901914"
+              }
+            ],
+            "uri": "large/3320/8560901914",
+            "height": 958
+          },
+          "go_detail_count": 84,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3698/552589654",
+            "user_id": 2752426576,
+            "name": "QQweiwei",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4291751352,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 2523,
+          "digg_count": 981,
+          "has_hot_comments": 1,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3320/8560901914"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3320/8560901914"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3320/8560901914"
+              }
+            ],
+            "uri": "w202/3320/8560901914",
+            "height": 359
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432638473,
+        "display_time": 1432638473,
+        "group": {
+          "create_time": 1424051012,
+          "favorite_count": 1533,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 61,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 6,
+          "share_url": "http://m.neihanshequ.com/share/group/3964376860/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "不要亏待每一份热情，不要讨好任何的冷漠。",
+          "category_type": 1,
+          "share_count": 21,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/2209/4174432012"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/2209/4174432012"
+              },
+              {
+                "url": "http://p.pstatp.com/large/2209/4174432012"
+              }
+            ],
+            "uri": "large/2209/4174432012",
+            "height": 622
+          },
+          "go_detail_count": 19,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p1.pstatp.com/thumb/2520/5375654935",
+            "user_id": 2926255204,
+            "name": "暖話",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 3964376860,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 1533,
+          "digg_count": 653,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/2209/4174432012"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/2209/4174432012"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/2209/4174432012"
+              }
+            ],
+            "uri": "w202/2209/4174432012",
+            "height": 196
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432638254,
+        "display_time": 1432638254,
+        "group": {
+          "create_time": 1430134029,
+          "favorite_count": 2609,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 77,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 40,
+          "share_url": "http://m.neihanshequ.com/share/group/4274192240/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "想念，不代表要联系，这是我留给自己最后的尊严",
+          "category_type": 1,
+          "share_count": 67,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/large/3190/8349609069"
+              },
+              {
+                "url": "http://p6.pstatp.com/large/3190/8349609069"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3190/8349609069"
+              }
+            ],
+            "uri": "large/3190/8349609069",
+            "height": 966
+          },
+          "go_detail_count": 92,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/3732/5938319399",
+            "user_id": 1264285814,
+            "name": "我的白开水",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4274192240,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 2609,
+          "digg_count": 1111,
+          "has_hot_comments": 1,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p3.pstatp.com/w202/3190/8349609069"
+              },
+              {
+                "url": "http://p6.pstatp.com/w202/3190/8349609069"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3190/8349609069"
+              }
+            ],
+            "uri": "w202/3190/8349609069",
+            "height": 304
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432638035,
+        "display_time": 1432638035,
+        "group": {
+          "create_time": 1430262404,
+          "favorite_count": 3142,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 86,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 14,
+          "share_url": "http://m.neihanshequ.com/share/group/4279949648/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "丈夫是左手！妻子是右手！左手摸右手总是没感觉！ 当有一天！左手流血了！右手一定去帮着止血！当有一天，左手痒痒了！右手一定去给挠挠！当有一天，左手提东西累了！右手一定会去帮你负担！所以！不用去嫌弃你的右手！更不能嫌弃你的左手！因为左手拍右手！才能鼓出精彩的人生！-执子之手，与子偕老，相濡以沫，平平淡淡才是真。",
+          "category_type": 1,
+          "share_count": 178,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 640,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/3233/4120531519"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/3233/4120531519"
+              },
+              {
+                "url": "http://p.pstatp.com/large/3233/4120531519"
+              }
+            ],
+            "uri": "large/3233/4120531519",
+            "height": 1136
+          },
+          "go_detail_count": 141,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p1.pstatp.com/thumb/3743/628119682",
+            "user_id": 3271140872,
+            "name": "暮子然",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 4279949648,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 3142,
+          "digg_count": 1200,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/3233/4120531519"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/3233/4120531519"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/3233/4120531519"
+              }
+            ],
+            "uri": "w202/3233/4120531519",
+            "height": 358
+          }
+        },
+        "comments": [],
+        "type": 1
+      },
+      {
+        "online_time": 1432637816,
+        "display_time": 1432637816,
+        "group": {
+          "create_time": 1424151656,
+          "favorite_count": 1178,
+          "user_bury": 0,
+          "user_favorite": 0,
+          "bury_count": 54,
+          "max_screen_width_percent": 0.6,
+          "is_can_share": 1,
+          "comment_count": 16,
+          "share_url": "http://m.neihanshequ.com/share/group/3969122362/?iid=2337593504&app=joke_essay",
+          "label": 1,
+          "content": "如果你飞不起来，那就跑； 如果你跑不起来，那就走； 如果你走不起来，那就爬； 但是无论你做什么，你必须要前进！比你优秀的人还在努力，你有什么资格原地不动？",
+          "category_type": 1,
+          "share_count": 27,
+          "min_screen_width_percent": 0.167,
+          "status": 3,
+          "has_comments": 0,
+          "large_image": {
+            "width": 800,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/large/2218/5190629328"
+              },
+              {
+                "url": "http://p5.pstatp.com/large/2218/5190629328"
+              },
+              {
+                "url": "http://p.pstatp.com/large/2218/5190629328"
+              }
+            ],
+            "uri": "large/2218/5190629328",
+            "height": 1067
+          },
+          "go_detail_count": 14,
+          "status_desc": "热门投稿",
+          "user": {
+            "is_following": false,
+            "avatar_url": "http://p2.pstatp.com/thumb/1788/7173080112",
+            "user_id": 3771171235,
+            "name": "鱼美美",
+            "user_verified": false
+          },
+          "user_digg": 0,
+          "category_name": "早晚必读的话",
+          "group_id": 3969122362,
+          "share_type": 1,
+          "level": 4,
+          "repin_count": 1178,
+          "digg_count": 599,
+          "image_status": 1,
+          "user_repin": 0,
+          "category_id": 3,
+          "middle_image": {
+            "width": 202,
+            "url_list": [
+              {
+                "url": "http://p2.pstatp.com/w202/2218/5190629328"
+              },
+              {
+                "url": "http://p5.pstatp.com/w202/2218/5190629328"
+              },
+              {
+                "url": "http://p.pstatp.com/w202/2218/5190629328"
+              }
+            ],
+            "uri": "w202/2218/5190629328",
+            "height": 269
+          }
+        },
+        "comments": [],
+        "type": 1
+      }
+    ],
+    "max_time": 1432637816
+  }
+}

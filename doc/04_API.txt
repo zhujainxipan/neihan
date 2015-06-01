@@ -1,0 +1,836 @@
+//////// 第一次软件启动  第一个接口
+
+
+1.
+
+请求网址参数：
+
+app=1
+default=1
+ac=wifi                  网络连接类型，手机卡为3g，也可以有 wifi
+channel=wandoujia        渠道信息
+aid=7                    固定
+app_name=joke_essay      固定
+version_code=302         固定，apk版本号
+device_platform=android  固定
+device_type=KFTT         对应的是 Build.MODEL
+os_api=15                Android手机对应的API Level
+os_version=4.0.3            Android手机系统版本号
+openudid=b90ca6a3a19a78d6   android_id 属性，可以通过特定方法获取到
+uuid=358239058749419        IMEI  有SIM（手机电话卡）时，通过 TelephonyManager 来获取的
+
+
+
+
+
+GET http://ib.snssdk.com/service/settings/v2/?app=1&default=1&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ib.snssdk.com
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:08 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 20
+
+{"message": "error"}
+
+////////////////////////////
+
+2. 非常重要
+
+本接口返回的数据包含 install_id , 以及 device_id  ，这两个id在其他的网址请求中
+
+作为参数 iid 和 device_id   重要，重要
+
+
+提交数据：(这个JSON数据，提交时，必须经过gzip的压缩)
+
+openudid 这个就是统一个 android_id
+
+clientudid 随机的UUID，可以通过 UUID类获取到，建议生成后保存起来。
+
+os_api  Android  API Level
+
+package com.ss.android.essay.joke  这个是固定的
+
+"appkey":"4f58859c527015425e000070",  固定的
+app_version 应用程序版本号，现在可以使用 3.0.2
+"sdk_version":1,  固定的
+aid:7   固定的
+"resolution":"1280x800",   分辨率
+access:wifi    网络连接类型，就和网址上面的  ac参数一样
+
+"os_version":"4.0.3",   操作系统版本号
+"version_code":302,       当前软件整形的版本号
+"device_model":"KFTT",     手机型号
+"display_name":"内涵段子",   固定的内容，当前软件的名字
+"timezone":8,                    时区
+"mc":"e0:cb:1d:c8:b7:81",        网卡 MAC 地址
+"push_sdk":[ 2 ],                  不明白，注意这是一个数组
+"display_density":"hdpi",                          当前手机屏幕密度
+"sig_hash":"aea615ab910015038f73c47e45d21466",   固定，针对 3.0.2版本的内涵段子
+"language":"zh",                                当前手机语言
+"channel":"wandoujia"                  推广渠道，豌豆荚
+
+// 可以会有的数据
+
+carrier:中文 或者是 Android 或者是 运营商代码             运营商的名称
+
+
+
+{
+	"header":
+	{
+		"openudid":"b90ca6a3a19a78d6",
+		"os":"Android",
+		"clientudid":"8ca2d4e6-6e3b-478c-84e0-909a8b95741b",
+		"os_api":15,
+		"package":"com.ss.android.essay.joke",
+		"appkey":"4f58859c527015425e000070",
+		"app_version":"3.0.2",
+		"sdk_version":1,
+		"aid":7,
+		"resolution":"1280x800",
+		"access":"wifi",
+		"os_version":"4.0.3",
+		"version_code":302,
+		"device_model":"KFTT",
+		"display_name":"内涵段子",
+		"timezone":8,
+		"mc":"e0:cb:1d:c8:b7:81",
+		"push_sdk":[2],
+		"display_density":"hdpi",
+		"sig_hash":"aea615ab910015038f73c47e45d21466",
+		"language":"zh",
+		"channel":"wandoujia"
+	},
+	"magic_tag":"ss_app_log"
+}
+
+服务器响应的数据
+
+{
+    "config": {
+        "session_interval": 30,
+        "fingerprint_codes": [1, 2, 3, 4],
+
+        "allow_push_service": 0,
+        "image_error_report": {
+            "p0.pstatp.com": {
+                "net_report_count": 10,
+                "srv_error_interval": 10,
+                "srv_report_count": 3,
+                "net_error_interval": 10,
+
+                "net_silent_period": 60,
+                "srv_silent_period": 300
+            },
+            "p.pstatp.com": {
+                "net_report_count": 5,
+                "srv_error_interval": 10,
+                "srv_report_count": 3,
+                "net_error_interval": 30,
+
+                "net_silent_period": 60,
+                "srv_silent_period": 300
+            },
+            "p2.pstatp.com": {
+                "net_report_count": 10,
+                "srv_error_interval": 10,
+                "srv_report_count": 3,
+
+                "net_error_interval": 10,
+                "net_silent_period": 60,
+                "srv_silent_period": 300
+            },
+
+            "p1.pstatp.com": {
+                "net_report_count": 10,
+                "srv_error_interval": 10,
+                "srv_report_count": 3,
+                "net_error_interval": 10,
+                "net_silent_period": 60,
+                "srv_silent_period": 300
+            }
+        },
+
+        "batch_event_interval": 60,
+        "allow_push_list": [],
+        "send_policy": "start",
+
+        "image_error_codes": [2, 3, 4, 6, 8, 12, 13, 14, 15],
+        "allow_keep_alive": true,
+
+        "hp_stat_sampling_ratio": {
+            "default": 0.01,
+            "/data/get_item_summary/": 4e-05
+        },
+
+        "image_sampling_ratio": {
+            "p0.pstatp.com": 0.01,
+            "p.pstatp.com": 0.01,
+            "p2.pstatp.com": 0.01,
+            "p1.pstatp.com": 0.01
+        }
+    },
+    "device_id": 2757969807,          //这个字段，在后续的所有请求里，都用到了
+    "server_time": 1411884431,
+
+    "magic_tag": "ss_app_log",
+    "install_id": 2337593504          //这个字段，在后续的所有请求里，都用到了
+}
+
+
+
+
+POST http://log.snssdk.com/service/2/app_log_config/ HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Accept-Encoding: gzip
+Content-Length: 560
+Host: log.snssdk.com
+Connection: Keep-Alive
+{
+    "header": {
+        "openudid": "b90ca6a3a19a78d6",
+        "os": "Android",
+        "clientudid": "8ca2d4e6-6e3b-478c-84e0-909a8b95741b",
+        "os_api": 15,
+        "package": "com.ss.android.essay.joke",
+        "appkey": "4f58859c527015425e000070",
+        "app_version": "3.0.2",
+        "sdk_version": 1,
+        "aid": 7,
+        "resolution": "1280x800",
+        "access": "wifi",
+        "os_version": "4.0.3",
+        "version_code": 302,
+        "device_model": "KFTT",
+        "display_name": "内涵段子",
+        "timezone": 8,
+        "mc": "e0: cb:1d:c8:b7:81",
+        "push_sdk": [2],
+        "display_density": "hdpi",
+        "sig_hash": "aea615ab910015038f73c47e45d21466",
+        "language": "zh",
+        "channel": "wandoujia"
+    },
+    "magic_tag": "ss_app_log"
+}
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:11 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+X-SS-Set-Cookie: install_id=2337593504; Domain=.snssdk.com; expires=Fri, 27-Sep-2019 06:07:11 GMT; Max-Age=157680000; Path=/
+Set-Cookie: install_id=2337593504; Domain=.snssdk.com; expires=Fri, 27-Sep-2019 06:07:11 GMT; Max-Age=157680000; Path=/
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 1250
+
+{"config": {"session_interval": 30, "fingerprint_codes": [1, 2, 3, 4], "allow_push_service": 0, "image_error_report": {"p0.pstatp.com": {"net_report_count": 10, "srv_error_interval": 10, "srv_report_count": 3, "net_error_interval": 10, "net_silent_period": 60, "srv_silent_period": 300}, "p.pstatp.com": {"net_report_count": 5, "srv_error_interval": 10, "srv_report_count": 3, "net_error_interval": 30, "net_silent_period": 60, "srv_silent_period": 300}, "p2.pstatp.com": {"net_report_count": 10, "srv_error_interval": 10, "srv_report_count": 3, "net_error_interval": 10, "net_silent_period": 60, "srv_silent_period": 300}, "p1.pstatp.com": {"net_report_count": 10, "srv_error_interval": 10, "srv_report_count": 3, "net_error_interval": 10, "net_silent_period": 60, "srv_silent_period": 300}}, "batch_event_interval": 60, "allow_push_list": [], "send_policy": "start", "image_error_codes": [2, 3, 4, 6, 8, 12, 13, 14, 15], "allow_keep_alive": true, "hp_stat_sampling_ratio": {"default": 0.01, "/data/get_item_summary/": 4e-05}, "image_sampling_ratio": {"p0.pstatp.com": 0.01, "p.pstatp.com": 0.01, "p2.pstatp.com": 0.01, "p1.pstatp.com": 0.01}}, "device_id": 2757969807, "server_time": 1411884431, "magic_tag": "ss_app_log", "install_id": 2337593504}
+
+///////////////////////////
+
+
+3.  非常重要 获取文本段子的服务器地址，所有请求文本列表的API调用都要用这个服务器
+
+请求地址参数：
+
+以下是所有GET请求的公共参数，需要使用统一的代码来设置
+
+ac=wifi
+channel=wandoujia
+aid=7
+app_name=joke_essay
+version_code=302
+device_platform=android
+device_type=KFTT
+os_api=15
+os_version=4.0.3
+openudid=b90ca6a3a19a78d6
+
+
+GET http://dm.toutiao.com/get_domains/?ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: dm.toutiao.com
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:12 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 67
+
+{"message": "success","data": {"mapping": {"i": "ic.snssdk.com"}}}
+
+
+
+///////////////////////////////////////
+
+4.
+
+
+GET http://isub.snssdk.com/2/user/info/?ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: isub.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504
+X-SS-Cookie: install_id=2337593504
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:12 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 101
+
+{"message": "error", "data": {"name": "session_expired", "description": "Session\u5df2\u8fc7\u671f"}}
+
+
+//////////////////////////////////
+
+5.ad
+
+GET http://ib.snssdk.com/service/6/app_ad/?_unused=0&display_density=800x1280&display_dpi=240&density=1.5&access=wifi&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ib.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504
+X-SS-Cookie: install_id=2337593504
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:12 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 2430
+
+{"message": "success", "data": {"app_bind": {"app_list": [], "interval": 604800, "splash_interval": 0, "leave_interval": 120}, "splash": [{"display_density": "480x800", "expire_seconds": 35568.0, "display_time": 3, "display_after": 0, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1411920000.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}, {"display_density": "480x800", "expire_seconds": 86400.0, "display_time": 3, "display_after": 35567, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1412006400.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}, {"display_density": "480x800", "expire_seconds": 86400.0, "display_time": 3, "display_after": 121967, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1412092800.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}, {"display_density": "480x800", "expire_seconds": 86400.0, "display_time": 3, "display_after": 208367, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1412179200.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}, {"display_density": "480x800", "expire_seconds": 86400.0, "display_time": 3, "display_after": 294767, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1412265600.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}, {"display_density": "480x800", "expire_seconds": 86400.0, "display_time": 3, "display_after": 381167, "title": "", "url": "http://p2.pstatp.com/origin/1367/6482144028", "track_url": "", "splash_interval": 7200, "open_url": "", "leave_interval": 600, "expire_timestamp": 1412352000.0, "splash_id": 3564333713, "action": "", "type": "web", "id": 3564333713}], "sdk_splash": 0, "ad_area": [{"type": "umengapplist", "area": "setting_app_recommend"}, {"type": "ewall", "area": "essay_ali_right"}], "display_area": []}}
+
+
+///////////////////////////////////////
+
+6.
+
+GET http://i.snssdk.com/push/get_service_addrs/?ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: i.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504
+X-SS-Cookie: install_id=2337593504
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:13 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 131
+
+{
+  "request_id": 8386444123727646238,
+  "max_interval": 60,
+  "addrs": [
+    "115.28.114.98:8900",
+    "115.28.114.118:8900"
+  ]
+}
+
+
+7.
+
+POST http://log.snssdk.com/service/2/app_log/ HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Accept-Encoding: gzip
+Content-Length: 658
+Host: log.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504
+X-SS-Cookie: install_id=2337593504
+
+{"launch":[{"datetime":"2014-09-28 14:07:08","session_id":"ffe25a3e-1bfa-4d90-8fa3-592720192a0d"}],"header":{"openudid":"b90ca6a3a19a78d6","os":"Android","clientudid":"8ca2d4e6-6e3b-478c-84e0-909a8b95741b","os_api":15,"package":"com.ss.android.essay.joke","appkey":"4f58859c527015425e000070","app_version":"3.0.2","sdk_version":1,"aid":7,"resolution":"1280x800","access":"wifi","os_version":"4.0.3","version_code":302,"device_model":"KFTT","display_name":"内涵段子","timezone":8,"mc":"e0:cb:1d:c8:b7:81","push_sdk":[2],"display_density":"hdpi","sig_hash":"aea615ab910015038f73c47e45d21466","language":"zh","channel":"wandoujia"},"magic_tag":"ss_app_log"}
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:07:12 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 76
+
+{"message": "success", "server_time": 1411884432, "magic_tag": "ss_app_log"}
+
+
+//////////////////////////
+8
+
+GET http://ichannel.snssdk.com/service/2/app_notify/?allow_notify=1&leave_time=60&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ichannel.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504
+X-SS-Cookie: install_id=2337593504
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:12:09 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+X-SS-Set-Cookie: rl23864=1; Domain=.snssdk.com; expires=Sun, 28-Sep-2014 08:12:09 GMT; Max-Age=7200; Path=/, ctIDv3=0; Domain=.snssdk.com; expires=Sun, 28-Sep-2014 08:12:09 GMT; Max-Age=7200; Path=/
+Set-Cookie: rl23864=1; Domain=.snssdk.com; expires=Sun, 28-Sep-2014 08:12:09 GMT; Max-Age=7200; Path=/
+Set-Cookie: ctIDv3=0; Domain=.snssdk.com; expires=Sun, 28-Sep-2014 08:12:09 GMT; Max-Age=7200; Path=/
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 634
+
+{"delay_time": 9, "message": "success", "data": {"open_url": "snssdk53://comments?groupid=3553002582", "preload_article": 1, "title": "", "text": "\u6bb5\u5b50\u754c\u56db\u5927\u4e0d\u5e78\uff1a\u971c\u971c\u4e0d\u518d\u9ec4\uff0c\u8001\u738b\u5df2\u9635\u4ea1\uff0c\u5927\u5e08\u4e0d\u5e2e\u5fd9\uff0c\u5c0f\u660e\u6eda\u51fa\u7fd4\u3002", "app_data": {}, "device": {"package": "com.ss.android.essay.joke", "last_time": 1411884431, "app_device_id": 2757969807}, "message": {"push_level": 2, "property": {"group_id": 3553002582, "rule_id": 23864}, "message_type": 1, "strategy": 1}, "group_id": 3553002582, "id": 23864}, "wakeup": 1}
+
+
+//////////////////////////////////////////
+
+9. 版本检查(启动时)
+
+GET http://ichannel.snssdk.com/service/2/check_version/?iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&amp;openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ichannel.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:55:57 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 973
+
+{"message": "success", "data": {"market_url": "https://play.google.com/store/apps/details?id=com.ss.android.essay.joke", "last_version_code": 302, "market_package": "", "market_name": "", "real_last_version_code": 302, "whats_new": "\u3010\u706b\u7206\u5347\u7ea7\u30111.\u5ba1\u6838\u6bb5\u5b50\u5de6\u53f3\u4e3a\u96be\uff1f\u5411\u5de6\u6ed1\u52a8\u201c\u8df3\u8fc7\u5ba1\u6838\u201d\uff0c\u7559\u7ed9\u5176\u4ed6\u6bb5\u53cb\u5ba1\u6838\u5427\uff012.\u4fee\u590d\u5df2\u77e5\u7684\u95ee\u9898\uff0c\u6bb5\u5b50\u54e5\u4e00\u76f4\u5728\u52aa\u529b\uff013.\u4f18\u5316\u6d4f\u89c8\u4f53\u9a8c\uff0c\u5237\u6bb5\u5b50\u66f4\u9178\u723d\uff01", "last_version_name": "3.0.2", "latency": 20, "real_last_version_name": "3.0.2", "market_download_url": "", "download_url": "http://s0.pstatp.com/site/download/app/apk/joke/3.0/JokeEssay_download_v3.0.2_8f6f888.apk", "no_market_only": 0, "try_market": 0, "last_real_version_code": 302, "verbose_name": "\u5185\u6db5\u6bb5\u5b50"}}
+
+///////////////////////////////////
+
+10.
+
+GET http://ic.snssdk.com/2/essay/settings/?iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&amp;openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:55:57 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 437
+
+{"message": "success", "data": {"ugc": {"presettext": "", "placeholder": "\u60a8\u7684\u6295\u7a3f\u7ecf\u8fc7\u6bb5\u53cb\u5ba1\u6838\u624d\u80fd\u53d1\u5e03\u54e6\uff01\u6211\u4eec\u7684\u76ee\u6807\u662f\uff1a\u4e13\u6ce8\u5185\u6db5\uff0c\u62d2\u7edd\u9ec4\u53cd\uff01\u53ef\u4ee5\u77eb\u60c5\uff0c\u4e0d\u8981\u717d\u60c5!\n\n\u656c\u544a\uff1a\u53d1\u5e03\u8272\u60c5\u654f\u611f\u5185\u5bb9\u4f1a\u88ab\u5c01\u53f7\u5904\u7406"}}}
+
+
+11.  新活动的统计
+
+GET http://ic.snssdk.com/2/essay/zone/activities/count/?&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:55:56 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 117
+
+{"message": "success", "data": {"count": 4, "tips": "\u67094\u6761\u65b0\u6d3b\u52a8\uff0c\u70b9\u51fb\u5237\u65b0"}}
+
+
+12.  段子
+
+这个接口返回的是 内涵段子 文本部分的列表，如果以前已经加载过，那么
+
+这个接口地址，需要增加一个 min_time 参数，来加载新的数据。
+
+请求地址参数：
+
+TODO  还有 顶部标题部分切换“推荐”，“热门”等
+
+category_id=1              分类id， 1：代表的是文本段子
+level=6                    固定的
+count=30                   一次请求，服务器返回的段子个数
+iid=2337593504             从第二个接口返回的 install_id
+device_id=2757969807       从第二个接口返回的 device_id
+
+
+ac=wifi
+channel=wandoujia
+aid=7
+app_name=joke_essay
+version_code=302
+device_platform=android
+device_type=KFTTos_api=15
+os_version=4.0.3
+openudid=b90ca6a3a19a78d6
+
+
+
+
+
+GET http://ic.snssdk.com/2/essay/zone/category/data/?category_id=1&level=6&count=30&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 06:55:57 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 69714
+
+{
+    "message": "success",
+    "data": {
+        "has_more": true,
+        "min_time": 1411887357,
+        "tip": "50条新内容",
+        "data": [
+            {
+                "online_time": 1411878957,
+                "display_time": 1411878957,
+                "group": {
+                    "create_time": 1411718218.0,
+                    "favorite_count": 1209,
+                    "user_bury": 0,
+                    "user_favorite": 0,
+                    "bury_count": 1516,
+                    "share_url": "http://toutiao.com/group/3560859160/?iid=2337593504&app=joke_essay",
+                    "label": 1,
+                    "content": "甲:昨天碰到抢劫的，被打了两顿。乙:为啥啊？甲:他问我有钱吗我说没有，他从我身上搜出一包软中华然后就被打了一顿。等他走了，不一会儿又回来打了我一顿，因为他发现里面塞的是白红梅，劫匪走时还留下一句‘没钱还装B’",
+                    "comment_count": 177,
+                    "status": 3,
+                    "has_comments": 0,
+                    "go_detail_count": 4370,
+                    "status_desc": "已发表到热门列表",
+                    "user": {
+                        "avatar_url": "http://p1.pstatp.com/thumb/1367/2213311454",
+                        "user_id": 3080520868,
+                        "name": "请叫我梓安哥",
+                        "user_verified": false
+                    },
+                    "user_digg": 0,
+                    "group_id": 3560859160,
+                    "level": 4,
+                    "repin_count": 1209,
+                    "digg_count": 18424,
+                    "has_hot_comments": 1,
+                    "user_repin": 0,
+                    "category_id": 1
+                },
+                "comments": [],
+                "type": 1
+            },
+            {
+                "type": 5,
+                "display_time": 1411878658,
+                "online_time": 1411878658,
+                "ad": {
+                    "display_image_height": 400,
+                    "ad_id": 3561092485,
+                    "display_image_width": 600,
+                    "source": "",
+                    "package": "",
+                    "title": "霜霜和阿伟都爱玩的游戏，还有iphone6等你拿哦！",
+                    "open_url": "",
+                    "download_url": "http://yihua.b0.upaiyun.com/neihan.apk",
+                    "is_ad": 1,
+                    "display_info": "霜霜和阿伟都爱玩的游戏，还有iphone6等你拿哦！",
+                    "web_url": "http://yihua.b0.upaiyun.com/neihan.apk",
+                    "display_type": 3,
+                    "button_text": "立即下载",
+                    "appleid": "",
+                    "track_url": "",
+                    "label": "推广",
+                    "type": "app",
+                    "id": 3561092485,
+                    "ipa_url": "",
+                    "display_image": "http://p2.pstatp.com/large/1362/1075506622"
+                }
+            },
+            {
+                "online_time": 1411872657,
+                "display_time": 1411872657,
+                "group": {
+                    "create_time": 1411365213,
+                    "favorite_count": 1641,
+                    "user_bury": 0,
+                    "user_favorite": 0,
+                    "bury_count": 2143,
+                    "share_url": "http://toutiao.com/group/3551461874/?iid=2337593504&app=joke_essay",
+                    "label": 1,
+                    "content": "今天看到七岁的儿子在画画，画了一只小鸡，我问他:儿子，你这画的是什么啊？儿子说:我画的是老鹰捉小鸡。我问他:那鹰去哪了？儿子回:那英去参加中国好声音了。现在的孩子…",
+                    "comment_count": 111,
+                    "status": 3,
+                    "has_comments": 0,
+                    "go_detail_count": 944,
+                    "status_desc": "已发表到热门列表",
+                    "user": {
+                        "avatar_url": "http://p2.pstatp.com/thumb/953/2658476120",
+                        "user_id": 1791732391,
+                        "name": "随遇而安",
+                        "user_verified": false
+                    },
+                    "user_digg": 0,
+                    "group_id": 3551461874,
+                    "level": 4,
+                    "repin_count": 1641,
+                    "digg_count": 20001,
+                    "has_hot_comments": 1,
+                    "user_repin": 0,
+                    "category_id": 1
+                },
+                "comments": [],
+                "type": 1
+            }
+        ],
+        "max_time": 1411872657
+    }
+}
+
+
+/////////////////////////////////
+
+13.检查文本段子的新内容的个数
+
+GET http://ic.snssdk.com/2/essay/zone/category/count/?category_id=1&level=6&min_time=1411887357&iid=2337593504&amp;device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&amp;device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 07:03:12 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 119
+
+{"message": "success", "data": {"count": 33, "tips": "\u670933\u6761\u65b0\u5185\u5bb9\uff0c\u70b9\u51fb\u5237\u65b0"}}
+
+///////////////////
+
+14. 文本段子列表分页加载接口
+
+GET http://ic.snssdk.com/2/essay/zone/category/data/?category_id=1&level=6&count=30&min_time=1411887357&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&amp;aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 07:28:45 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 62682
+
+{"message": "success", "data": {"has_more": false, "min_time": 1411889325, "tip": "39\u6761\u65b0\u5185\u5bb9", "data": [{"online_time": 1411889325, "display_time": 1411889325, "group": {"create_time": 1411301329.0, "favorite_count": 1692, "user_bury": 0, "user_favorite": 0, "bury_count": 1956, "share_url": "http://toutiao.com/group/3550036269/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5510\u50e7\u5e08\u5f92\u56db\u4eba\u6210\u529f\u53d6\u7ecf\u5f52\u6765\uff0c\u5e86\u529f\u5bb4\u90a3\u5929\u6709\u8bb0\u8005\u91c7\u8bbf\u5510\u50e7\uff1a\u53d6\u7ecf\u8def\u4e0a\u90a3\u4e48\u591a\u7f8e\u5973\u5996\u7cbe\u8ff7\u60d1\u4f60\uff0c\u4f5c\u4e3a\u7537\u4eba\u4f60\u662f\u600e\u4e48\u8d70\u8fc7\u6765\u7684\u3002\u5510\u50e7\u610f\u5473\u6df1\u957f\u7684\u7b54\u9053\uff1a\u8fd9\u4e00\u8def\u8d2b\u50e7\u90fd\u662f\u633a\u8fc7\u6765\u7684\uff01", "comment_count": 225, "status": 3, "has_comments": 1, "go_detail_count": 2152, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1292/1441374194", "user_id": 3517773716, "name": "\u5b50\u842717753692", "user_verified": false}, "user_digg": 0, "group_id": 3550036269, "level": 4, "repin_count": 1692, "digg_count": 18151, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3518157428, "description": "", "text": "\u5510\u50e7:\u609f\u7a7a\uff0c\u7ed9\u6211\u53d8\u4e2a\u89c2\u97f3\u3002\u609f\u7a7a:\u5e08\u5085\uff0c\u6628\u665a\u53d8\u7684\u90a3\u4e2a\u767d\u9aa8\u7cbe\u8fd8\u884c\u5427", "comment_id": 3551938099, "digg_count": 432, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/1284/7340667604", "create_time": 1411379642, "is_digg": 0, "user_name": "Ge\u5011\u86cb\u5576", "user_profile_image_url": "http://p2.pstatp.com/thumb/1284/7340667604"}], "type": 1}, {"online_time": 1411889275, "display_time": 1411889275, "group": {"create_time": 1411672883.0, "favorite_count": 978, "user_bury": 0, "user_favorite": 0, "bury_count": 1629, "share_url": "http://toutiao.com/group/3559699980/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5c0f\u65f6\u5019\u8fc7\u5e74\u8981\u538b\u5c81\u94b1\u662f\u4e3a\u4e86\u653e\u70ae\uff0c\u9752\u5e74\u65f6\u671f\u62ff\u7740\u751f\u6d3b\u8d39\u5e26\u7740\u5973\u53cb\u51fa\u53bb\u662f\u4e3a\u4e86\u653e\u70ae\uff0c\u957f\u5927\u7ed3\u5a5a\u540e\u85cf\u70b9\u79c1\u623f\u94b1\u8fd8\u662f\u4e3a\u4e86\u653e\u70ae\uff01", "comment_count": 354, "status": 3, "has_comments": 0, "go_detail_count": 1530, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/545/2352110753", "user_id": 3092195187, "name": "\u6062\u590dDJ", "user_verified": false}, "user_digg": 0, "group_id": 3559699980, "level": 4, "repin_count": 978, "digg_count": 16254, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411889225, "display_time": 1411889225, "group": {"create_time": 1411859774.0, "favorite_count": 2, "user_bury": 0, "user_favorite": 0, "bury_count": 11, "share_url": "http://toutiao.com/group/3564001448/?iid=2337593504&app=joke_essay", "content": "\u6628\u5929\u4e0b\u5348\u963f\u7389\u6b7b\u6d3b\u8981\u62c9\u6211\u4e00\u8d77\u53bb\u901b\u8857\uff0c\u4e0d\u5f97\u5df2\u6253\u7535\u8bdd\u7ed9\u8001\u677f\u8bf7\u5047\uff1a\u201c\u738b\u603b\uff0c\u6211\u5927\u59e8\u5988\u6765\u4e86\uff0c\u4e0d\u8212\u670d\uff0c\u60f3\u8bf7\u4e00\u4e0b\u5348\u5047\u3002\u201d\u738b\u603b\u4e0d\u5f97\u5df2\u540c\u610f\u3002\u6b63\u7a83\u559c\uff0c\u963f\u7389\u5f00\u542f\u514d\u63d0\u4e5f\u6253\u901a\u4e86\u7535\u8bdd\uff1a\u201c\u738b\u603b\u4f60\u597d\uff0c\u6211\u5927\u59e8\u5988\u3002\u3002\u3002\u201d\u6ca1\u7b49\u963f\u7389\u8bf4\u5b8c\uff0c\u7ecf\u7406\u5c31\u9a82\u8d77\u6765\u4e86\uff1a\u201c\u5927\u59e8\u5988\u6765\u4e86\u662f\u5427\uff1f\u4e0d\u6279\uff01\u201d\u963f\u7389\u5f31\u5f31\u7684\u8bf4\uff1a\u201c\u6211\u5927\u59e8\u5988\u6ca1\u6765\u3002\u201d\u4e00\u9635\u6c89\u9ed8\u4e4b\u540e\uff0c\u8001\u677f\u8bf4\uff1a\u201c\u5148\u51c6\u4f60\u4e00\u661f\u671f\u3002\u201d", "comment_count": 7, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1322/2062247312", "user_id": 3112621377, "name": "\u5973\u7231\u5973", "user_verified": false}, "user_digg": 0, "group_id": 3564001448, "level": 3, "repin_count": 2, "digg_count": 277, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411889175, "display_time": 1411889175, "group": {"create_time": 1411463141.0, "favorite_count": 1710, "user_bury": 0, "user_favorite": 0, "bury_count": 2584, "share_url": "http://toutiao.com/group/3554054936/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8001\u5e08:\u8c01\u80fd\u7528\u6709\u7f18\u548c\u65e0\u7f18\u9020\u53e5\n\u5c0f\u660e:\u8001\u5e08\u6211\u53ef\u4ee5\n\u8001\u5e08:\u8bf4\u6765\u542c\u542c\n\u5c0f\u660e:\u6709\u7f18\u4eca\u751f\u505a\u592b\u59bb\uff0c\u65e0\u7f18\u53ea\u80fd\u8279\u56debi\n\u8001\u5e08:\u6eda\u51fa\u53bb\u2026\u2026\n\u7edd\u5bf9\u539f\u521b\uff0c\u7b2c\u4e00\u6b21", "comment_count": 177, "status": 3, "has_comments": 0, "go_detail_count": 2938, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/1043/6031679275", "user_id": 3115188894, "name": "\u6700\u8fd1\u4e0d\u600e\u4e48\u53fc", "user_verified": false}, "user_digg": 0, "group_id": 3554054936, "level": 4, "repin_count": 1710, "digg_count": 21982, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411889125, "display_time": 1411889125, "group": {"create_time": 1411363258.0, "favorite_count": 1420, "user_bury": 0, "user_favorite": 0, "bury_count": 2337, "share_url": "http://toutiao.com/group/3551402666/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5f53\u4f60\u7684QQ\u6216\u8005\u5fae\u4fe1\u90fd\u6ca6\u843d\u6210\u8054\u7cfb\u5de5\u5177\u800c\u4e0d\u662f\u804a\u5929\u5de5\u5177\u65f6\uff0c\u5f53\u522b\u4eba\u6709\u4e8b\u624d\u627e\u5230\u4f60\u6ca1\u4e8b\u538b\u6839\u513f\u4e0d\u9e1f\u4f60\u65f6\uff0c\u4f60\u624d\u77e5\u9053\uff0c\u53ea\u6709\u6bb5\u5b50\u6700\u53ef\u9760\uff0c\u867d\u7136\u8282\u64cd\u5df2\u6b20\u8d39\uff0c\u4f46\u8d77\u7801\u6211\u8fd8\u80fd\u7b11", "comment_count": 152, "status": 3, "has_comments": 1, "go_detail_count": 2440, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/736/3708602117", "user_id": 3238185214, "name": "\u4f20\u8bf4\u4e2d\u7684\u54b8\u9c7c", "user_verified": false}, "user_digg": 0, "group_id": 3551402666, "level": 4, "repin_count": 1420, "digg_count": 33020, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 2166343718, "description": "", "text": "\u6211\u6ca1\u6709\u5fae\u4fe1\uff0c\u6ca1\u6709\u964c\u964c\u3002QQ\u53ea\u662f\u8bc1\u660e\u6211\u8fd8\u6d3b\u7740\u3002", "comment_id": 3554424168, "digg_count": 213, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p1.pstatp.com/thumb/307/4076410598", "create_time": 1411475084, "is_digg": 0, "user_name": "\u82b1\u5f0f\u64b8\u7ba1\u56db\u5ddd\u8d5b\u533a\u70ae\u7070", "user_profile_image_url": "http://p1.pstatp.com/thumb/307/4076410598"}], "type": 1}, {"online_time": 1411889075, "display_time": 1411889075, "group": {"create_time": 1411728661.0, "favorite_count": 840, "user_bury": 0, "user_favorite": 0, "bury_count": 1034, "share_url": "http://toutiao.com/group/3561251581/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5973:\u8001\u516c\uff0c\u4f60\u8bf4\u6211\u7684\u80f8\u90e8\u662f\u98de\u673a\u573a\u4e48\uff1f\n\u7537:\u5f53\u7136\u4e0d\u662f\u4e86\uff0c\u98de\u673a\u573a\u4e0a\u600e\u4e48\u4f1a\u6709\u5c0f\u77f3\u5b50\u5462\uff01", "comment_count": 151, "status": 3, "has_comments": 1, "go_detail_count": 791, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/839/4502023447", "user_id": 3290284417, "name": "\u5c4c\u7ec6\u5982\u4e1d", "user_verified": false}, "user_digg": 0, "group_id": 3561251581, "level": 4, "repin_count": 840, "digg_count": 11216, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3217341998, "description": "\u261e\u76f8\u8bc6\uff0c\u76f8\u77e5\uff0c\u76f8\u4f9d\uff0c\u76f8\u504e\uff0c\u76f8\u60dc\uff0c\u76f8\u7231\uff0c\u76f8\u6276\uff0c\u643a\u624b\u3002\u611f\u8c22\u6709\u4f60\uff0c\u4e00\u8def\u540c\u884c\u261c", "text": "\u80f8\u90e8\u4e5f\u957f\u75d8\u75d8\u5417", "comment_id": 3563135605, "digg_count": 90, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p0.pstatp.com/thumb/1096/5778575452", "create_time": 1411812886, "is_digg": 0, "user_name": "\u5e8a\u5355\u4e00\u591c\u7ea2_-...", "user_profile_image_url": "http://p0.pstatp.com/thumb/1096/5778575452"}], "type": 1}, {"online_time": 1411889025, "display_time": 1411889025, "group": {"create_time": 1411884552.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 1, "share_url": "http://toutiao.com/group/3564619783/?iid=2337593504&app=joke_essay", "content": "\u6211\u4eca\u5929\u5728\u9a6c\u8def\u65c1\u8fb9\u6253\u4e86\u4e2a\u54c8\u5207\uff0c\u5413\u5230\u4e86\u4e00\u4e2a\u9a91\u81ea\u884c\u8f66\u7684\u4eba\uff0c\u5bfc\u81f4\u5411\u9a6c\u8def\u4e2d\u95f4\u9a76\u53bb\uff0c\u4e00\u8f86\u8d27\u8f66\u4e3a\u4e86\u8ba9\u5f00\u4e0e\u65c1\u8fb9\u8f66\u76f8\u649e\uff0c\u5835\u4f4f\u4e86\u9a6c\u8def\uff0c\u8ba9\u6b63\u8981\u53bb\u5f00\u4f1a\u7684\u8de8\u56fd\u516c\u53f8\u8001\u677f\u8fdf\u5230\u51e0\u4e2a\u5c0f\u65f6\uff0c\u5bfc\u81f4\u56fd\u9645\u5173\u7cfb\u6076\u5316\uff0c\u4e24\u56fd\u5df2\u7ecf\u5728\u4e92\u76f8\u6295\u653e\u539f\u5b50\u5f39\u4e86\u3002\u6211\u6b63\u5728\u56fd\u9645\u6cd5\u9662\u63a5\u53d7\u5ba1\u5224\uff0c\u8fc7\u51e0\u65e5\u5c31\u56de\u6765\u4e86", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/529/2610962876", "user_id": 3078985909, "name": "\u7d20\u7834\u629c", "user_verified": false}, "user_digg": 0, "group_id": 3564619783, "level": 3, "repin_count": 0, "digg_count": 34, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888975, "display_time": 1411888975, "group": {"create_time": 1411362529.0, "favorite_count": 662, "user_bury": 0, "user_favorite": 0, "bury_count": 3341, "share_url": "http://toutiao.com/group/3551367790/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8001\u516c\uff1a\n\u8001\u5a46\u6211\u53d1\u73b0\u8ddf\u4f60\u7ed3\u5a5a\u90a3\u4e48\u4e45\u4e86\u8fd8\u50cf\u521d\u604b\uff0c\u8ba9\u6211\u4e00\u76f4\u90a3\u4e48\u7231\u4f60\uff0c\u90a3\u4e48\u5475\u62a4\u4f60\u2026\u2026\n\u8001\u5a46\uff1a\n\u771f\u7684\u5417\u8001\u516c\uff0ctmd\u7ed9\u8001\u5a18\u8bf4\u4eba\u8bdd\uff5e\n\u8001\u516c\uff1a\n\u8001\u5a46\u4eca\u5929\u4e00\u53f7\u8be5\u7ed9\u70df\u94b1\u4e86\uff0c\n\u70b9\u8d5e\u665a\u4e0a\u5403\u9ebb\u8fa3\u70eb", "comment_count": 177, "status": 3, "has_comments": 0, "go_detail_count": 2560, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/1100/2763297580", "user_id": 2999630350, "name": "\u8001\u738b\u9694\u58c1\u9694\u58c1\u9694\u58c1\u7684\u8001\u738b", "user_verified": false}, "user_digg": 0, "group_id": 3551367790, "level": 4, "repin_count": 662, "digg_count": 29830, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888925, "display_time": 1411888925, "group": {"create_time": 1411341771.0, "favorite_count": 679, "user_bury": 0, "user_favorite": 0, "bury_count": 2547, "share_url": "http://toutiao.com/group/3550758660/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u672c\u4eba\u88c5\u4fee\u5de5\uff0c\u5230\u57ce\u91cc\u7ed9\u4e00\u5c11\u5987\u88c5\u4fee\u623f\u5b50\uff0c\u5979\u8001\u516c\u4e0d\u5728\uff0c\u52fe\u5151\u6210\u529f\uff0c\u556a\u556a\u540e\uff0c\u5c11\u5987\u611f\u53f9\u5230\uff1a\u519c\u6751\u4eba\u556a\u556a\u7684\u786e\u5389\u5bb3\uff0c\u540e\u6765\u5c31\u6ca1\u7ed9\u6211\u5de5\u94b1", "comment_count": 457, "status": 3, "has_comments": 0, "go_detail_count": 7424, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1026/3609074202", "user_id": 2858476315, "name": "\u5929\u4e0b\u7b2c\u4e00\u64b8\u4e4b\u64b8\u738b\u518d\u73b0", "user_verified": false}, "user_digg": 0, "group_id": 3550758660, "level": 4, "repin_count": 679, "digg_count": 25385, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888875, "display_time": 1411888875, "group": {"create_time": 1411805830.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 3, "share_url": "http://toutiao.com/group/3562975816/?iid=2337593504&app=joke_essay", "content": "\u6211:\u201c\u4e3b\u4efb\uff0c\u6211\u60f3\u8bf7\u5047\u201d\u3002\n\u4e3b\u4efb:\u201c\u4ec0\u4e48\u4e8b\u60c5\u5440\u201d\uff1f\n\u6211:\u201c\u5bb6\u91cc\u6709\u6025\u4e8b\u513f\uff0c\u521a\u521a\u6211\u548c\u603b\u7ecf\u7406\u8bf4\u4e86\uff0c\u7ecf\u7406\u540c\u610f\u7684\u5566\u201d\u3002\n\u4e3b\u4efb:\u201c\u597d\u5427\uff0c\u7ecf\u7406\u540c\u610f\u4e86\uff0c\u4f60\u5c31\u53bb\u5427\u201d\u3002\n\u53e6\u4e00\u8fb9\n\u6211:\u201c\u7ecf\u7406\u6211\u60f3\u8bf7\u5047\u201d\u3002\n\u7ecf\u7406:\u201c\u8bf7\u5047\u554a\uff01\u53ef\u662f\u4eba\u624b\u8981\u662f\u4e0d\u591f\u4e86\u600e\u4e48\u529e\u201d\uff1f\n\u6211:\u201c\u6211\u548c\u4e3b\u4efb\u8bf4\u5566\uff0c\u4e3b\u4efb\u540c\u610f\u5566\uff0c\u4eba\u624b\u7edd\u5bf9\u591f\u54c7\u201d\u3002\n\u7ecf\u7406:\u201c\u597d\u5427\uff0c\u4e3b\u4efb\u90fd\u540c\u610f\u4e86\uff0c\u90a3\u4f60\u53bb\u5427\u201d\u3002", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/958/1875921331", "user_id": 3334457731, "name": "\u5fc3\u4e2d\u65e0\u9650\u7a7a\u53ea\u56e0\u4ecd\u6709\u68a6", "user_verified": false}, "user_digg": 0, "group_id": 3562975816, "level": 3, "repin_count": 0, "digg_count": 41, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888825, "display_time": 1411888825, "group": {"create_time": 1411400955.0, "favorite_count": 956, "user_bury": 0, "user_favorite": 0, "bury_count": 2137, "share_url": "http://toutiao.com/group/3552621618/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4eca\u5929\u548c\u540c\u4e8b\u4e00\u8d77\u53bb\u5403\u76d6\u996d\u3002\u6211\u7684\u662f\u9c7c\u9999\u8089\u4e1d\u76d6\u996d\uff0c\u5979\u7684\u662f\u6728\u8033\u8089\u4e1d\u76d6\u996d\u3002\u6211\u7684\u8fd8\u6ca1\u4e0a\u5979\u7684\u5c31\u6765\u4e86\u3002\u5979\u7a81\u7136\u95ee\u6211:\u8981\u4e0d\u8981\u5c1d\u5c1d\u6211\u7684\u6728\u8033\uff1f\u5c3c\u739b\uff0c\u77ac\u95f4\u6fc0\u52a8\u5f97\u7b77\u5b50\u90fd\u6389\u843d\u5728\u5730\u4e0a\u2026\u2026", "comment_count": 413, "status": 3, "has_comments": 0, "go_detail_count": 3563, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1057/2403885993", "user_id": 3376608017, "name": "\u9ec4\u6cc9\u8def\u4e0a\u8fc7\u8def\u4eba", "user_verified": false}, "user_digg": 0, "group_id": 3552621618, "level": 4, "repin_count": 956, "digg_count": 21188, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888775, "display_time": 1411888775, "group": {"create_time": 1411475435.0, "favorite_count": 943, "user_bury": 0, "user_favorite": 0, "bury_count": 2302, "share_url": "http://toutiao.com/group/3554441273/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8bf4\u4e00\u4e2a\u6211\u5bb6\u72d7\u72d7\u7684\u4e8b\uff0c \u90a3\u4e00\u5929\u6211\u5f88\u4f24\u5fc3\uff0c\u5fcd\u4e0d\u4f4f\u568e\u5555\u5927\u54ed\u3002\u5b83\u9759\u9759\u5730\u770b\u6211\u3002\u8df3\u4e0a\u5e8a\uff0c\u628a\u5934\u653e\u5728\u6211\u80a9\u8180\u8e6d\u8e6d\u6211\u5c31\u50cf\u5728\u8bf4\u4e0d\u8981\u54ed\u3002\u7136\u540e\u628a\u5b83\u6240\u6709\u7684\u73a9\u5177\u90fd\u53fc\u5230\u6211\u9762\u524d\uff0c\u5750\u5728\u90a3\u770b\u7740\u6211\u3002\u7a81\u7136\u89c9\u5f97\u5b83\u4e0d\u662f\u4e00\u53ea\u666e\u901a\u7684\u72d7\uff0c\u662f\u72d7\u795e\u3002", "comment_count": 1016, "status": 3, "has_comments": 0, "go_detail_count": 5906, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://tp2.sinaimg.cn/2217300637/50/40000519578/0", "user_id": 2738461293, "name": "\u8096\u8bd7\u67f3", "user_verified": false}, "user_digg": 0, "group_id": 3554441273, "level": 4, "repin_count": 943, "digg_count": 37331, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888725, "display_time": 1411888725, "group": {"create_time": 1411367199.0, "favorite_count": 1137, "user_bury": 0, "user_favorite": 0, "bury_count": 2892, "share_url": "http://toutiao.com/group/3551516468/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u67d0\u65c5\u6e38\u56e2\u51fa\u56fd\u65c5\u6e38\uff0c\u4e0b\u69bb\u4e00\u9152\u5e97\uff0c\u5403\u4e86\u9152\u5e97\u7684\u996d\u83dc\u540e\u96c6\u4f53\u4e0a\u5410\u4e0b\u6cfb\uff0c\u68c0\u67e5\u9152\u5e97\u7684\u996d\u83dc\u4e5f\u6ca1\u53d1\u73b0\u4efb\u4f55\u95ee\u9898\uff0c\u6b63\u5f53\u5927\u5bb6\u4e00\u7b79\u83ab\u5c55\u65f6\uff0c\u4e00\u6e38\u5ba2\u63d0\u8bae\u201c\u8981\u4e0d\u660e\u5929\u7528\u5730\u6c9f\u6cb9\u505a\u83dc\u8bd5\u8bd5\uff1f\u201d\n\u7b2c\u4e8c\u5929\uff0c\u5403\u4e86\u5730\u6c9f\u6cb9\u505a\u83dc\u7684\u6e38\u5ba2\u90fd\u6062\u590d\u4e86\u6d3b\u529b\uff0c\u611f\u89c9\u80c3\u6696\u6696\u7684\uff0c\u5f88\u8d34\u5fc3\u3002", "comment_count": 338, "status": 3, "has_comments": 1, "go_detail_count": 2551, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1348/5645839972", "user_id": 3383067429, "name": "\u5ba2\u5bb6\u4eba\u53bb\u5230\u54ea\u90fd\u884c", "user_verified": false}, "user_digg": 0, "group_id": 3551516468, "level": 4, "repin_count": 1137, "digg_count": 27050, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3224977310, "description": "", "text": "\u8170\u4e0d\u9178\u4e86\uff0c\u817f\u4e0d\u75bc\u4e86\u3002\u8d70\u8def\u6709\u52b2\u4e86\uff01", "comment_id": 3551589458, "digg_count": 247, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/716/2115367065", "create_time": 1411368963, "is_digg": 0, "user_name": "\u7f18\u4efd9145668", "user_profile_image_url": "http://p2.pstatp.com/thumb/716/2115367065"}], "type": 1}, {"online_time": 1411888675, "display_time": 1411888675, "group": {"create_time": 1411719308.0, "favorite_count": 4, "user_bury": 0, "user_favorite": 0, "bury_count": 132, "share_url": "http://toutiao.com/group/3560896443/?iid=2337593504&app=joke_essay", "content": "\u6211:\u8001\u5e08\uff0c\u6211\u8981\u8bf7\u5047\n\u8001\u5e08\uff1a\u4ec0\u4e48\u4e8b\uff1f\n\u6211:\u6211\u5bb6\u90bb\u5c45\u6253\u7535\u8bdd\u6211\u8bf4\uff0c\u4f60\u8001\u516c\u5728\u6211\u5bb6\u548c\u6211\u5988\u5728\u5403\u5c0f\u9f99\u867e\u6211\u5f97\u56de\u53bb\u770b\u770b\uff0c\n\u8001\u5e08\uff1a\u884c\uff0c\u6211\u8ddf\u4f60\u4e00\u8d77\u53bb", "comment_count": 28, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/476/8545651696", "user_id": 3019140738, "name": "\u5427\u5527\u5427\u55274783674", "user_verified": false}, "user_digg": 0, "group_id": 3560896443, "level": 3, "repin_count": 4, "digg_count": 386, "has_hot_comments": 1, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888625, "display_time": 1411888625, "group": {"create_time": 1411384159.0, "favorite_count": 663, "user_bury": 0, "user_favorite": 0, "bury_count": 1729, "share_url": "http://toutiao.com/group/3552080022/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8001\u5a46\u4e0a\u5348\u4e70\u4e86\u4ef6\u8863\u670d\uff0c\u4e2d\u5348\u7a7f\u4e0a\u95ee\u6211\u548c\u5973\u513f\u597d\u770b\u5417\uff1f\u6211\u548c\u5973\u513f\u90fd\u8bf4\u771f\u7684\u771f\u7684\u5f88\u6f02\u4eae\uff0c\u4ef7\u683c\u4e5f\u4e0d\u8d35\uff01\u8001\u5a46\u559c\u6ecb\u6ecb\u7684\u8d70\u540e\uff0c\u5973\u513f\u5c0f\u58f0\u5bf9\u6211\u8bf4\uff1a\u7238\u7238\u54b1\u4eec\u662f\u4e0d\u662f\u5f88\u5351\u9119.....-_-#", "comment_count": 139, "status": 3, "has_comments": 0, "go_detail_count": 2135, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/307/4769951136", "user_id": 2277998721, "name": "\u5fd7\u5f53\u5b58\u9ad8\u8fdc", "user_verified": false}, "user_digg": 0, "group_id": 3552080022, "level": 4, "repin_count": 663, "digg_count": 18402, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888575, "display_time": 1411888575, "group": {"create_time": 1411293592.0, "favorite_count": 863, "user_bury": 0, "user_favorite": 0, "bury_count": 1975, "share_url": "http://toutiao.com/group/3549852861/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6700\u8fd1\u6211\u56db\u5c81\u7684\u59b9\u59b9\u5f00\u59cb\u5bf9\u4e8b\u7269\u6709\u4e86\u597d\u5947\u5fc3\u3002\u4e00\u5929\u6211\u5e26\u7740\u5168\u5957\u7684\u8fd0\u52a8\u8bbe\u5907\u53bb\u6253\u7fbd\u6bdb\u7403\u3002\u5230\u4e86\u7403\u573a\uff0c\u51c6\u5907\u6253\u7403\u3002\u5509,\u4f60\u80fd\u60f3\u8c61\u4ece\u7fbd\u6bdb\u7403\u5305\u4e2d\u62ff\u51fa\u7535\u868a\u62cd\u7684\u5fc3\u60c5\u5417\uff1f", "comment_count": 230, "status": 3, "has_comments": 0, "go_detail_count": 1787, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1315/1585460566", "user_id": 3470518147, "name": "\u611a\u6627\u7684\u540a\u4e1d", "user_verified": false}, "user_digg": 0, "group_id": 3549852861, "level": 4, "repin_count": 863, "digg_count": 19810, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888525, "display_time": 1411888525, "group": {"create_time": 1411697047.0, "favorite_count": 453, "user_bury": 0, "user_favorite": 0, "bury_count": 1085, "share_url": "http://toutiao.com/group/3560133103/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u628a\u6700\u559c\u6b22\u7684\u6b4c\u8bbe\u7f6e\u4e3a\u94c3\u58f0\uff0c\u5e7b\u60f3\u7740\u5728\u54cd\u8d77\u7684\u90a3\u4e00\u523b\u4e07\u4eba\u77a9\u76ee\uff0c\u53ef\u4f60\u5374\u5fd8\u4e86\uff0c\u6839\u672c\u6ca1\u6709\u51e0\u4e2a\u4eba\u4f1a\u7ed9\u4f60\u6253\u7535\u8bdd\u3002", "comment_count": 298, "status": 3, "has_comments": 1, "go_detail_count": 1524, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://tp1.sinaimg.cn/3813266236/50/40037310093/1", "user_id": 3351456261, "name": "\u5927\u80c3\u8d1d\u58f3\u6c49\u59c6", "user_verified": false}, "user_digg": 0, "group_id": 3560133103, "level": 4, "repin_count": 453, "digg_count": 12533, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3166644646, "description": "\u6211\u662f\u4e2a\u6027\u5f00\u653e\u7684\u4eba\uff0c\u4e0d\u662f\u4e2a\u6027\u5f00\u653e\u7684\u4eba", "text": "\u53ef\u60dc\u4e86\u6211\u7684\u5f69\u94c3\u4e5f\u6ca1\u4eba\u80fd\u542c\u5230\u201c\u60a8\u597d\uff0c\u60a8\u6240\u62e8\u6253\u7684\u7535\u8bdd\u6b63\u5728\u6d17\u6fa1\u4e2d\uff0c\u624b\u673a\u5728\u88e4\u5305\u4e2d\uff0c\u88e4\u5b50\u4e0d\u5728\u8eab\u4e0a\uff0c\u4e0d\u8981\u5077\u770b\uff0c\u8bf7\u81ea\u91cd\u2026\u2026\u2026\u201d", "comment_id": 3563038587, "digg_count": 73, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/1362/2182524020", "create_time": 1411808438, "is_digg": 0, "user_name": "\u6df1\u4e95\u6709\u51b0", "user_profile_image_url": "http://p2.pstatp.com/thumb/1362/2182524020"}], "type": 1}, {"online_time": 1411888475, "display_time": 1411888475, "group": {"create_time": 1411871510.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 5, "share_url": "http://toutiao.com/group/3564210261/?iid=2337593504&app=joke_essay", "content": "\u8bf7\u5047\u6761\uff1a\u4eb2\u7231\u7684\u8f85\u5bfc\u5458\uff0c\u4e0a\u661f\u671f\u548c\u5973\u53cb\u5728\u5bbe\u9986\u53d1\u751f\u91cd\u5927\u5931\u8bef\uff0c\u4e0d\u5c0f\u5fc3\u9020\u4eba\u6210\u529f\uff0c\u6240\u4ee5\u5c0f\u8bf7\u4e00\u661f\u671f\u7684\u5047\u4fbf\u4e8e\u6740\u4eba\uff0c\u6211\u4e0d\u6740\u4eba\u5219\u88ab\u4eba\u6740\uff0c\u4e8b\u5173\u8eab\u5bb6\u6027\u547d\uff0c\u671b\u8f85\u5bfc\u5458\u6279\u51c6\u3002\n\u8f85\u5bfc\u5458\uff1a\u51c6\uff01", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1207/5674571288", "user_id": 3382327368, "name": "\u6211\u662f\u9694\u58c1\u65b0\u6765\u7684\u5c0f\u8521", "user_verified": false}, "user_digg": 0, "group_id": 3564210261, "level": 3, "repin_count": 0, "digg_count": 53, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888425, "display_time": 1411888425, "group": {"create_time": 1411318983.0, "favorite_count": 1623, "user_bury": 0, "user_favorite": 0, "bury_count": 2081, "share_url": "http://toutiao.com/group/3550557015/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u770b\u5230\u4e00\u670b\u53cb\u53d1\u72b6\u6001\u4f60\u6700\u957f\u4e22\u7684\u4e09\u6837\u4e1c\u897f\u662f\u4ec0\u4e48\u3002\u6211\u201c\u94a5\u5319\uff0c\u53e3\u7ea2\uff0c\u6212\u6307\u201d\uff0c\u540e\u6765\u770b\u5230\u4e00\u5927\u795e\u56de\u590d\u201c\u8138\uff0c\u7238\u5988\u7684\u8138\u3002\u8001\u5e08\u5f97\u8138\u201d\u819c\u62dc\u963f\uff01\uff01", "comment_count": 138, "status": 3, "has_comments": 0, "go_detail_count": 1162, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/1287/8194317189", "user_id": 1767505767, "name": "\u5965\u5965\u5965\u5965\u5965\u7279\u66fc_\u5c0f\u80d6", "user_verified": false}, "user_digg": 0, "group_id": 3550557015, "level": 4, "repin_count": 1623, "digg_count": 18171, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888375, "display_time": 1411888375, "group": {"create_time": 1411400951.0, "favorite_count": 579, "user_bury": 0, "user_favorite": 0, "bury_count": 1688, "share_url": "http://toutiao.com/group/3552625701/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6628\u665a\u7ec8\u4e8e\u628a\u68a6\u5bd0\u5df2\u4e45\u7684\u5973\u795e\u529e\u4e86\uff0c\u5fc3\u91cc\u7f8e\u7684\u6211\u7761\u89c9\u90fd\u54a7\u7740\u5634\u3002\u7b2c\u4e8c\u5929\uff0c\u5973\u795e\u5c31\u5bf9\u6211\u7ffb\u767d\u773c\uff0c\u8bf4:\u8fd9\u4e48\u591a\u4eba\uff0c\u7f8e\u6210\u8fd9\u6837\u7684\u4f60\u8fd8\u662f\u7b2c\u4e00\u4e2a\uff01", "comment_count": 242, "status": 3, "has_comments": 0, "go_detail_count": 3589, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1226/1888806383", "user_id": 3484624799, "name": "\u6bcf\u5929\u770b\u6bb5\u5b50\u770b\u7684\u6211\u4e5f\u52a8\u4e86\u51e1\u5fc3\u5f00\u59cb\u53d1\u6bb5\u5b50\u4e86", "user_verified": false}, "user_digg": 0, "group_id": 3552625701, "level": 4, "repin_count": 579, "digg_count": 18083, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888325, "display_time": 1411888325, "group": {"create_time": 1411888730.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 3, "share_url": "http://toutiao.com/group/3564747753/?iid=2337593504&app=joke_essay", "content": "\u548c\u5c0f\u6e7f\u59b9\u5f00\u73a9\u7b11\u8bf4\uff1a\u201c\u5c0f\u6e7f\u59b9\uff0c\u660e\u5929\u6211\u8bf7\u4f60\u5403\u5927\u9910\uff01\u201d \u5c0f\u6e7f\u59b9\u95ee\uff1a\u201c\u6709\u8fd9\u597d\u4e8b\uff1f\u5403\u5565\u554a\uff1f\u201d \u6211\u7b54\u66f0\uff1a\u201c\u5341\u4e8c\u83dc\u4e00\u6c64\uff01\u201d \u5c0f\u6e7f\u59b9\u60ca\u559c\uff1a\u201c\u771f\u7684\uff1f\u5c31\u54b1\u4fe9\u5417\uff1f\u5403\u4e0d\u5b8c\u7684\uff01\u201d \u6211\uff1a\u201c\u5c31\u54b1\u4fe9\uff0c\u9ebb\u8fa3\u70eb\uff0c\u5341\u4e8c\u4e2a\u83dc\u90fd\u6709\u3002\u201d", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1341/1388439938", "user_id": 3409727751, "name": "\u5c71\u4e2d\u5c0f\u5e99\u5927\u6e7f\u5144", "user_verified": false}, "user_digg": 0, "group_id": 3564747753, "level": 3, "repin_count": 0, "digg_count": 23, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888275, "display_time": 1411888275, "group": {"create_time": 1411430447.0, "favorite_count": 586, "user_bury": 0, "user_favorite": 0, "bury_count": 2340, "share_url": "http://toutiao.com/group/3553029924/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u697c\u4e3b\u662f\u5728\u5de5\u5730\u5e72\u6c34\u7535\u7684\u3002\u5207\uff5e\uff5e\uff5e\u5c31\u5728\u6628\u5929\u6211\u4eec6\u4e2a\u4eba\u5728\u697c\u9876\u4e0a\u8d70\u7ebf\u7ba1\u3002\u6709\u4e00\u4e2a\u5de5\u53cb\u5916\u53f7\u53eb\u79bd\u517d\uff0c\u7a81\u53d1\u5947\u60f3\u7684\u95ee\u4ed6\u4e86\u53e5\u201c\u7ed9\u4f60500\u4e07\u8ba9\u4f60\u5403\u5c4e\u4f60\u5403\u4e0d\u3002\u201d\u4ed6\u6beb\u4e0d\u72b9\u8c6b\u7684\u8bf4\u201c\u5403\u201d\u3002\u6211\u4eec\u90fd\u6ca1\u6709\u7b11\uff0c\u56e0\u4e3a\u6211\u4eec\u89c9\u5f97\u6323\u94b1\u6bd4\u5403\u5c4e\u90fd\u96be\u3002", "comment_count": 578, "status": 3, "has_comments": 1, "go_detail_count": 3928, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/531/5635962991", "user_id": 3080336971, "name": "\u642c\u7816\u54e5\u54e5", "user_verified": false}, "user_digg": 0, "group_id": 3553029924, "level": 4, "repin_count": 586, "digg_count": 23856, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 1951770453, "description": "\u266a", "text": "\u4e0d\u7528500\u4e07\uff0c500\u5c31\u884c\u3002", "comment_id": 3553194566, "digg_count": 866, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/674/8039173865", "create_time": 1411437729, "is_digg": 0, "user_name": "\u53f3\u8138\u5b64\u72ec", "user_profile_image_url": "http://p2.pstatp.com/thumb/674/8039173865"}], "type": 1}, {"online_time": 1411888225, "display_time": 1411888225, "group": {"create_time": 1411275940.0, "favorite_count": 489, "user_bury": 0, "user_favorite": 0, "bury_count": 1506, "share_url": "http://toutiao.com/group/3549323535/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5728\u5e7f\u5dde\u5730\u94c1\u7ad9\u770b\u5230\u4e00\u4e5e\u4e10\uff0c\u8eab\u4e16\u5404\u79cd\u51c4\u51c9\uff0c\u6b63\u51c6\u5907\u638f\u94b1\uff0c\u4ed6\u4ece\u8eab\u540e\u62ff\u51fa\u4e00\u74f6\u6052\u5927\u51b0\u6cc9\u5c31\u559d\u4e86\u8d77\u6765\uff0c\u6211\u9ed8\u9ed8\u8d70\u5f00\uff01\u773c\u89d2\u6709\u6cea\u5212\u8fc7\uff0c\u54e5\u7279\u4e48\u6df7\u4e86\u8fd9\u4e48\u591a\u5e74\u90fd\u6ca1\u559d\u8fc7\u6052\u5927", "comment_count": 367, "status": 3, "has_comments": 0, "go_detail_count": 3305, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/551/5189759659", "user_id": 2849161136, "name": "\u4e40\u611b\u5df3\u6b20\u8cbb", "user_verified": false}, "user_digg": 0, "group_id": 3549323535, "level": 4, "repin_count": 489, "digg_count": 16838, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888175, "display_time": 1411888175, "group": {"create_time": 1411287596.0, "favorite_count": 797, "user_bury": 0, "user_favorite": 0, "bury_count": 2928, "share_url": "http://toutiao.com/group/3549653386/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4eca\u5929\u6597\u5730\u4e3b \u4e00\u628a\u597d\u724c\u554a \u738b\u70b8 3\u4e2a2 \u4e0d\u77e5\u5929\u9ad8\u5730\u539a\u7684\u4e0a\u684c\u7adf\u7136\u62a2\u8d70\u4e86\u5730\u4e3b \u6446\u660e\u627e\u6b7b\u4e48 \u505a\u597d\u67b6\u52bf \u5730\u4e3b\u51fa\u724c\u4e86 \u98de\u673a\u3002\u3002\u3002\u3002\u3002\u3002\u4ec0\u4e48\u53eb\u8fd8\u6ca1\u5f00\u59cb\u5c31\u5df2\u7ecf\u7ed3\u675f\u4e86 \u4f60\u4eec\u6709\u6253\u8fc7\u8fd9\u6837\u7684\u724c\u5417 \u98de\u5f97\u4e00\u5f20\u4e0d\u5269", "comment_count": 863, "status": 3, "has_comments": 0, "go_detail_count": 7352, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/425/6233617613", "user_id": 2867417673, "name": "\u9b3c\u9b3c\u82b1", "user_verified": false}, "user_digg": 0, "group_id": 3549653386, "level": 4, "repin_count": 797, "digg_count": 24948, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888125, "display_time": 1411888125, "group": {"create_time": 1411830661.0, "favorite_count": 1, "user_bury": 0, "user_favorite": 0, "bury_count": 10, "share_url": "http://toutiao.com/group/3563668436/?iid=2337593504&app=joke_essay", "content": "\u6211\uff1a\u8001\u677f\u4f60\u53ef\u80fd\u4e0d\u77e5\u9053\u6211\u53d1\u70e7\u4e86\uff0c\u4f46\u662f\u8bf7\u4f60\u4e0d\u8981\u7ed9\u6211\u6279\u5047\uff0c\u6211\u8981\u575a\u6301\u5de5\u4f5c\u3002\n\u8001\u677f\uff1a\u8bb0\u5f97\u4f60\u4e0d\u662f\u8fd9\u6837\u7684\u4eba\u554a\uff0c\u70e7\u7cca\u6d82\u4e86\uff1f\n\u6211\uff1a\u4e0d\u662f\u7684\u542c\u8bf4\u731d\u6b7b\u8d54\u4e94\u5341\u4e07\u5462\uff0c\u6211\u60f3\u7ed9\u5bb6\u91cc\u505a\u70b9\u8d21\u732e\uff01\n\u8001\u677f\uff1a\u60f3\u7684\u7f8e\uff0c\u73b0\u5728\u4f60\u75c5\u4e0d\u597d\u522b\u6765\u4e0a\u73ed\uff0c\u73b0\u5728\u5c31\u8d70\u3002\n\u6211\uff1a\u563f\u563f\u6210\u529f\u4e86\u3002", "comment_count": 2, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg", "user_id": 3304259610, "name": "\u6211\u7231\u5403\u725b\u8089", "user_verified": false}, "user_digg": 0, "group_id": 3563668436, "level": 3, "repin_count": 1, "digg_count": 62, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888075, "display_time": 1411888075, "group": {"create_time": 1411559013.0, "favorite_count": 3101, "user_bury": 0, "user_favorite": 0, "bury_count": 2689, "share_url": "http://toutiao.com/group/3556794271/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u7537\uff1a\u201c\u7f8e\u5973\uff0c\u6211\u5b69\u5b50\u4eec\u8bf4\u4f60\u771f\u6f02\u4eae\uff0c\u60f3\u4f60\u505a\u4ed6\u4eec\u7684\u5988\u5988!\u201d\u5973\uff1a\u201c\u4f60\u5b69\u5b50\u5462\uff1f\u2026\u2026\u201d\u7537\uff1a\u201c\u5047\u5982\u4f60\u613f\u610f\uff0c\u5341\u4e2a\u6708\u4e4b\u540e\u6211\u5c31\u4f1a\u5b89\u6392\u4f60\u4eec\u89c1\u9762\u3002\u201d\u5973\uff1a\u201c\u8bf7\u95ee\u4e94\u4e2a\u6708\u4f60\u80fd\u63a5\u53d7\u4e0d\uff1f\u201d\u7537\uff1a\u2026\u2026", "comment_count": 415, "status": 3, "has_comments": 0, "go_detail_count": 11040, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/1235/810515619", "user_id": 3446945268, "name": "\u53e3\u6c34\u6e7f\u4e86\u6211\u4e00\u8138\u6743\u5f53\u7f8e\u5bb9", "user_verified": false}, "user_digg": 0, "group_id": 3556794271, "level": 4, "repin_count": 3101, "digg_count": 35523, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411888025, "display_time": 1411888025, "group": {"create_time": 1411732659.0, "favorite_count": 316, "user_bury": 0, "user_favorite": 0, "bury_count": 987, "share_url": "http://toutiao.com/group/3561361823/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u73b0\u5728\u518d\u597d\u5403\u7684\u96f6\u98df\u4e5f\u6ca1\u763e\uff0c\u60f3\u60f3\u5c0f\u65f6\u50191\u6bdb\u94b1\u4e00\u5305\u7684\u9178\u6885\u7c89\uff0c\u5510\u50e7\u8089\uff0c\u65e0\u82b1\u679c\uff08\u540e\u6765\u624d\u77e5\u9053\u662f\u841d\u535c\u6761\uff09\uff0c\u90a3\u79cd\u6e34\u671b\uff01\uff01\uff01\u662f\u5473\u89c9\u53d8\u4e86\u8fd8\u662f\u8ffd\u6c42\u53d8\u4e86\uff1f", "comment_count": 414, "status": 3, "has_comments": 0, "go_detail_count": 998, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/688/4394802836", "user_id": 3105119324, "name": "\u5b5f\u5a46\u641e\u7897\u6c64\u559d\u4e00\u4e0b", "user_verified": false}, "user_digg": 0, "group_id": 3561361823, "level": 4, "repin_count": 316, "digg_count": 11481, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887975, "display_time": 1411887975, "group": {"create_time": 1411416189.0, "favorite_count": 709, "user_bury": 0, "user_favorite": 0, "bury_count": 1618, "share_url": "http://toutiao.com/group/3552901672/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u966a\u4e8c\u8d27\u670b\u53cb\u4e70\u8336\u53f6\uff0c\u770b\u4e0a\u4e00\u6b3e\u94c1\u89c2\u97f3\uff0c\u9042\u95ee\u552e\u8d27\u5458\u591a\u94b1\u4e00\u65a4\uff0c\u7b54\u66f0:7\u4e07\u3002\u5f53\u65f6\u54e5\u4eec\u5c31\u6ca1\u5565\u60f3\u6cd5\u4e86\uff0c\u6ca1\u60f3\u5230\u4e8c\u8d27\u670b\u53cb\u7279\u6de1\u5b9a\u7684\u6765\u4e00\u53e5:\u7ed9\u6211\u6765\u5341\u5757\u94b1\u7684\u5c1d\u5c1d\u5565\u5473\u513f\u3002\u4f60\u80fd\u60f3\u50cf\u552e\u8d27\u5458\u90a3\u53d1\u7eff\u7684\u8138\u4e48\u3002", "comment_count": 238, "status": 3, "has_comments": 0, "go_detail_count": 2433, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/539/3524994445", "user_id": 3086893323, "name": "HAO\u5148\u751f", "user_verified": false}, "user_digg": 0, "group_id": 3552901672, "level": 4, "repin_count": 709, "digg_count": 16468, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887925, "display_time": 1411887925, "group": {"create_time": 1411825990.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 16, "share_url": "http://toutiao.com/group/3563386634/?iid=2337593504&app=joke_essay", "content": "\u5c0f\u660e:\u8001\u677f\uff0c\u6211\u60f3\u8bf7\u4e00\u5929\u5047\u2026\u2026\n\u8001\u677f:\u7ed9\u6211\u4e00\u4e2a\u725b\u903c\u7684\u7406\u7531\uff01 \u5c0f\u660e:\u6628\u665a\u548c\u51e0\u4e2a\u670b\u53cb\u559d\u591a\u4e86\uff0c\u4eca\u5929\u5c41\u773c\u75bc\uff0c\u60f3\u8bf7\u5047\u4f11\u606f\u4e00\u4e0b\uff01\n\u8001\u677f:\u597d\u5427\uff0c\u4e0b\u6b21\u559d\u9152\u53eb\u4e0a\u6211\u554a\u2026\u2026", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://tp2.sinaimg.cn/2271172453/50/5653308284/1", "user_id": 3294790540, "name": "-\u773c\u775b\u957f\u5728\u5c41\u80a1\u4e0a10640271", "user_verified": false}, "user_digg": 0, "group_id": 3563386634, "level": 3, "repin_count": 0, "digg_count": 68, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"type": 5, "display_time": 1411887876, "online_time": 1411887876, "ad": {"display_image_height": 400, "ad_id": 3561119039, "display_image_width": 600, "source": "", "package": "", "title": "\u5982\u4f55\u62e5\u6709\u4e00\u90e8iPhone6\uff0c\u77ac\u95f4\u89c9\u5f97\u4e0d\u7528\u5356\u80be\u4e86", "open_url": "", "download_url": "http://yihua.b0.upaiyun.com/neihan.apk", "is_ad": 1, "display_info": "\u5982\u4f55\u62e5\u6709\u4e00\u90e8iPhone6\uff0c\u77ac\u95f4\u89c9\u5f97\u4e0d\u7528\u5356\u80be\u4e86", "web_url": "http://yihua.b0.upaiyun.com/neihan.apk", "display_type": 3, "button_text": "\u7acb\u5373\u4e0b\u8f7d", "appleid": "", "track_url": "", "label": "\u63a8\u5e7f", "type": "app", "id": 3561119039, "ipa_url": "", "display_image": "http://p2.pstatp.com/large/1361/1096548608"}}, {"online_time": 1411887875, "display_time": 1411887875, "group": {"create_time": 1411391825.0, "favorite_count": 2353, "user_bury": 0, "user_favorite": 0, "bury_count": 2123, "share_url": "http://toutiao.com/group/3552332433/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u516c\u4ea4\u8f66\u4e0a\uff0c\u4e00\u8d31\u7537\u5bf9\u4e00\u4e2a\u5e26\u7740\u5b69\u5b50\u7684\u5c11\u5987\u8bf4\uff1a\u8fd9\u5b69\u5b50\u591a\u4fca\u5462\uff0c\u591a\u50cf\u6211\uff0c\u8fd9\u65f6\u5019\u5168\u8f66\u4eba\u90fd\u7b11\u4e86\uff0c\u5c11\u5987\u8bf4\uff0c\u80fd\u4e0d\u50cf\u5417\uff0c\u90fd\u662f\u4e00\u4e2a\u5988\u751f\u7684\uff0c\u5168\u8f66\u4eba\u90fd\u7b11\u6b6a\u4e86", "comment_count": 225, "status": 3, "has_comments": 1, "go_detail_count": 4105, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1097/7865998184", "user_id": 3401586434, "name": "\u5c0f_\u79bd\u517d", "user_verified": false}, "user_digg": 0, "group_id": 3552332433, "level": 4, "repin_count": 2353, "digg_count": 30179, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3179380692, "description": "\u76f8\u7ea6\u5feb\u4e50 \u5411\u5feb\u4e50\u770b\u9f50", "text": "\u8d31\u7537:\u5988\u5988 \uff0c\u53ef\u627e\u5230\u4f60\u4e86 \uff0c\u6211\u8981\u770b\u770b\u751f\u6211\u517b\u6211\u7684\u5730\u65b9\u548c\u6211\u51fa\u751f\u65f6\u6240\u8d70\u8fc7\u7684\u8def\u7a0b\uff01", "comment_id": 3554024365, "digg_count": 244, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p1.pstatp.com/thumb/748/1522924406", "create_time": 1411462234, "is_digg": 0, "user_name": "feel\u500d\u513f\u723d...", "user_profile_image_url": "http://p1.pstatp.com/thumb/748/1522924406"}, {"user_id": 3336992585, "description": "", "text": "\u7136\u540e\u8d31\u7537\u4f38\u51fa\u53cc\u624b\u8d31\u8d31\u7684\u8bf4:\u5988\u5988\u6211\u8981\u559d\u5976\u5976\uff0c\u8981\u561b\uff0c\u8981\u561b\uff0c\u6211\u73b0\u5728\u5c31\u8981\u3002", "comment_id": 3554249967, "digg_count": 277, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p0.pstatp.com/thumb/967/1893081597", "create_time": 1411468759, "is_digg": 0, "user_name": "\u6587\u748b", "user_profile_image_url": "http://p0.pstatp.com/thumb/967/1893081597"}], "type": 1}, {"online_time": 1411887825, "display_time": 1411887825, "group": {"create_time": 1411362094.0, "favorite_count": 753, "user_bury": 0, "user_favorite": 0, "bury_count": 1771, "share_url": "http://toutiao.com/group/3551352210/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5c0f\u65f6\u5019\u542c\u8bdd\u4e56\u5de7\u61c2\u4e8b\u7684\u5b69\u5b50\uff0c\u957f\u5927\u540e\u5ad6\u4e86\u4e00\u6b21\u5a3c\u88ab\u6293\u4e86\uff0c\u8eab\u8fb9\u7684\u4eba\u90fd\u8bf4\uff0c\u8fd9\u5c0f\u5b50\u88c5\u4e86\u8fd9\u4e48\u591a\u5e74\uff0c\u7ec8\u4e8e\u6f0f\u51fa\u72d0\u72f8\u5c3e\u5df4\u6765\u4e86\uff0c\u6d3b\u8be5\u3002\u5c0f\u65f6\u5019\u4e0d\u542c\u8bdd\u6574\u5929\u60f9\u9ebb\u70e6\u7684\u5b69\u5b50\uff0c\u957f\u5927\u540e\u63a5\u4e00\u4e2a\u5de5\u7a0b\u53d1\u8d22\u4e86\uff0c\u8eab\u8fb9\u7684\u4eba\u8bf4\uff0c\u8fd8\u662f\u8fd9\u5c0f\u5b50\u6709\u80fd\u8010\uff0c\u662f\u4e2a\u597d\u5b69\u5b50\uff01", "comment_count": 219, "status": 3, "has_comments": 0, "go_detail_count": 3683, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1329/2369112397", "user_id": 3430098036, "name": "\u53bf\u57ce\u83bd\u6e9c\u5b50", "user_verified": false}, "user_digg": 0, "group_id": 3551352210, "level": 4, "repin_count": 753, "digg_count": 18723, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887775, "display_time": 1411887775, "group": {"create_time": 1411881593.0, "favorite_count": 1, "user_bury": 0, "user_favorite": 0, "bury_count": 12, "share_url": "http://toutiao.com/group/3564519486/?iid=2337593504&app=joke_essay", "content": "\u5c0f\u660e\uff1a\u8001\u5e08\uff0c\u6211\u8bf7\u5047\u3002\n\u8001\u5e08\uff1a\u4e3a\u4ec0\u4e48\u8981\u8bf7\u5047\u554a\uff01\n\u5c0f\u660e\uff1a\u4eca\u5929\u6211\u4e0a\u5b66\u8def\u4e0a\u978b\u8fdb\u4e86\u77f3\u5b50\uff0c\u6211\u5c31\u6276\u7740\u65c1\u8fb9\u7684\u7535\u7ebf\u6746\u628a\u978b\u91cc\u7684\u77f3\u5b50\u6296\u51fa\u53bb\uff0c\u8def\u8fc7\u597d\u5fc3\u7684\u738b\u5927\u53d4 \u4ee5\u4e3a\u6211\u89e6\u7535\u4e86\uff0c\u6284\u8d77\u9504\u5934\u628a\u6211\u7684\u624b\u6253\u65ad\u4e86 \uff01", "comment_count": 2, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u6d3b\u52a8\u5df2\u53d1\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1059/421427645", "user_id": 1958027142, "name": "\u6211\u591a\u60f3\u8bf7\u4f60\u5403\u516d\u5757\u7684\u9ebb\u8fa3\u70eb", "user_verified": false}, "user_digg": 0, "group_id": 3564519486, "level": 3, "repin_count": 1, "digg_count": 45, "user_repin": 0, "activity": {"status": 2, "user_count": 2122, "title": "\u8bf7\u5047\u6761", "text": "\u64cd\u52b3\u6570\u65e5\uff0c\u61d2\u764c\u53c8\u72af\uff0c\u597d\u60f3\u8bf7\u5047\uff01\r\n\u5404\u4f4d\u9017\u6bd4\u6bb5\u53cb\u4eec\uff0c\u4e3a\u4e86\u8bf7\u5047\u4f60\u4eec\u90fd\u7528\u4e86\u795e\u9a6c\u62db\u6570\uff1f\u8bf7\u5047\u6761\u600e\u4e48\u5199\u624d\u5c3d\u663e\u529f\u5e95\uff1f\u6652\u51fa\u6765\u7ed9\u5927\u5bb6\u89c1\u8bc6\u89c1\u8bc6\uff01", "start_time": 1411531212, "share_url": "http://neihanshequ.com/activity/29/?iid=2337593504&app_name=joke_essay", "group_count": 2271, "end_time": 1412071200, "image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1347/8185543519"}, {"url": "http://p0.pstatp.com/large/1347/8185543519"}, {"url": "http://p.pstatp.com/large/1347/8185543519"}], "uri": "large/1347/8185543519", "height": 248}, "category_id": 1, "id": 29, "user": {"avatar_url": "http://p2.pstatp.com/thumb/398/644451160", "user_id": 20396, "name": "\u5185\u6db5\u6bb5\u5b50", "user_verified": true}}, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887725, "display_time": 1411887725, "group": {"create_time": 1411541048.0, "favorite_count": 868, "user_bury": 0, "user_favorite": 0, "bury_count": 1563, "share_url": "http://toutiao.com/group/3556144826/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8bb0\u8005\uff1a\u5148\u751f\uff0c\u4f60\u59bb\u5b50\u5411\u6211\u4eec\u611f\u60c5\u70ed\u7ebf\u53cd\u5e94\uff0c\u4f60\u5728\u5916\u5934\u5305\u5c0f\u4e09\uff0c\u8fd8\u6709\u4e86\u5b69\u5b50\uff1f\n\u7537\uff1a\u4f60\u51e0\u5c81\u5931\u53bb\u7684\u8d1e\u64cd\uff1f\u4f60\u548c\u51e0\u4e2a\u7537\u4eba\u4e0a\u8fc7\u5e8a\uff1f\u4f60\u548c\u51e0\u4e2a\u7537\u4eba\u540c\u8fc7\u5c45\uff1f\u5815\u8fc7\u51e0\u6b21\u80ce\uff1f\n\u8bb0\u8005\uff1a\u4e0d\u597d\u610f\u601d\uff0c\u8fd9\u662f\u6211\u7684\u9690\u79c1\u3002\n\u90a3\u4f60TM\u7684\u8fd8\u95ee\u6211", "comment_count": 88, "status": 3, "has_comments": 0, "go_detail_count": 1797, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1073/8253191340", "user_id": 3069965530, "name": "\u963f\u6728\u5f61", "user_verified": false}, "user_digg": 0, "group_id": 3556144826, "level": 4, "repin_count": 868, "digg_count": 15471, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887675, "display_time": 1411887675, "group": {"create_time": 1411269861.0, "favorite_count": 386, "user_bury": 0, "user_favorite": 0, "bury_count": 2991, "share_url": "http://toutiao.com/group/3549210513/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6211\u5728\u5de5\u5730\u642c\u7816\uff0c\u8001\u5a46\u5728\u5bb6\u5e26\u5c0f\u5b69\uff0c\u6b64\u80cc\u666f\u4e0b\u3002\u7531\u4e8e\u5de5\u5730\u4e0a\u4f19\u98df\u4e0d\u662f\u5f88\u597d\uff0c\u6709\u4e00\u6b21\u7ed9\u8001\u5a46\u6253\u7535\u8bdd\uff1a\u8001\u5a46\uff0c\u6211\u597d\u60f3\u5403\u8089\u3002\u7ed3\u679c\u4e8c\u8d27\u8001\u5a46\u8bf4\uff1a\u6211\u4e5f\u60f3\u5403\u8089\u2026\u2026\u4e5f\u60f3\u5403\u8089\u7684\u5de6\u4e0b\u5427", "comment_count": 344, "status": 3, "has_comments": 1, "go_detail_count": 2691, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1343/3700726748", "user_id": 3504895732, "name": "\u5c0f\u660e\u5bb6\u9694\u58c1\u7684\u971c\u971c", "user_verified": false}, "user_digg": 0, "group_id": 3549210513, "level": 4, "repin_count": 386, "digg_count": 25924, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 2468033669, "description": "", "text": "\u642c\u7816\u7684\u90fd\u6709\u8001\u5a46\uff01   \u6297\u6c34\u6ce5\u7684\u8868\u793a\u4e0d\u670d\uff01", "comment_id": 3553193718, "digg_count": 777, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p0.pstatp.com/thumb/399/4113231048", "create_time": 1411437855, "is_digg": 0, "user_name": "\u563f\u2026\u5c0f\u83dc\u4e00\u789f", "user_profile_image_url": "http://p0.pstatp.com/thumb/399/4113231048"}], "type": 1}, {"online_time": 1411887625, "display_time": 1411887625, "group": {"create_time": 1411385025.0, "favorite_count": 531, "user_bury": 0, "user_favorite": 0, "bury_count": 1616, "share_url": "http://toutiao.com/group/3552056474/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u521a\u51fa\u6765\u4e0a\u73ed\uff01\u603b\u662f\u60f3\u7740\u8ba1\u7b97\u4e00\u6708\u80fd\u62ff\u591a\u5c11\u5de5\u8d44\uff0c\u9664\u6389\u623f\u79df\u5403\u996d\uff01\u4e00\u5e74\u5c31\u80fd\u7701\u4e2a\u51e0\u4e07\uff01\u5988\u86cb\u8fd9\u90fd\u51e0\u5e74\u4e86\uff5e\uff5e\uff5e\u94b1\u5462\uff1f\uff1f\uff1f", "comment_count": 227, "status": 3, "has_comments": 0, "go_detail_count": 590, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1339/5998963647", "user_id": 3172603872, "name": "\u78a7\u4e91\u6843\u5b50", "user_verified": false}, "user_digg": 0, "group_id": 3552056474, "level": 4, "repin_count": 531, "digg_count": 16837, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887575, "display_time": 1411887575, "group": {"create_time": 1411888570.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 4, "share_url": "http://toutiao.com/group/3564755974/?iid=2337593504&app=joke_essay", "content": "\u77e5\u9053\u4e3a\u4ec0\u4e48\u6211\u7ecf\u5e38\u53bb\u5e7f\u573a\u770b\u5927\u5988\u8df3\u821e\u4e0d\uff1f\u544a\u8bc9\u4f60\u5427\uff0c\u53ea\u8981\u4f60\u8ddf\u90a3\u4e9b\u5927\u5988\u6df7\u719f\u4e86\uff0c\u5927\u5988\u90fd\u4f1a\u95ee\u4f60\uff1a\u201c\u5c0f\u4f19\u5b50\uff0c\u6709\u5973\u670b\u53cb\u4e86\u6ca1\uff0c\u5927\u5988\u7ed9\u4f60\u4ecb\u7ecd\u4e00\u4e2a\u3002\u201d", "comment_count": 1, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1366/7125677078", "user_id": 3564687121, "name": "\u8001\u88e4\u5b50", "user_verified": false}, "user_digg": 0, "group_id": 3564755974, "level": 3, "repin_count": 0, "digg_count": 13, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887525, "display_time": 1411887525, "group": {"create_time": 1411812569.0, "favorite_count": 234, "user_bury": 0, "user_favorite": 0, "bury_count": 780, "share_url": "http://toutiao.com/group/3563122650/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4ee5\u524d\u548c\u5973\u670b\u53cb\uff08\u73b0\u5728\u7684\u8001\u5a46\uff09\u8fd8\u6709\u5979\u7684\u95fa\u871c\u51fa\u53bb\u5403\u996d\uff0c\u90fd\u9009\u62e9\u6bd4\u8f83\u597d\u7684\u9910\u5385\u53bb\u5403\uff0c\u6211\u5973\u670b\u53cb\u77e5\u9053\u6211\u5f88\u7a77\uff0c\u6bcf\u6b21\u5feb\u5403\u5b8c\u996d\u7684\u65f6\u5019\u53eb\u4e0a\u95fa\u871c\u53bb\u6d17\u624b\u95f4\uff0c\u800c\u540e\u6211\u5973\u670b\u53cb\u5f88\u5feb\u51fa\u6765\u5c31\u5148\u628a\u94b1\u7ed9\u6211\u5fae\u7b11\u7740\u8bf4\uff1a\u8bb0\u597d\u5e10\uff0c\u4ee5\u540e\u8fd8\u7ed9\u6211\u3002\u5509\uff01\u644a\u4e0a\u8fd9\u79cd\u5973\u4eba\u5c31\u5a36\u4e86\u5427", "comment_count": 426, "status": 3, "has_comments": 1, "go_detail_count": 2064, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/936/7866824152", "user_id": 3316086922, "name": "\u542c\u8bf4\u9694\u58c1\u642c\u6765\u4e00\u4e2a\u8001\u5434", "user_verified": false}, "user_digg": 0, "group_id": 3563122650, "level": 4, "repin_count": 234, "digg_count": 9581, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [{"user_id": 3385131530, "description": " \u6ca1\u6709\u4e2a\u6027\u4e0d\u9700\u7b7e\u540d\u3002", "text": "\u7b2c\u4e00\u6b21\u89c1\u628a\u5403\u8f6f\u996d\u8bf4\u7684\u8fd9\u4e48\u6e05\u65b0\u8131\u4fd7\uff01", "comment_id": 3563178303, "digg_count": 833, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/1098/996695592", "create_time": 1411814225, "is_digg": 0, "user_name": "\u79cb\u610f\u51e0\u591a\u51c9_", "user_profile_image_url": "http://p2.pstatp.com/thumb/1098/996695592"}], "type": 1}, {"online_time": 1411887475, "display_time": 1411887475, "group": {"create_time": 1411359750.0, "favorite_count": 799, "user_bury": 0, "user_favorite": 0, "bury_count": 2441, "share_url": "http://toutiao.com/group/3551277052/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u201c\u738b\u83f2\u8c22\u9706\u950b\u548c\u597d\u662f\u5047\u7684\uff01\u201d\u201c\u4f60\u600e\u4e48\u77e5\u9053\uff1f\u201d\u201c\u5f88\u7b80\u5355\uff0c\u4e09\u5929\u4e86\uff0c\u674e\u767d\u90a3\u8fb9\u8fd8\u6ca1\u6709\u653e\u51fa\u6d88\u606f\u3002\u201d", "comment_count": 245, "status": 3, "has_comments": 0, "go_detail_count": 5033, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://tp4.sinaimg.cn/3944250579/50/0/0", "user_id": 3351584907, "name": "gogo\u751f\u547d\u5982\u6b64\u8106\u5f31", "user_verified": false}, "user_digg": 0, "group_id": 3551277052, "level": 4, "repin_count": 799, "digg_count": 20709, "has_hot_comments": 1, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}, {"online_time": 1411887425, "display_time": 1411887425, "group": {"create_time": 1411888561.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 5, "share_url": "http://toutiao.com/group/3564745178/?iid=2337593504&app=joke_essay", "content": "\u90a3\u5929\u4f60\u4e00\u8f6c\u8eab\uff0c\u4ece\u6b64\u6765\u53bb\u5306\u5306\uff0c\u6df1\u60c5\u7684\u56de\u671b\u7559\u4e0b\u591a\u5c11\u60c6\u6005\uff0c\u8001\u5e08\uff1a\u201c\u5c0f\u660e\u56de\u6765\u4e0a\u8bfe\u5427\uff01\uff01\"", "comment_count": 0, "status": 2, "has_comments": 0, "go_detail_count": 0, "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg", "user_id": 3531583017, "name": "\u9a91\u5929__\u5927\u5723", "user_verified": false}, "user_digg": 0, "group_id": 3564745178, "level": 3, "repin_count": 0, "digg_count": 12, "user_repin": 0, "category_id": 1}, "comments": [], "type": 1}], "max_time": 1411887425}}
+
+
+////////////////////////////////////
+
+15. 图片列表 没有分页的
+
+获取列表，分类ID为 2
+
+GET http://ic.snssdk.com/2/essay/zone/category/data/?category_id=2&level=6&count=30&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: ic.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 07:42:41 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 46166
+
+{"message": "success", "data": {"has_more": true, "min_time": 1411890161, "tip": "30\u6761\u65b0\u5185\u5bb9", "data": [{"online_time": 1411890151, "display_time": 1411890151, "group": {"create_time": 1411311066.0, "favorite_count": 413, "go_detail_count": 2329, "user_favorite": 0, "bury_count": 685, "share_url": "http://toutiao.com/group/3550209209/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6b63\u597d\u4e94\u4e2a\u5b57", "comment_count": 105, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 460, "url_list": [{"url": "http://p2.pstatp.com/large/1343/5291321889"}, {"url": "http://p0.pstatp.com/large/1343/5291321889"}, {"url": "http://p.pstatp.com/large/1343/5291321889"}], "uri": "large/1343/5291321889", "height": 1936}, "description": "\u6b63\u597d\u4e94\u4e2a\u5b57", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1310/4022060884", "user_id": 3373800416, "name": "\u83aa\u6664", "user_verified": false}, "user_digg": 0, "group_id": 3550209209, "level": 4, "repin_count": 413, "digg_count": 9835, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1343/5291321889"}, {"url": "http://p0.pstatp.com/w202/1343/5291321889"}, {"url": "http://p.pstatp.com/w202/1343/5291321889"}], "uri": "w202/1343/5291321889", "height": 850}}, "comments": [], "type": 1}, {"online_time": 1411890131, "display_time": 1411890131, "group": {"create_time": 1411395202.0, "favorite_count": 347, "go_detail_count": 13325, "user_favorite": 0, "bury_count": 1059, "share_url": "http://toutiao.com/group/3552276764/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4ee5\u524d\u8fd8\u771f\u7684\u4e0d\u77e5\u9053", "comment_count": 401, "user_bury": 0, "status": 3, "has_comments": 1, "large_image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1345/2036232243"}, {"url": "http://p0.pstatp.com/large/1345/2036232243"}, {"url": "http://p.pstatp.com/large/1345/2036232243"}], "uri": "large/1345/2036232243", "height": 1411}, "description": "\u4ee5\u524d\u8fd8\u771f\u7684\u4e0d\u77e5\u9053", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1183/7779064850", "user_id": 3463108969, "name": "\u760b\u5b50JK", "user_verified": false}, "user_digg": 0, "group_id": 3552276764, "level": 4, "repin_count": 347, "digg_count": 13522, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1345/2036232243"}, {"url": "http://p0.pstatp.com/w202/1345/2036232243"}, {"url": "http://p.pstatp.com/w202/1345/2036232243"}], "uri": "w202/1345/2036232243", "height": 445}}, "comments": [{"user_id": 3220344750, "description": "", "text": "\u91d1\u9f9f\u5b50\u59d0\u59d0   \u597d\u60f3\u56de\u5230\u516d\u70b9\u5750\u7b49\u5927\u98ce\u8f66\u7684\u65f6\u5019", "comment_id": 3552373286, "digg_count": 1192, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/708/5156666539", "create_time": 1411393007, "is_digg": 0, "user_name": "\u86c7\u59ec\u7684\u8def\u98de", "user_profile_image_url": "http://p2.pstatp.com/thumb/708/5156666539"}], "type": 1}, {"online_time": 1411890111, "display_time": 1411890111, "group": {"create_time": 1411649321.0, "favorite_count": 488, "go_detail_count": 15768, "user_favorite": 0, "bury_count": 1573, "share_url": "http://toutiao.com/group/3559087995/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u7edd\u4e16\u597d\u724c\uff01\uff01\uff01\uff01\uff01\uff01\uff01\uff01\uff01", "comment_count": 785, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 449, "url_list": [{"url": "http://p2.pstatp.com/large/1357/5669112505"}, {"url": "http://p0.pstatp.com/large/1357/5669112505"}, {"url": "http://p.pstatp.com/large/1357/5669112505"}], "uri": "large/1357/5669112505", "height": 316}, "description": "\u7edd\u4e16\u597d\u724c\uff01\uff01\uff01\uff01\uff01\uff01\uff01\uff01\uff01", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1358/2263940350", "user_id": 3411770064, "name": "\u4e9a\u5f53\u4e0e\u590f\u5a03\u7684\u6545\u4e8b", "user_verified": false}, "user_digg": 0, "group_id": 3559087995, "level": 4, "repin_count": 488, "digg_count": 13338, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1357/5669112505"}, {"url": "http://p0.pstatp.com/w202/1357/5669112505"}, {"url": "http://p.pstatp.com/w202/1357/5669112505"}], "uri": "w202/1357/5669112505", "height": 142}}, "comments": [], "type": 1}, {"online_time": 1411890091, "display_time": 1411890091, "group": {"create_time": 1411553464.0, "favorite_count": 381, "go_detail_count": 5814, "user_favorite": 0, "bury_count": 675, "share_url": "http://toutiao.com/group/3556389097/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8fd9\u8be5\u600e\u4e48\u8bf4\u597d\u5462", "comment_count": 168, "user_bury": 0, "status": 3, "has_comments": 1, "large_image": {"width": 800, "url_list": [{"url": "http://p2.pstatp.com/large/1354/1364056574"}, {"url": "http://p0.pstatp.com/large/1354/1364056574"}, {"url": "http://p.pstatp.com/large/1354/1364056574"}], "uri": "large/1354/1364056574", "height": 1067}, "description": "\u8fd9\u8be5\u600e\u4e48\u8bf4\u597d\u5462", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/307/4269312224", "user_id": 2199322535, "name": "\u6700\u540e\u4e00\u9875", "user_verified": false}, "user_digg": 0, "group_id": 3556389097, "level": 4, "repin_count": 381, "digg_count": 9367, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1354/1364056574"}, {"url": "http://p0.pstatp.com/w202/1354/1364056574"}, {"url": "http://p.pstatp.com/w202/1354/1364056574"}], "uri": "w202/1354/1364056574", "height": 269}}, "comments": [{"user_id": 1923733270, "description": "\u5979\u5728\u4f60\u773c\u91cc\u592a\u6e29\u67d4\u3002", "text": "\u6211\u8981\u8ba9\u5168\u4e16\u754c\u7684\u4eba\u90fd\u77e5\u9053\uff0c\u963f\u65af\u987f\u9a6c\u4e01\u88ab\u4f60\u627f\u5305\u4e86\uff01", "comment_id": 3556690028, "digg_count": 599, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/991/3499520713", "create_time": 1411556380, "is_digg": 0, "user_name": "\u95fa\u871c\u6db5\u6db5i", "user_profile_image_url": "http://p2.pstatp.com/thumb/991/3499520713"}], "type": 1}, {"online_time": 1411890081, "display_time": 1411890081, "group": {"create_time": 1411887016.0, "go_detail_count": 0, "favorite_count": 11, "user_bury": 0, "user_favorite": 0, "bury_count": 54, "share_url": "http://toutiao.com/group/3564010199/?iid=2337593504&app=joke_essay", "content": "\u3002\u3002\u3002\u3002\u3002", "comment_count": 22, "status": 2, "has_comments": 0, "large_image": {"width": 550, "url_list": [{"url": "http://p2.pstatp.com/large/1361/6175137636"}, {"url": "http://p0.pstatp.com/large/1361/6175137636"}, {"url": "http://p.pstatp.com/large/1361/6175137636"}], "uri": "large/1361/6175137636", "height": 1229}, "description": "\u3002\u3002\u3002\u3002\u3002", "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1361/6395756286", "user_id": 2996442389, "name": "\u90a3\u8c01--\u8bf7\u522b\u8d70", "user_verified": false}, "user_digg": 0, "group_id": 3564010199, "level": 3, "repin_count": 11, "digg_count": 443, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1361/6175137636"}, {"url": "http://p0.pstatp.com/w202/1361/6175137636"}, {"url": "http://p.pstatp.com/w202/1361/6175137636"}], "uri": "w202/1361/6175137636", "height": 451}}, "comments": [], "type": 1}, {"online_time": 1411890071, "display_time": 1411890071, "group": {"create_time": 1411820206.0, "favorite_count": 33, "go_detail_count": 1609, "user_favorite": 0, "bury_count": 698, "share_url": "http://toutiao.com/group/3563224360/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u82e6\u903c\u7684\u6c11\u5de5 \u81ea\u5a31\u81ea\u4e50 \u6253\u5de5\u5728\u5916\u90fd\u4e0d\u5bb9\u6613\u8fc7\u5427\u4eb2", "comment_count": 159, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 800, "url_list": [{"url": "http://p2.pstatp.com/large/1367/3964392621"}, {"url": "http://p0.pstatp.com/large/1367/3964392621"}, {"url": "http://p.pstatp.com/large/1367/3964392621"}], "uri": "large/1367/3964392621", "height": 1419}, "description": "\u82e6\u903c\u7684\u6c11\u5de5 \u81ea\u5a31\u81ea\u4e50 \u6253\u5de5\u5728\u5916\u90fd\u4e0d\u5bb9\u6613\u8fc7\u5427\u4eb2", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1182/5653773554", "user_id": 3457741673, "name": "\u90aa\u7231", "user_verified": false}, "user_digg": 0, "group_id": 3563224360, "level": 4, "repin_count": 33, "digg_count": 9545, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1367/3964392621"}, {"url": "http://p0.pstatp.com/w202/1367/3964392621"}, {"url": "http://p.pstatp.com/w202/1367/3964392621"}], "uri": "w202/1367/3964392621", "height": 358}}, "comments": [], "type": 1}, {"online_time": 1411890051, "display_time": 1411890051, "group": {"create_time": 1411568756.0, "favorite_count": 208, "go_detail_count": 1021, "user_favorite": 0, "bury_count": 692, "share_url": "http://toutiao.com/group/3554362899/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u597d\u50cf\u786e\u5b9e\u662f\u8fd9\u6837\u8bf6\u3002\u3002\u3002\u3002\u3002", "comment_count": 81, "user_bury": 0, "status": 3, "has_comments": 1, "large_image": {"width": 639, "url_list": [{"url": "http://p2.pstatp.com/large/1348/5842457371"}, {"url": "http://p0.pstatp.com/large/1348/5842457371"}, {"url": "http://p.pstatp.com/large/1348/5842457371"}], "uri": "large/1348/5842457371", "height": 422}, "description": "\u597d\u50cf\u786e\u5b9e\u662f\u8fd9\u6837\u8bf6\u3002\u3002\u3002\u3002\u3002", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/827/7647049817", "user_id": 3286286718, "name": "\u795e\u8bfa\u4e9a10446361", "user_verified": false}, "user_digg": 0, "group_id": 3554362899, "level": 4, "repin_count": 208, "digg_count": 9965, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1348/5842457371"}, {"url": "http://p0.pstatp.com/w202/1348/5842457371"}, {"url": "http://p.pstatp.com/w202/1348/5842457371"}], "uri": "w202/1348/5842457371", "height": 133}}, "comments": [{"user_id": 3143803124, "description": "", "text": "\u7136\u540e\u53d1\u73b0\u5fd8\u4e86\u770b\u65f6\u95f4", "comment_id": 3556991314, "digg_count": 114, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/614/115927536", "create_time": 1411566351, "is_digg": 0, "user_name": "\u62e9\u66f0\u4e0d\u5982\u649e\u65e5", "user_profile_image_url": "http://p2.pstatp.com/thumb/614/115927536"}], "type": 1}, {"online_time": 1411890041, "display_time": 1411890041, "group": {"create_time": 1411882367.0, "favorite_count": 16, "user_bury": 0, "user_favorite": 0, "bury_count": 54, "share_url": "http://toutiao.com/group/3564538697/?iid=2337593504&app=joke_essay", "content": "\u9047\u5230\u8fd9\u6837\u7684\u5973\u5b69\uff0c\u8d76\u7d27\u5a36\u4e86\u5427", "comment_count": 7, "status": 1, "has_comments": 0, "large_image": {"width": 659, "url_list": [{"url": "http://p2.pstatp.com/large/1367/6758163200"}, {"url": "http://p0.pstatp.com/large/1367/6758163200"}, {"url": "http://p.pstatp.com/large/1367/6758163200"}], "uri": "large/1367/6758163200", "height": 436}, "go_detail_count": 0, "status_desc": "\u5ba1\u6838\u4e2d", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1363/5959667654", "user_id": 1919439590, "name": " \u51f9\u51f8\u66fc\u00b0", "user_verified": false}, "user_digg": 0, "group_id": 3564538697, "level": 1, "repin_count": 16, "digg_count": 334, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1367/6758163200"}, {"url": "http://p0.pstatp.com/w202/1367/6758163200"}, {"url": "http://p.pstatp.com/w202/1367/6758163200"}], "uri": "w202/1367/6758163200", "height": 133}}, "comments": [], "type": 1}, {"online_time": 1411890031, "display_time": 1411890031, "group": {"create_time": 1411540670.0, "favorite_count": 351, "go_detail_count": 6724, "user_favorite": 0, "bury_count": 652, "share_url": "http://toutiao.com/group/3554355864/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8001\u738b\u65c1\u8fb9\u7684\u662f\u8c01\uff1f\uff1f", "comment_count": 296, "user_bury": 0, "status": 3, "has_comments": 1, "large_image": {"width": 408, "url_list": [{"url": "http://p1.pstatp.com/large/1346/6196174613"}, {"url": "http://p2.pstatp.com/large/1346/6196174613"}, {"url": "http://p.pstatp.com/large/1346/6196174613"}], "uri": "large/1346/6196174613", "height": 295}, "description": "\u8001\u738b\u65c1\u8fb9\u7684\u662f\u8c01\uff1f\uff1f", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1285/5593887749", "user_id": 3123027869, "name": "\u8f6c\u89d2\u8def\u53e3\u6211\u9047\u5230\u4e86n", "user_verified": false}, "user_digg": 0, "group_id": 3554355864, "level": 4, "repin_count": 351, "digg_count": 9124, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p1.pstatp.com/w202/1346/6196174613"}, {"url": "http://p2.pstatp.com/w202/1346/6196174613"}, {"url": "http://p.pstatp.com/w202/1346/6196174613"}], "uri": "w202/1346/6196174613", "height": 146}}, "comments": [{"user_id": 3538614185, "description": "", "text": "\u539f\u6765\u8001\u738b\u4ed6\u7239\u4e00\u76f4\u6302\u5728\u8fd9", "comment_id": 3556880652, "digg_count": 882, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p1.pstatp.com/thumb/1342/3632561130", "create_time": 1411561408, "is_digg": 0, "user_name": "90\u9005\u6751\u6c11", "user_profile_image_url": "http://p1.pstatp.com/thumb/1342/3632561130"}], "type": 1}, {"online_time": 1411890011, "display_time": 1411890011, "group": {"create_time": 1409886092.0, "is_gif": 1, "favorite_count": 1239, "user_bury": 0, "user_favorite": 0, "bury_count": 1421, "share_url": "http://toutiao.com/group/3513585888/?iid=2337593504&app=joke_essay", "label": 1, "content": "", "comment_count": 511, "status": 3, "has_comments": 0, "large_image": {"width": 250, "url_list": [{"url": "http://p2.pstatp.com/large/1272/8558559602"}, {"url": "http://p0.pstatp.com/large/1272/8558559602"}, {"url": "http://p.pstatp.com/large/1272/8558559602"}], "uri": "large/1272/8558559602", "height": 139}, "go_detail_count": 0, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1286/7419167118", "user_id": 3503599139, "name": "\u5439\u725b\u6bd4\u4e0d\u8170\u75bc", "user_verified": false}, "user_digg": 0, "group_id": 3513585888, "level": 4, "repin_count": 1239, "digg_count": 44544, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 10, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1272/8558559602"}, {"url": "http://p0.pstatp.com/w202/1272/8558559602"}, {"url": "http://p.pstatp.com/w202/1272/8558559602"}], "uri": "w202/1272/8558559602", "height": 112}}, "comments": [], "type": 1}, {"online_time": 1411890001, "display_time": 1411890001, "group": {"create_time": 1411885069.0, "go_detail_count": 0, "favorite_count": 11, "user_bury": 0, "user_favorite": 0, "bury_count": 67, "share_url": "http://toutiao.com/group/3564178275/?iid=2337593504&app=joke_essay", "content": "\u6765\u4e2a\u65b0\u9c9c\u7684", "comment_count": 13, "status": 2, "has_comments": 0, "large_image": {"width": 589, "url_list": [{"url": "http://p2.pstatp.com/large/1360/7259275641"}, {"url": "http://p0.pstatp.com/large/1360/7259275641"}, {"url": "http://p.pstatp.com/large/1360/7259275641"}], "uri": "large/1360/7259275641", "height": 700}, "description": "\u6765\u4e2a\u65b0\u9c9c\u7684", "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/307/8171650249", "user_id": 2750701827, "name": "\u9ed1\u8272\u4e36\u82ac\u8fbe", "user_verified": false}, "user_digg": 0, "group_id": 3564178275, "level": 3, "repin_count": 11, "digg_count": 516, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1360/7259275641"}, {"url": "http://p0.pstatp.com/w202/1360/7259275641"}, {"url": "http://p.pstatp.com/w202/1360/7259275641"}], "uri": "w202/1360/7259275641", "height": 240}}, "comments": [], "type": 1}, {"online_time": 1411889991, "display_time": 1411889991, "group": {"create_time": 1411563270.0, "favorite_count": 491, "go_detail_count": 6197, "user_favorite": 0, "bury_count": 802, "share_url": "http://toutiao.com/group/3556596119/?iid=2337593504&app=joke_essay", "label": 1, "content": "", "comment_count": 217, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 440, "url_list": [{"url": "http://p2.pstatp.com/large/1354/1845959496"}, {"url": "http://p0.pstatp.com/large/1354/1845959496"}, {"url": "http://p.pstatp.com/large/1354/1845959496"}], "uri": "large/1354/1845959496", "height": 1202}, "description": "", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1353/6254175753", "user_id": 1862482423, "name": "\u7c73\u52d2\u7684\u679c\u679c", "user_verified": false}, "user_digg": 0, "group_id": 3556596119, "level": 4, "repin_count": 491, "digg_count": 9826, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1354/1845959496"}, {"url": "http://p0.pstatp.com/w202/1354/1845959496"}, {"url": "http://p.pstatp.com/w202/1354/1845959496"}], "uri": "w202/1354/1845959496", "height": 551}}, "comments": [], "type": 1}, {"online_time": 1411889971, "display_time": 1411889971, "group": {"create_time": 1411725321.0, "favorite_count": 250, "go_detail_count": 1347, "user_favorite": 0, "bury_count": 810, "share_url": "http://toutiao.com/group/3560984080/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u575a\u6301\u5c31\u662f\u80dc\u5229\u3002\u540c\u610f\u8bf7\u8d5e\u4e0b\u3002", "comment_count": 306, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 294, "url_list": [{"url": "http://p2.pstatp.com/large/1366/54137427"}, {"url": "http://p0.pstatp.com/large/1366/54137427"}, {"url": "http://p.pstatp.com/large/1366/54137427"}], "uri": "large/1366/54137427", "height": 220}, "description": "\u575a\u6301\u5c31\u662f\u80dc\u5229\u3002\u540c\u610f\u8bf7\u8d5e\u4e0b\u3002", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg", "user_id": 3537233625, "name": "\u9694\u58c1\u5bb6\u7684\u4eb2\u621a\u7684\u513f\u5b50\u7684\u4e08\u6bcd\u5a18\u7684\u4e8c\u59d1\u7684\u7537\u4eba", "user_verified": false}, "user_digg": 0, "group_id": 3560984080, "level": 4, "repin_count": 250, "digg_count": 10232, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1366/54137427"}, {"url": "http://p0.pstatp.com/w202/1366/54137427"}, {"url": "http://p.pstatp.com/w202/1366/54137427"}], "uri": "w202/1366/54137427", "height": 151}}, "comments": [], "type": 1}, {"online_time": 1411889961, "display_time": 1411889961, "group": {"create_time": 1411883279.0, "favorite_count": 7, "go_detail_count": 0, "user_favorite": 0, "bury_count": 68, "share_url": "http://toutiao.com/group/3563988722/?iid=2337593504&app=joke_essay", "content": "\u201c\u5982\u8d70\u5931\uff0c\u8bf7\u628a\u6211\u8fd8\u7ed9Rtita\u201d\u3001\u201c\u6211\u5c31\u662fRita\u201d\uff01", "comment_count": 5, "user_bury": 0, "status": 2, "has_comments": 0, "large_image": {"width": 592, "url_list": [{"url": "http://p2.pstatp.com/large/1367/5363107412"}, {"url": "http://p0.pstatp.com/large/1367/5363107412"}, {"url": "http://p.pstatp.com/large/1367/5363107412"}], "uri": "large/1367/5363107412", "height": 501}, "description": "\u201c\u5982\u8d70\u5931\uff0c\u8bf7\u628a\u6211\u8fd8\u7ed9Rtita\u201d\u3001\u201c\u6211\u5c31\u662fRita\u201d\uff01", "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/307/7832439041", "user_id": 2745369097, "name": "L\u01d2v\u306e\u256c\u5c0f\u4e11", "user_verified": false}, "user_digg": 0, "group_id": 3563988722, "level": 3, "repin_count": 7, "digg_count": 556, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1367/5363107412"}, {"url": "http://p0.pstatp.com/w202/1367/5363107412"}, {"url": "http://p.pstatp.com/w202/1367/5363107412"}], "uri": "w202/1367/5363107412", "height": 170}}, "comments": [], "type": 1}, {"online_time": 1411889931, "display_time": 1411889931, "group": {"create_time": 1411564960.0, "favorite_count": 175, "go_detail_count": 1023, "user_favorite": 0, "bury_count": 715, "share_url": "http://toutiao.com/group/3553863787/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6709\u4e86\u5b9d\u5b9d\u7684\u5bb6\uff0c", "comment_count": 348, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 800, "url_list": [{"url": "http://p2.pstatp.com/large/1347/4882480814"}, {"url": "http://p0.pstatp.com/large/1347/4882480814"}, {"url": "http://p.pstatp.com/large/1347/4882480814"}], "uri": "large/1347/4882480814", "height": 1067}, "description": "\u6709\u4e86\u5b9d\u5b9d\u7684\u5bb6\uff0c", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1171/3038991950", "user_id": 3435528604, "name": "\u8001\u738b\u4ed6\u5988", "user_verified": false}, "user_digg": 0, "group_id": 3553863787, "level": 4, "repin_count": 175, "digg_count": 10152, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1347/4882480814"}, {"url": "http://p0.pstatp.com/w202/1347/4882480814"}, {"url": "http://p.pstatp.com/w202/1347/4882480814"}], "uri": "w202/1347/4882480814", "height": 269}}, "comments": [], "type": 1}, {"online_time": 1411889921, "display_time": 1411889921, "group": {"create_time": 1411887573.0, "favorite_count": 0, "user_bury": 0, "user_favorite": 0, "bury_count": 22, "share_url": "http://toutiao.com/group/3564718771/?iid=2337593504&app=joke_essay", "label": 4, "content": "\u4ee5\u540e\u53eb\u6211\u5982\u4f55\u9762\u5bf9\u6c34\u716e\u9c7c\u3002\u3002\u3002", "comment_count": 1, "status": 1, "has_comments": 0, "large_image": {"width": 331, "url_list": [{"url": "http://p2.pstatp.com/large/1364/7554146363"}, {"url": "http://p0.pstatp.com/large/1364/7554146363"}, {"url": "http://p.pstatp.com/large/1364/7554146363"}], "uri": "large/1364/7554146363", "height": 794}, "go_detail_count": 0, "status_desc": "\u5ba1\u6838\u4e2d", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1269/5101796174", "user_id": 1747759040, "name": "\u65e5\u90a2\u4e00\u73caO_o", "user_verified": false}, "user_digg": 0, "group_id": 3564718771, "level": 1, "repin_count": 0, "digg_count": 81, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1364/7554146363"}, {"url": "http://p0.pstatp.com/w202/1364/7554146363"}, {"url": "http://p.pstatp.com/w202/1364/7554146363"}], "uri": "w202/1364/7554146363", "height": 484}}, "comments": [], "type": 1}, {"online_time": 1411889911, "display_time": 1411889911, "group": {"create_time": 1411448462.0, "favorite_count": 291, "go_detail_count": 2327, "user_favorite": 0, "bury_count": 728, "share_url": "http://toutiao.com/group/3552616753/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u6211\u7adf\u65e0\u8a00\u4ee5\u5bf9", "comment_count": 156, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 460, "url_list": [{"url": "http://p2.pstatp.com/large/1351/1635351938"}, {"url": "http://p0.pstatp.com/large/1351/1635351938"}, {"url": "http://p.pstatp.com/large/1351/1635351938"}], "uri": "large/1351/1635351938", "height": 796}, "description": "\u6211\u7adf\u65e0\u8a00\u4ee5\u5bf9", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/475/2050727090", "user_id": 3015934831, "name": "\u552f\u4f0awill\u58f9", "user_verified": false}, "user_digg": 0, "group_id": 3552616753, "level": 4, "repin_count": 291, "digg_count": 10188, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1351/1635351938"}, {"url": "http://p0.pstatp.com/w202/1351/1635351938"}, {"url": "http://p.pstatp.com/w202/1351/1635351938"}], "uri": "w202/1351/1635351938", "height": 349}}, "comments": [], "type": 1}, {"online_time": 1411889891, "display_time": 1411889891, "group": {"create_time": 1411281925.0, "favorite_count": 373, "go_detail_count": 892, "user_favorite": 0, "bury_count": 1937, "share_url": "http://toutiao.com/group/3549270790/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u7b2c\u4e00\u773c\u770b\u9519\u7684&#39;\u81ea\u89c9\u70b9\u8d5e", "comment_count": 400, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 440, "url_list": [{"url": "http://p1.pstatp.com/large/1341/3775133954"}, {"url": "http://p2.pstatp.com/large/1341/3775133954"}, {"url": "http://p.pstatp.com/large/1341/3775133954"}], "uri": "large/1341/3775133954", "height": 513}, "description": "\u7b2c\u4e00\u773c\u770b\u9519\u7684&#39;\u81ea\u89c9\u70b9\u8d5e", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p0.pstatp.com/thumb/1349/8141163361", "user_id": 1697105359, "name": "\u4eca\u665a\u4e0d\u7528\u5957Tao", "user_verified": false}, "user_digg": 0, "group_id": 3549270790, "level": 4, "repin_count": 373, "digg_count": 16045, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p1.pstatp.com/w202/1341/3775133954"}, {"url": "http://p2.pstatp.com/w202/1341/3775133954"}, {"url": "http://p.pstatp.com/w202/1341/3775133954"}], "uri": "w202/1341/3775133954", "height": 235}}, "comments": [], "type": 1}, {"online_time": 1411889881, "display_time": 1411889881, "group": {"create_time": 1411886997.0, "go_detail_count": 1, "favorite_count": 13, "user_bury": 0, "user_favorite": 0, "bury_count": 67, "share_url": "http://toutiao.com/group/3563664998/?iid=2337593504&app=joke_essay", "content": "\u6211\u5f53\u5e74\u600e\u4e48\u73a9\u4e0d\u51fa\u8fd9\u79cd\u6548\u679c\uff01", "comment_count": 29, "status": 2, "has_comments": 0, "large_image": {"width": 800, "url_list": [{"url": "http://p1.pstatp.com/large/1365/4972280902"}, {"url": "http://p2.pstatp.com/large/1365/4972280902"}, {"url": "http://p.pstatp.com/large/1365/4972280902"}], "uri": "large/1365/4972280902", "height": 1280}, "description": "\u6211\u5f53\u5e74\u600e\u4e48\u73a9\u4e0d\u51fa\u8fd9\u79cd\u6548\u679c\uff01", "status_desc": "\u5df2\u53d1\u8868\u5230\u65b0\u9c9c\u5217\u8868", "user": {"avatar_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg", "user_id": 3553172897, "name": "\u4e48\u4e48\u54d218505622", "user_verified": false}, "user_digg": 0, "group_id": 3563664998, "level": 3, "repin_count": 13, "digg_count": 430, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p1.pstatp.com/w202/1365/4972280902"}, {"url": "http://p2.pstatp.com/w202/1365/4972280902"}, {"url": "http://p.pstatp.com/w202/1365/4972280902"}], "uri": "w202/1365/4972280902", "height": 323}}, "comments": [], "type": 1}, {"online_time": 1411889871, "display_time": 1411889871, "group": {"create_time": 1411375597.0, "favorite_count": 1553, "go_detail_count": 3906, "user_favorite": 0, "bury_count": 759, "share_url": "http://toutiao.com/group/3551580766/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4e0d\u5728\u56e0\u4e3a\u4efb\u6027\u800c\u4e0d\u80af\u4f4e\u5934\uff0c\u4e0d\u518d\u56e0\u4e3a\u56fa\u6267\u800c\u8f7b\u8a00\u5206\u624b\u3002\u575a\u4fe1\u4e00\u6b21\uff0c\u4e00\u76f4\u8d70\uff0c\u5c31\u53ef\u8d70\u5230\u767d\u5934\u3002\u5c31\u90a3\u6837\u76f8\u5b88\uff0c\u5728\u6765\u5f80\u7684\u6d41\u5e74\u91cc\uff0c\u5c81\u6708\u5b89\u597d\u3002", "comment_count": 133, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 321, "url_list": [{"url": "http://p1.pstatp.com/large/1344/695621586"}, {"url": "http://p2.pstatp.com/large/1344/695621586"}, {"url": "http://p.pstatp.com/large/1344/695621586"}], "uri": "large/1344/695621586", "height": 1600}, "description": "\u4e0d\u5728\u56e0\u4e3a\u4efb\u6027\u800c\u4e0d\u80af\u4f4e\u5934\uff0c\u4e0d\u518d\u56e0\u4e3a\u56fa\u6267\u800c\u8f7b\u8a00\u5206\u624b\u3002\u575a\u4fe1\u4e00\u6b21\uff0c\u4e00\u76f4\u8d70\uff0c\u5c31\u53ef\u8d70\u5230\u767d\u5934\u3002\u5c31\u90a3\u6837\u76f8\u5b88\uff0c\u5728\u6765\u5f80\u7684\u6d41\u5e74\u91cc\uff0c\u5c81\u6708\u5b89\u597d\u3002", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/643/3460174643", "user_id": 2932176486, "name": "\u9738\u6c14\u83c7\u51c9", "user_verified": false}, "user_digg": 0, "group_id": 3551580766, "level": 4, "repin_count": 1553, "digg_count": 11142, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p1.pstatp.com/w202/1344/695621586"}, {"url": "http://p2.pstatp.com/w202/1344/695621586"}, {"url": "http://p.pstatp.com/w202/1344/695621586"}], "uri": "w202/1344/695621586", "height": 1006}}, "comments": [], "type": 1}, {"online_time": 1411889851, "display_time": 1411889851, "group": {"create_time": 1409495827.0, "is_gif": 1, "favorite_count": 2864, "user_bury": 0, "user_favorite": 0, "bury_count": 989, "share_url": "http://toutiao.com/group/3503543231/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8fd9\u7edd\u5bf9\u662f\u84dd\u7fd4\u6bd5\u4e1a\u7684\u3002", "comment_count": 381, "status": 3, "has_comments": 1, "large_image": {"width": 300, "url_list": [{"url": "http://p0.pstatp.com/large/1255/5266718927"}, {"url": "http://p1.pstatp.com/large/1255/5266718927"}, {"url": "http://p.pstatp.com/large/1255/5266718927"}], "uri": "large/1255/5266718927", "height": 225}, "go_detail_count": 0, "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1169/6460324741", "user_id": 3390278351, "name": "\u591c\u7a7a\u4e2d\u6700\u4eae\u4eae\u7684\u661f", "user_verified": false}, "user_digg": 0, "group_id": 3503543231, "level": 4, "repin_count": 2864, "digg_count": 22178, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 10, "middle_image": {"width": 202, "url_list": [{"url": "http://p0.pstatp.com/w202/1255/5266718927"}, {"url": "http://p1.pstatp.com/w202/1255/5266718927"}, {"url": "http://p.pstatp.com/w202/1255/5266718927"}], "uri": "w202/1255/5266718927", "height": 151}}, "comments": [{"user_id": 3398437031, "description": "\u4e3a\u4ec0\u4e48\u6211\u7684\u6295\u7a3f\u4e0d\u7ed9\u8fc7\u5462", "text": "\u561a\u745f\u4e00\u5708\uff0c\u5b8c\u4e8b\u513f\u56de\u7a9d\u4e86", "comment_id": 3504377121, "digg_count": 491, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://p2.pstatp.com/thumb/1102/1417599874", "create_time": 1409541265, "is_digg": 0, "user_name": "\u5feb\u4e50\u7684\u4e00\u53ea\u5c0f\u8df3\u86d9", "user_profile_image_url": "http://p2.pstatp.com/thumb/1102/1417599874"}], "type": 1}, {"online_time": 1411889809, "display_time": 1411889809, "group": {"create_time": 1411307850.0, "go_detail_count": 597, "favorite_count": 90, "user_bury": 0, "user_favorite": 0, "bury_count": 815, "share_url": "http://toutiao.com/group/3550166474/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u8001\u5e74\u7ec4\u67b6\u5b50\u9f13\u51a0\u519b\uff01\u70b9\u8d5e\u7684\u4e03\u5341\u5c81\u4e5f\u80fd\u591c\u591c\u7b19\u6b4c\uff0c\u6240\u5411\u62ab\u9761\uff01", "comment_count": 83, "status": 3, "has_comments": 0, "large_image": {"width": 960, "url_list": [{"url": "http://p2.pstatp.com/large/1343/5214703486"}, {"url": "http://p0.pstatp.com/large/1343/5214703486"}, {"url": "http://p.pstatp.com/large/1343/5214703486"}], "uri": "large/1343/5214703486", "height": 1280}, "description": "\u8001\u5e74\u7ec4\u67b6\u5b50\u9f13\u51a0\u519b\uff01\u70b9\u8d5e\u7684\u4e03\u5341\u5c81\u4e5f\u80fd\u591c\u591c\u7b19\u6b4c\uff0c\u6240\u5411\u62ab\u9761\uff01", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://tp1.sinaimg.cn/2066736852/50/5601127938/1", "user_id": 3434298360, "name": "\u5e38\u5dde\u5f85\u4e1a\u9752\u5e74\u88c5\u82b1\u5fc3", "user_verified": false}, "user_digg": 0, "group_id": 3550166474, "level": 4, "repin_count": 90, "digg_count": 13654, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1343/5214703486"}, {"url": "http://p0.pstatp.com/w202/1343/5214703486"}, {"url": "http://p.pstatp.com/w202/1343/5214703486"}], "uri": "w202/1343/5214703486", "height": 269}}, "comments": [], "type": 1}, {"online_time": 1411889807, "display_time": 1411889807, "group": {"create_time": 1411567786.0, "favorite_count": 472, "go_detail_count": 7035, "user_favorite": 0, "bury_count": 700, "share_url": "http://toutiao.com/group/3556933545/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u597d\u725b", "comment_count": 133, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 500, "url_list": [{"url": "http://p0.pstatp.com/large/1355/1958817566"}, {"url": "http://p1.pstatp.com/large/1355/1958817566"}, {"url": "http://p.pstatp.com/large/1355/1958817566"}], "uri": "large/1355/1958817566", "height": 702}, "description": "\u597d\u725b", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1307/5170335084", "user_id": 3487850323, "name": "\u5ad2\u706c\u7dba\u9200\u4e36\u613c\u9e9c", "user_verified": false}, "user_digg": 0, "group_id": 3556933545, "level": 4, "repin_count": 472, "digg_count": 10494, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p0.pstatp.com/w202/1355/1958817566"}, {"url": "http://p1.pstatp.com/w202/1355/1958817566"}, {"url": "http://p.pstatp.com/w202/1355/1958817566"}], "uri": "w202/1355/1958817566", "height": 283}}, "comments": [], "type": 1}, {"online_time": 1411889805, "display_time": 1411889805, "group": {"create_time": 1411290816.0, "favorite_count": 442, "go_detail_count": 6829, "user_favorite": 0, "bury_count": 1681, "share_url": "http://toutiao.com/group/3549590781/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u597d\u611f\u52a8\uff0c\u6211\u90fd\u8ba9\u4f60\u4eec\u8fc7\u4e86", "comment_count": 928, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 640, "url_list": [{"url": "http://p2.pstatp.com/large/1338/4925833113"}, {"url": "http://p0.pstatp.com/large/1338/4925833113"}, {"url": "http://p.pstatp.com/large/1338/4925833113"}], "uri": "large/1338/4925833113", "height": 314}, "description": "\u597d\u611f\u52a8\uff0c\u6211\u90fd\u8ba9\u4f60\u4eec\u8fc7\u4e86", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1165/6462442964", "user_id": 3448772371, "name": "shutup15548936", "user_verified": false}, "user_digg": 0, "group_id": 3549590781, "level": 4, "repin_count": 442, "digg_count": 19127, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1338/4925833113"}, {"url": "http://p0.pstatp.com/w202/1338/4925833113"}, {"url": "http://p.pstatp.com/w202/1338/4925833113"}], "uri": "w202/1338/4925833113", "height": 99}}, "comments": [], "type": 1}, {"online_time": 1411889801, "display_time": 1411889801, "group": {"create_time": 1411270390.0, "favorite_count": 419, "go_detail_count": 3838, "user_favorite": 0, "bury_count": 711, "share_url": "http://toutiao.com/group/3548421184/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u3002\u3002\u3002\u3002\u3002", "comment_count": 213, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 460, "url_list": [{"url": "http://p2.pstatp.com/large/1336/3654391454"}, {"url": "http://p0.pstatp.com/large/1336/3654391454"}, {"url": "http://p.pstatp.com/large/1336/3654391454"}], "uri": "large/1336/3654391454", "height": 721}, "description": "\u3002\u3002\u3002\u3002\u3002", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/307/3263969948", "user_id": 1953179492, "name": "``\u8074 \u98a8\u5fc3\u60c5", "user_verified": false}, "user_digg": 0, "group_id": 3548421184, "level": 4, "repin_count": 419, "digg_count": 10697, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1336/3654391454"}, {"url": "http://p0.pstatp.com/w202/1336/3654391454"}, {"url": "http://p.pstatp.com/w202/1336/3654391454"}], "uri": "w202/1336/3654391454", "height": 316}}, "comments": [], "type": 1}, {"online_time": 1411889799, "display_time": 1411889799, "group": {"create_time": 1411375130.0, "favorite_count": 1687, "go_detail_count": 8012, "user_favorite": 0, "bury_count": 1957, "share_url": "http://toutiao.com/group/3551653259/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u80f8\u5927\u600e\u4e48\u4e86\uff0c\u723d\u7684\u53c8\u4e0d\u662f\u81ea\u5df1\uff01", "comment_count": 699, "user_bury": 0, "status": 3, "has_comments": 1, "large_image": {"width": 360, "url_list": [{"url": "http://p2.pstatp.com/large/1347/311647894"}, {"url": "http://p0.pstatp.com/large/1347/311647894"}, {"url": "http://p.pstatp.com/large/1347/311647894"}], "uri": "large/1347/311647894", "height": 490}, "description": "\u80f8\u5927\u600e\u4e48\u4e86\uff0c\u723d\u7684\u53c8\u4e0d\u662f\u81ea\u5df1\uff01", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p2.pstatp.com/thumb/1316/109972904", "user_id": 3087323948, "name": "\u5218\u5fb7\u534e_", "user_verified": false}, "user_digg": 0, "group_id": 3551653259, "level": 4, "repin_count": 1687, "digg_count": 13685, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1347/311647894"}, {"url": "http://p0.pstatp.com/w202/1347/311647894"}, {"url": "http://p.pstatp.com/w202/1347/311647894"}], "uri": "w202/1347/311647894", "height": 274}}, "comments": [{"user_id": 3443827301, "description": "\u79bb\u6211\u8fdc\u70b9\uff0c\u6211\u4f1a\u54ac\u4eba\u7684", "text": "\u6839\u636e\u8179\u90e8\u4f4d\u7f6e\u4e0d\u5e73\u6574\u7455\u75b5\u3001\u8170\u90e8\u957f\u5bbd\u6bd4\u4f8b\u4e0d\u534f\u8c03\u53ca\u6574\u4f53\u611f\u5b98\u5f02\u5e38\u800c\u5f97\u51fa\u7ed3\u8bba\uff1a\u8f6f\u4ef6\u540e\u671f\u52a0\u5de5\u6240\u5f97\u56fe\u7247\u3002\u9274\u5b9a\u5b8c\u6bd5\u3002", "comment_id": 3552404575, "digg_count": 1379, "user_verified": false, "platform_id": "feifei", "avatar_url": "http://tp2.sinaimg.cn/2687589293/50/5688780406/1", "create_time": 1411395038, "is_digg": 0, "user_name": "\u4e00\u4e2a\u766b\u4f6c\u7684\u81ea\u767d", "user_profile_image_url": "http://tp2.sinaimg.cn/2687589293/50/5688780406/1"}], "type": 1}, {"online_time": 1411889797, "display_time": 1411889797, "group": {"create_time": 1411372085.0, "favorite_count": 247, "go_detail_count": 3265, "user_favorite": 0, "bury_count": 962, "share_url": "http://toutiao.com/group/3551596661/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u5c81\u6708\u4e0d\u9976\u4eba\uff0c\u4f60\u4eec\u7684\u6211\u90fd\u8fc7\u4e86", "comment_count": 204, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 510, "url_list": [{"url": "http://p2.pstatp.com/large/1342/8429353154"}, {"url": "http://p0.pstatp.com/large/1342/8429353154"}, {"url": "http://p.pstatp.com/large/1342/8429353154"}], "uri": "large/1342/8429353154", "height": 323}, "description": "\u5c81\u6708\u4e0d\u9976\u4eba\uff0c\u4f60\u4eec\u7684\u6211\u90fd\u8fc7\u4e86", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://tp2.sinaimg.cn/2732512793/50/5699931971/1", "user_id": 3487287584, "name": "\u8001\u5b50\u65e0\u6cd5\u590d\u5236", "user_verified": false}, "user_digg": 0, "group_id": 3551596661, "level": 4, "repin_count": 247, "digg_count": 18497, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1342/8429353154"}, {"url": "http://p0.pstatp.com/w202/1342/8429353154"}, {"url": "http://p.pstatp.com/w202/1342/8429353154"}], "uri": "w202/1342/8429353154", "height": 127}}, "comments": [], "type": 1}, {"online_time": 1411889795, "display_time": 1411889795, "group": {"create_time": 1411535694.0, "favorite_count": 507, "go_detail_count": 4389, "user_favorite": 0, "bury_count": 1151, "share_url": "http://toutiao.com/group/3554363581/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u4e0d\u5199\u6807\u9898\u4e86!", "comment_count": 355, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 460, "url_list": [{"url": "http://p2.pstatp.com/large/1350/5554729782"}, {"url": "http://p0.pstatp.com/large/1350/5554729782"}, {"url": "http://p.pstatp.com/large/1350/5554729782"}], "uri": "large/1350/5554729782", "height": 654}, "description": "\u4e0d\u5199\u6807\u9898\u4e86!", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1333/3296029748", "user_id": 3232166472, "name": "\u6709\u79cd\u52a8\u624b\u522b\u52a8\u53e3", "user_verified": false}, "user_digg": 0, "group_id": 3554363581, "level": 4, "repin_count": 507, "digg_count": 21436, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1350/5554729782"}, {"url": "http://p0.pstatp.com/w202/1350/5554729782"}, {"url": "http://p.pstatp.com/w202/1350/5554729782"}], "uri": "w202/1350/5554729782", "height": 287}}, "comments": [], "type": 1}, {"online_time": 1411889794, "display_time": 1411889794, "group": {"create_time": 1411881916.0, "favorite_count": 9, "user_bury": 0, "user_favorite": 0, "bury_count": 49, "share_url": "http://toutiao.com/group/3564523472/?iid=2337593504&app=joke_essay", "content": "\u61d2\u4eba\u7684\u6700\u9ad8\u5883\u754c", "comment_count": 4, "status": 1, "has_comments": 0, "large_image": {"width": 331, "url_list": [{"url": "http://p2.pstatp.com/large/1363/7332487281"}, {"url": "http://p0.pstatp.com/large/1363/7332487281"}, {"url": "http://p.pstatp.com/large/1363/7332487281"}], "uri": "large/1363/7332487281", "height": 793}, "go_detail_count": 0, "status_desc": "\u5ba1\u6838\u4e2d", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1269/5101796174", "user_id": 1747759040, "name": "\u65e5\u90a2\u4e00\u73caO_o", "user_verified": false}, "user_digg": 0, "group_id": 3564523472, "level": 1, "repin_count": 9, "digg_count": 346, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p2.pstatp.com/w202/1363/7332487281"}, {"url": "http://p0.pstatp.com/w202/1363/7332487281"}, {"url": "http://p.pstatp.com/w202/1363/7332487281"}], "uri": "w202/1363/7332487281", "height": 483}}, "comments": [], "type": 1}, {"online_time": 1411889793, "display_time": 1411889793, "group": {"create_time": 1411552364.0, "favorite_count": 409, "go_detail_count": 7480, "user_favorite": 0, "bury_count": 1301, "share_url": "http://toutiao.com/group/3556419651/?iid=2337593504&app=joke_essay", "label": 1, "content": "\u79d2\u61c2\u7684\u5de6\u4e0b", "comment_count": 278, "user_bury": 0, "status": 3, "has_comments": 0, "large_image": {"width": 500, "url_list": [{"url": "http://p0.pstatp.com/large/1357/879612670"}, {"url": "http://p1.pstatp.com/large/1357/879612670"}, {"url": "http://p.pstatp.com/large/1357/879612670"}], "uri": "large/1357/879612670", "height": 288}, "description": "\u79d2\u61c2\u7684\u5de6\u4e0b", "status_desc": "\u5df2\u53d1\u8868\u5230\u70ed\u95e8\u5217\u8868", "user": {"avatar_url": "http://p1.pstatp.com/thumb/1336/7818812760", "user_id": 2919455575, "name": "\u8bf7\u53eb\u6211\u72d0\u72f8\u4e36\u7cbe", "user_verified": false}, "user_digg": 0, "group_id": 3556419651, "level": 4, "repin_count": 409, "digg_count": 15285, "has_hot_comments": 1, "image_status": 1, "user_repin": 0, "category_id": 2, "middle_image": {"width": 202, "url_list": [{"url": "http://p0.pstatp.com/w202/1357/879612670"}, {"url": "http://p1.pstatp.com/w202/1357/879612670"}, {"url": "http://p.pstatp.com/w202/1357/879612670"}], "uri": "w202/1357/879612670", "height": 116}}, "comments": [], "type": 1}], "max_time": 1411889793}}
+
+16. 图片列表分页接口(下拉刷新)
+
+分页刷新，其中增加了 min_time 参数，这个参数代表的是，上一次请求列表，
+
+服务器返回结果中，包含的 min_time字段
+
+http://ic.snssdk.com/2/essay/zone/category/data/?category_id=2&level=6&count=30&min_time=1411890151&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+请求的Header 和 服务器响应与上面的列表接口相同,唯一不同的是,
+
+增加了一个 min_time 参数
+
+17. 详情界面(评论部分)
+
+GET http://isub.snssdk.com/2/data/get_essay_comments/?group_id=3550036269&count=20&offset=0&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6 HTTP/1.1
+Accept-Encoding: gzip
+Host: isub.snssdk.com
+Connection: Keep-Alive
+Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+X-SS-Cookie: install_id=2337593504; ctIDv3=0; rl23864=1
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.1
+Date: Sun, 28 Sep 2014 07:58:12 GMT
+Content-Type: application/json
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Content-Length: 14792
+
+{"has_more": true, "message": "success", "group_id": 3550036269, "data": {"recent_comments": [{"uid": 0, "text": "Yxxyxgxh", "create_time": 1411890065, "user_digg": 0, "id": 3564806738, "user_bury": 0, "user_profile_url": "", "user_id": 3564815206, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u6211\u5c31\u662f\u621118772986", "user_profile_image_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg"}, {"uid": 0, "text": "\uff0c\u4f60\u821e\u53f0\u697c\u5c31", "create_time": 1411888970, "user_digg": 0, "id": 3564768075, "user_bury": 0, "user_profile_url": "", "user_id": 3488851506, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u5b89\u5b8916914011", "user_profile_image_url": "http://head.xiaonei.com/photos/0/0/men_tiny.gif"}, {"uid": 0, "text": "\u897f\u6e38\u8bb0\u90fd\u5751\uff0c\u8fd8\u6709\u4ec0\u4e48\u4f60\u4eec\u4e0d\u80fd\u505a\u7684", "create_time": 1411886626, "user_digg": 0, "id": 3564690341, "user_bury": 0, "user_profile_url": "", "user_id": 3092944770, "bury_count": 0, "description": "\u8be5\u600e\u4e48\u529e\u5462", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u6211\u60f3\u4e86\u597d\u4e45\u4e86\u90fd\u6ca1\u60f3\u5230\u4e2a\u53ef\u4ee5\u7ed9\u6211\u70b9\u8d5e\u7684\u540d\u5b57", "user_profile_image_url": "http://p2.pstatp.com/thumb/1024/3356915231"}, {"uid": 0, "text": "\u5510\u50e7:\u7a7a\u7a7a\u53bb\u7ed9\u6211\u6293\u4e2a\u6f02\u4eae\u7684\u5996\u7cbe\u73a9\u73a9\uff01\u8bb0\u4f4f\u8ba9\u5bfc\u6f14\u628a\u7247\u526a\u4e86\uff01", "create_time": 1411878780, "user_digg": 0, "id": 3564407549, "user_bury": 0, "user_profile_url": "", "user_id": 3522962902, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 1, "user_verified": false, "platform": "feifei", "user_name": "\u7965\u5475\u5475", "user_profile_image_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg"}, {"uid": 0, "text": "\u5927\u5e08\u5144\u6709\u52fe\u4eba\u7684\u773c\u795e\uff0c\u8c79\u7eb9\u77ed\u88d9\uff0c\u9774\u5b50\uff0c\u94a2\u7ba1\uff0c\u592b\u590d\u4f55\u6c42\u3002\u3002\u3002", "create_time": 1411872704, "user_digg": 0, "id": 3564228175, "user_bury": 0, "user_profile_url": "", "user_id": 1499882353, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u6fd5\u301e \u2532\u30ad\u6dfa\u85cd\u92abd\u0113\u611b", "user_profile_image_url": "http://p2.pstatp.com/thumb/306/1973981295"}, {"uid": 0, "text": "\u201c\u633a\u201d\u5b57\u610f\u5473\u6df1\u957f\u554a\uff01", "create_time": 1411866434, "user_digg": 0, "id": 3564105081, "user_bury": 0, "user_profile_url": "", "user_id": 3431097765, "bury_count": 0, "description": "\u201c\u8bf7\u53eb\u6211\u5982\u82b1\u201d\u6b64\u53f7\u5df2\u4e0d\u7528\u4e86\uff0c\u8fd8\u6709\u8ba4\u8bc6\u6211\u7684\u4eba\u9ebd\uff1f", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u8bf7\u79f0\u6211\u5982\u82b1", "user_profile_image_url": "http://p2.pstatp.com/thumb/1329/2067986575"}, {"uid": 0, "text": "\u771f\u662f\u8f9b\u82e6\u767d\u9f99\u9a6c\u4e86\u3002", "create_time": 1411839147, "user_digg": 0, "id": 3563838942, "user_bury": 0, "user_profile_url": "", "user_id": 3071544436, "bury_count": 0, "description": "\u5176\u5b9e\uff0c\u6211\u662f\u597d\u4eba\u4e00\u4e2a\uff01\uff01\u5927\u5927\u7684\u597d\u4eba\uff01", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u53eb\u517d\u8001\u6e7f", "user_profile_image_url": "http://p2.pstatp.com/thumb/523/2191890088"}, {"uid": 0, "text": "\u89c2\u97f3\u662f\u4e2a\u7537\u7684\u5510\u50e7\u53e3\u5473\u53ef\u771f\u91cd // @Ge\u5011\u86cb\u5576: \u5510\u50e7:\u609f\u7a7a\uff0c\u7ed9\u6211\u53d8\u4e2a\u89c2\u97f3\u3002\u609f\u7a7a:\u5e08\u5085\uff0c\u6628\u665a\u53d8\u7684\u90a3\u4e2a\u767d\u9aa8\u7cbe\u8fd8\u884c\u5427", "create_time": 1411832622, "user_digg": 0, "id": 3563701360, "user_bury": 0, "user_profile_url": "", "user_id": 3522743204, "bury_count": 0, "description": "\u8fd9\u6837\u771f\u7684\u597d\u5417:O", "digg_count": 2, "user_verified": false, "platform": "feifei", "user_name": "\u8001\u738b\u4f60\u5feb\u4e0b\u6765", "user_profile_image_url": "http://p1.pstatp.com/thumb/1334/3483103404"}, {"uid": 0, "text": "\u65e0\u8bedO__O\"\u4e86", "create_time": 1411828360, "user_digg": 0, "id": 3563601882, "user_bury": 0, "user_profile_url": "", "user_id": 3563572905, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u7d66\u88ae\u6674\u5fdd\u822c\u5572\u5fae\u7b1118736503", "user_profile_image_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg"}, {"uid": 0, "text": "\u591f\u5185\u6db5\u3002\u3002\u3002\u8d5e\u4e86", "create_time": 1411814713, "user_digg": 0, "id": 3563188098, "user_bury": 0, "user_profile_url": "", "user_id": 2942279949, "bury_count": 0, "description": "\u556a\u556a\u556a\u3002\u3002\u3002", "digg_count": 3, "user_verified": false, "platform": "feifei", "user_name": "Czc\u54ab\u5c3a\u5929\u6daf", "user_profile_image_url": "http://p1.pstatp.com/thumb/436/2017397130"}, {"uid": 0, "text": "\u6caa\u53f7", "create_time": 1411812679, "user_digg": 0, "id": 3563138797, "user_bury": 0, "user_profile_url": "", "user_id": 1689649442, "bury_count": 0, "description": "\u3010\u7259\u535a\u58eb\u4e4b\u5bb6\u6dd8\u5b9d4\u7687\u51a0\u5e97\u3011\u4fdd\u4e3d\u51c0\u7a33\u56fa\u5242\u5047\u7259\u6e05\u6d01\u7247\u4e49\u9f7f\u7c98\u7740\u818f\u6b63\u7578\u5e26\u7259\u5957\u5047\u7259\u7259\u9f7f\u53e3\u8154\u62a4\u7406\u7528\u54c1\u5e97 \u7259\u818f\u7259\u5237\u6f31\u53e3\u6c34\u7259\u7ebf\u522e\u820c\u5668\u7259\u7f1d\u5237\u96c5\u7693\u4e01\u787c\u4e73\u818f \u4fdd\u4e3d\u51c0\u7a33\u56fa\u5242  \u4e2d\u7f8e\u53f2\u514b\u4fdd\u4e3d\u51c0\u5047\u7259\u7a33\u56fa\u5242 \u5047\u7259\u677e\u52a8\u56fa\u5b9a\u5403\u561b\u561b\u9999", "digg_count": 2, "user_verified": false, "platform": "feifei", "user_name": "\u7259\u535a\u58eb\u4e4b\u5bb6-\u6dd8\u5b9d\u5e97", "user_profile_image_url": "http://tp2.sinaimg.cn/1811623101/50/22833708499/0"}, {"uid": 0, "text": "\u8fd9\u4e2a\u201c\u633a\u201d\u5b57\u7528\u7684\u771fTM\u8d34\u5207", "create_time": 1411807506, "user_digg": 0, "id": 3563016259, "user_bury": 0, "user_profile_url": "", "user_id": 2892105334, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 1, "user_verified": false, "platform": "feifei", "user_name": "\u58f9\u4e07\u4e2a\u820d\u4e0d\u5f973436291", "user_profile_image_url": "http://p2.pstatp.com/thumb/396/6121532808"}, {"uid": 0, "text": "// @Ge\u5011\u86cb\u5576: \u5510\u50e7:\u609f\u7a7a\uff0c\u7ed9\u6211\u53d8\u4e2a\u89c2\u97f3\u3002\u609f\u7a7a:\u5e08\u5085\uff0c\u6628\u665a\u53d8\u7684\u90a3\u4e2a\u767d\u9aa8\u7cbe\u8fd8\u884c\u5427", "create_time": 1411804355, "user_digg": 0, "id": 3562938411, "user_bury": 0, "user_profile_url": "", "user_id": 3562937842, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 1, "user_verified": false, "platform": "feifei", "user_name": "\u56e0\u4e3a\u4f60\u6240\u4ee5\u723118717423", "user_profile_image_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg"}, {"uid": 0, "text": "\u8fd9\u4e00\u8def\u8d2b\u50e7\u90fd\u662f \u786c \u633a\u8fc7\u6765\u7684", "create_time": 1411801037, "user_digg": 0, "id": 3562858721, "user_bury": 0, "user_profile_url": "", "user_id": 3482807117, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 1, "user_verified": false, "platform": "feifei", "user_name": "\u65ed\u9633\u6e38\u90ceZW", "user_profile_image_url": "http://mat1.gtimg.com/www/mb/images/head_50.jpg"}, {"uid": 0, "text": "\u94e4\u800c\u8d70\u9669\u662f\u8fd9\u4e48\u6765\u7684\uff1f", "create_time": 1411799608, "user_digg": 0, "id": 3562811167, "user_bury": 0, "user_profile_url": "", "user_id": 1326787738, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "\u2661\u3001\u309b \u900f  \u4e36   ", "user_profile_image_url": "http://p2.pstatp.com/thumb/1178/873166489"}, {"uid": 0, "text": "\u3002\u5f90\uff0c\u3002 \u4e36\u4eb2\u4eb2\u5c0f\u3002\u663e\u5361\u5c0f\u3002", "create_time": 1411793741, "user_digg": 0, "id": 3562682841, "user_bury": 0, "user_profile_url": "", "user_id": 2901343683, "bury_count": 2, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "iwpu", "user_profile_image_url": "http://p1.pstatp.com/thumb/405/1612086178"}, {"uid": 0, "text": "\u6bc1\u4e86\u897f\u6e38\u8bb0\u3002\u3002\u3002", "create_time": 1411792552, "user_digg": 0, "id": 3562652805, "user_bury": 0, "user_profile_url": "", "user_id": 2072618820, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "yo", "user_profile_image_url": "http://p1.pstatp.com/thumb/641/2870453310"}, {"uid": 0, "text": "\u5510\u50e7\u5fc5\u706b\u554a\u3002\u3002", "create_time": 1411791373, "user_digg": 0, "id": 3562620802, "user_bury": 0, "user_profile_url": "", "user_id": 3320572085, "bury_count": 0, "description": "\u9ed1\u9ed1\u4f60\uff0c\u5bf9\u4e0d\u8d77\uff0c\u8c01\u8ba9\u4f60\u4e0d\u662f\u59b9\u5b50\u7684\uff01", "digg_count": 1, "user_verified": false, "platform": "feifei", "user_name": "\u820d\u4e0d\u5f97\u6ef4\u4e0b\u7684\u6cea", "user_profile_image_url": "http://p2.pstatp.com/thumb/1330/815923244"}, {"uid": 0, "text": "\u6709\u4f1a72\u53d8\u7684\u609f\u7a7a,\u8fd9\u4e00\u8def\u5e08\u5f92\u4e0d\u4f1a\u5bc2\u5bde", "create_time": 1411791309, "user_digg": 0, "id": 3562618593, "user_bury": 0, "user_profile_url": "", "user_id": 1161574323, "bury_count": 0, "description": "\u8fd9\u4e2a\u7528\u6237\u5f88\u61d2\uff0c\u795e\u9a6c\u90fd\u6728\u6709\u5199", "digg_count": 2, "user_verified": false, "platform": "feifei", "user_name": "\u5927\u529b\u6851\u5fb7\u7f57", "user_profile_image_url": "http://p2.pstatp.com/thumb/1267/507247459"}, {"uid": 0, "text": "\u4f30\u8ba1\u767d\u9f99\u9a6c\u6e7f\u4e86\u4e00\u8eab\u2026", "create_time": 1411787917, "user_digg": 0, "id": 3562347980, "user_bury": 0, "user_profile_url": "", "user_id": 3272163176, "bury_count": 0, "description": "\u8bfb\u6bb5\u5b50\uff0c\u5b66\u6280\u672f\uff0c\u5c31\u4e1a\u5347\u5b66\u4e24\u6761\u8def\uff01", "digg_count": 0, "user_verified": false, "platform": "feifei", "user_name": "AKA-chAo", "user_profile_image_url": "http://p2.pstatp.com/thumb/793/2619167704"}], "top_comments": [{"uid": 0, "text": "\u5510\u50e7\u559c\u6b22\u54ea\u4e2a\u5996\u602a\uff0c\u53ea\u6709\u767d\u9f99\u9a6c\u61c2", "create_time": 1411310002, "user_digg": 0, "id": 3550142489, "user_bury": 0, "user_profile_url": "", "user_id": 3170073219, "bury_count": 5, "digg_count": 687, "user_verified": false, "platform": "feifei", "user_name": "\u65f6\u5ba4", "user_profile_image_url": "http://p2.pstatp.com/thumb/1027/5727063969"}, {"uid": 0, "text": "\u5510\u50e7:\u609f\u7a7a\uff0c\u7ed9\u6211\u53d8\u4e2a\u89c2\u97f3\u3002\u609f\u7a7a:\u5e08\u5085\uff0c\u6628\u665a\u53d8\u7684\u90a3\u4e2a\u767d\u9aa8\u7cbe\u8fd8\u884c\u5427", "create_time": 1411379642, "user_digg": 0, "id": 3551938099, "user_bury": 0, "user_profile_url": "", "user_id": 3518157428, "bury_count": 12, "digg_count": 432, "user_verified": false, "platform": "feifei", "user_name": "Ge\u5011\u86cb\u5576", "user_profile_image_url": "http://p2.pstatp.com/thumb/1284/7340667604"}, {"uid": 0, "text": "\u201c\u609f\u7a7a\u53d8\u4e2a\u7f8e\u5973\u6765\uff0c\u4e3a\u5e08\u618b\u4e0d\u4f4f\u4e86\u201d\u5510\u50e7\u4e00\u672c\u6b63\u7ecf\u8bf4 \u201c\u4e0d\u53d8\uff0c\u627e\u4f60\u4e94\u59d1\u5a18\u53bb\u201d \u201c\u4f60TMD\u53d8\u4e0d\u53d8\u554a\uff0c\u4e0d\u53d8\u6211\u53ef\u8981\u5ff5\u7d27\u7b8d\u5492\u5566\u201d \u5927\u5e08\u5144\u4e00\u624b\u628a\u5934\u4e0a\u7684\u91d1\u521a\u5708\u62fd\u4e86\u4e0b\u6765\uff0c\u6254\u5728\u5730\u4e0a\uff0c\u8bf4\uff1a\u5ff5\u554a\u4f60TMD\u7ed9\u6211\u5ff5\u554a\u3002 \u201c\u54ce\u54ce\uff0c\u609f\u7a7a\u522b\u51b2\u52a8\u554a\uff0c\u54b1\u4e0d\u53d8\u4e86\u554a\uff0c\u5feb\u6361\u8d77\u6765\u5427\uff0c\u90a3\u662f\u83e9\u8428\u9001\u7684\u201d \u5927\u5e08\u5144\u521a\u4e00\u5f2f\u8170\uff0c\u83ca\u82b1\u4e00\u9635\u5267\u75bc", "create_time": 1411519773, "user_digg": 0, "id": 3555364567, "user_bury": 0, "user_profile_url": "", "user_id": 1473440926, "bury_count": 7, "digg_count": 265, "user_verified": false, "platform": "feifei", "user_name": "\u5c0f\u706c\u4eba\u7269", "user_profile_image_url": "http://tp2.sinaimg.cn/2717148361/50/5630045331/1"}, {"uid": 0, "text": "\u90a3\u662f\u6ca1\u8def\u8fc7\u9ec4\u5c71...", "create_time": 1411310465, "user_digg": 0, "id": 3550323209, "user_bury": 0, "user_profile_url": "", "user_id": 3382802081, "bury_count": 6, "digg_count": 176, "user_verified": false, "platform": "feifei", "user_name": "\u9ec4\u5c71\u5c0f\u5996", "user_profile_image_url": "http://p2.pstatp.com/thumb/1343/7435323673"}, {"uid": 0, "text": "\u8fd9\u65f6\u5019\u4e00\u7fa4\u5973\u5996\u8d70\u4e86\u51fa\u6765\u201c\u653e\u5c41\uff0c\u6211\u4eec\u4e4b\u6240\u4ee5\u6293\u5510\u50e7\u90fd\u662f\u4e3a\u4e86\u5403\u8001\u5b59\u4e00\u68d2\uff01\u201d", "create_time": 1411632021, "user_digg": 0, "id": 3558720058, "user_bury": 0, "user_profile_url": "", "user_id": 3057321677, "bury_count": 0, "digg_count": 101, "user_verified": false, "platform": "feifei", "user_name": "\u53eb\u6211_\u7ea2\u9886\u5dfe", "user_profile_image_url": "http://p2.pstatp.com/thumb/1302/7707792184"}, {"uid": 0, "text": "\u5f53\u5e74\u609f\u7a7a\u53bb\u5077\u6843\uff0c\u628a\u4e03\u4ed9\u5973\u5b9a\u4f4f\u53bb\u5403\u6843\u4e86\u3002\u771f\u4ed6\u5988\u5c4c\u4e1d", "create_time": 1411606238, "user_digg": 0, "id": 3557840828, "user_bury": 0, "user_profile_url": "", "user_id": 3205272091, "bury_count": 0, "digg_count": 45, "user_verified": false, "platform": "feifei", "user_name": "LoveTheWayYouLie8697242", "user_profile_image_url": "http://p2.pstatp.com/thumb/685/726722844"}]}, "total_number": 216}
+
+
+18. 评论列表点击加载更多(上拉加载)
+
+http://isub.snssdk.com/2/data/get_essay_comments/?group_id=3550036269&count=20&offset=20&iid=2337593504&device_id=2757969807&ac=wifi&channel=wandoujia&aid=7&app_name=joke_essay&version_code=302&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+
+19. 推荐
+请求参数：（？后是参数），get请求是以&区分的
+content_type=-101
+message_cursor=-1
+loc_time=1432654641
+latitude=40.0522901291784
+longitude=116.23490963616668
+city=%E5%8C%97%E4%BA%AC
+count=30//一次返回的段子数量
+screen_width=800
+iid=2767929313
+device_id=2757969807
+ac=wifi
+channel=baidu2
+aid=7
+app_name=joke_essay
+version_code=400
+device_platform=android
+device_type=KFTT
+os_api=15
+os_version=4.0.3
+openudid=b90ca6a3a19a78d6
+
+
+http://ic.snssdk.com/neihan/stream/mix/v1/?content_type=-101&message_cursor=-1&loc_time=1432654641&latitude=40.0522901291784&longitude=116.23490963616668&city=%E5%8C%97%E4%BA%AC&count=30&screen_width=800&iid=2767929313&device_id=2757969807&ac=wifi&channel=baidu2&aid=7&app_name=joke_essay&version_code=400&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+20. 视频
+视频的请求参数：
+content_type=-104
+message_cursor=-1
+loc_time=1432654641
+latitude=40.0522901291784
+longitude=116.23490963616668
+city=北京
+count=30
+screen_width=800
+iid=2767929313
+device_id=2757969807
+ac=wifi
+channel=baidu2
+aid=7
+app_name=joke_essay
+version_code=400
+device_platform=android
+device_type=KFTT
+os_api=15
+os_version=4.0.3
+openudid=b90ca6a3a19a78d6
+
+http://ic.snssdk.com/neihan/stream/mix/v1/?content_type=-104&message_cursor=-1&loc_time=1432654641&latitude=40.0522901291784&longitude=116.23490963616668&city=北京&count=30&screen_width=800&iid=2767929313&device_id=2757969807&ac=wifi&channel=baidu2&aid=7&app_name=joke_essay&version_code=400&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+21. 发现
+
+http://ic.snssdk.com/2/essay/discovery/v3/?iid=2767929313&device_id=2757969807&ac=wifi&channel=baidu2&aid=7&app_name=joke_essay&version_code=400&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+22. 图片
+
+http://ic.snssdk.com/neihan/stream/mix/v1/?content_type=-103&message_cursor=-1&loc_time=1432654641&latitude=40.0522901291784&longitude=116.23490963616668&city=%E5%8C%97%E4%BA%AC&count=30&screen_width=800&iid=2767929313&device_id=2757969807&ac=wifi&channel=baidu2&aid=7&app_name=joke_essay&version_code=400&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+23. 段子
+
+ http://ic.snssdk.com/neihan/stream/mix/v1/?content_type=-102&message_cursor=-1&loc_time=1432654641&latitude=40.0522901291784&longitude=116.23490963616668&city=%E5%8C%97%E4%BA%AC&count=30&screen_width=800&iid=2767929313&device_id=2757969807&ac=wifi&channel=baidu2&aid=7&app_name=joke_essay&version_code=400&device_platform=android&device_type=KFTT&os_api=15&os_version=4.0.3&openudid=b90ca6a3a19a78d6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
